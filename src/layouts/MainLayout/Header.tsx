@@ -10,9 +10,21 @@ type StyleProps = {
 	isScrolled: boolean;
 };
 
+const HeaderBackgroundAnimation = (startColor: string, endColor: string) => keyframes`
+	0% {
+		background-color: ${startColor};
+	}
+	100% {
+		background-color: ${endColor};
+	} 
+`;
+
 const HeaderContainer = styled.div<StyleProps>`
 	height: 84px;
 	background-color: ${props => (props.isScrolled ? 'white' : 'transparent')};
+	animation: ${props =>
+			props.isScrolled ? HeaderBackgroundAnimation('transparent', 'white') : HeaderBackgroundAnimation('white', 'transparent')}
+		0.2s linear;
 
 	display: flex;
 	flex-direction: row;
@@ -43,7 +55,7 @@ const NaviContainer = styled.div`
 const LinkButton = styled(Button)`
 	display: flex;
 	align-items: center;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 14px;
 `;
 
