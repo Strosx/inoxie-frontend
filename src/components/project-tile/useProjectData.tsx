@@ -1,0 +1,153 @@
+import SoftflixHome from 'public/images/projects/softflix/softflix-home.png';
+import SoftflixLogo from 'public/images/projects/softflix/softflix-logo.png';
+import SkillsiveHome from 'public/images/projects/skillsive/skillsive-home.png';
+import SkillsiveLogo from 'public/images/projects/skillsive/skillsive-logo.png';
+import TaHome from 'public/images/projects/tradeanalytics/ta-home.png';
+import TaLogo from 'public/images/projects/tradeanalytics/ta-logo.png';
+import EyGVRTHome from 'public/images/projects/ey-gvrt/ey-gvrt-home.png';
+import EyLogo from 'public/images/projects/ey-gvrt/ey-logo.png';
+import KolejoweHome from 'public/images/projects/kolejoweABC/home.jpg';
+import KolejoweLogo from 'public/images/projects/kolejoweABC/logo.jpg';
+import FrankensteinLogo from 'public/images/projects/frankenstein/logo.jpg';
+import FrankensteinHome from 'public/images/projects/frankenstein/home.jpg';
+import { ReactNode } from 'react';
+import Image from 'next/image';
+import NetLogo from 'public/images/logos/net-logo.png';
+import SqlLogo from 'public/images/logos/sql-logo.png';
+import NextJsLogo from 'public/images/logos/next-js-logo.png';
+import AzureLogo from 'public/images/logos/azure-logo.png';
+import ReactLogo from 'public/images/logos/react-logo.png';
+import UnityLogo from 'public/images/logos/unity-logo.png';
+import ZohoLogo from 'public/images/logos/zoho-logo.png';
+import DevopsLogo from 'public/images/logos/devops-logo.png';
+import ElasticLogo from 'public/images/logos/elastic-logo.svg';
+import VercelLogo from 'public/images/logos/vercel-logo.png';
+
+import styled from '@emotion/styled';
+
+const TechContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+
+	> * {
+		margin-right: 10px !important;
+	}
+`;
+
+export const useProjectData = (project: ProjectType): ProjectData => {
+	switch (project) {
+		case 'softflix':
+			return {
+				name: 'Softflix',
+				description:
+					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform application with React, Next.js, ASP.NET Core and SQL Server.',
+				img: SoftflixHome,
+				link: 'https://www.softflix.com',
+				logo: SoftflixLogo,
+				tech: (
+					<TechContainer>
+						<Image src={NetLogo} width={30} height={30} />
+						<Image src={AzureLogo} width={60} height={30} />
+						<Image src={ReactLogo} width={60} height={30} />
+						<Image src={NextJsLogo} width={60} height={30} />
+						<Image src={ZohoLogo} width={50} height={30} />
+						<Image src={DevopsLogo} width={75} height={30} />
+					</TechContainer>
+				)
+			};
+		case 'skillsive':
+			return {
+				name: 'Skillsive',
+				description:
+					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform application with React, Next.js, ASP.NET Core and SQL Server.',
+				img: SkillsiveHome,
+				link: 'https://www.skillsive.com',
+				logo: SkillsiveLogo,
+				tech: (
+					<TechContainer>
+						<Image src={NetLogo} width={30} height={30} />
+						<Image src={AzureLogo} width={60} height={30} />
+						<Image src={ReactLogo} width={60} height={30} />
+						<Image src={NextJsLogo} width={60} height={30} />
+						<Image src={DevopsLogo} width={75} height={30} />
+						<Image src={UnityLogo} width={75} height={30} />
+					</TechContainer>
+				)
+			};
+		case 'eygvrt':
+			return {
+				name: 'EY Global Vat Reporting Tool',
+				description:
+					'We took part in development of Global Vat Reporting Tool for EY GDS Poland. This application was made to calculate tax declarations for big, worldwide corporations. Application was integrated with Azure Cosmos Database, Vies VAT number validation system and many more. Developed with ASP.NET Core and React on frontend.',
+				img: EyGVRTHome,
+				link: 'https://www.ey.com/en_pl/tax/global-vat-reporting-tool',
+				logo: EyLogo,
+				tech: (
+					<TechContainer>
+						<Image src={NetLogo} width={30} height={30} />
+						<Image src={AzureLogo} width={60} height={30} />
+						<Image src={ReactLogo} width={60} height={30} />
+						<Image src={DevopsLogo} width={75} height={30} />
+					</TechContainer>
+				)
+			};
+		case 'tradeanalytics':
+			return {
+				name: 'Trade Analytics',
+				description:
+					'Our developers were part of a development team of TradeAnalytics.pl (while working in Ceneo.pl). Main goal of project was to allow Allegro seller to analise their sales on different kind of charts and summary tables. We used ElasticSearch to store data, ASP.NET Core for backend login and Angular.',
+				img: TaHome,
+				link: 'https://allegro.pl/moje-allegro/sprzedaz/allegro-analytics/o-narzedziu',
+				logo: TaLogo,
+				tech: (
+					<TechContainer>
+						<Image src={NetLogo} width={30} height={30} />
+						<Image src={AzureLogo} width={60} height={30} />
+						<Image src={ReactLogo} width={60} height={30} />
+						<Image src={DevopsLogo} width={75} height={30} />
+					</TechContainer>
+				)
+			};
+		case 'kolejoweABC':
+			return {
+				name: 'Kolejowe ABC',
+				description:
+					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform.',
+				img: KolejoweHome,
+				link: 'https://kolejoweabc.pl/ABC/aktualnosci/730-podrozuj-z-edukacyjna-gra-kolejowe-abc?fbclid=IwAR2Th4ELEP41p6MXTRqCKe_wXX-akpHBBDAIP4lcgQJOR-rVC0iJB-HW3mI',
+				logo: KolejoweLogo,
+				tech: (
+					<TechContainer>
+						<Image src={UnityLogo} width={75} height={30} />
+					</TechContainer>
+				)
+			};
+		case 'frankenstein':
+			return {
+				name: 'Frankenstein: Beyond the Time',
+				description:
+					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform.',
+				img: FrankensteinHome,
+				link: 'https://store.steampowered.com/app/863380/Frankenstein_Beyond_the_Time',
+				logo: FrankensteinLogo,
+				tech: (
+					<TechContainer>
+						<Image src={UnityLogo} width={75} height={30} />
+					</TechContainer>
+				)
+			};
+		default:
+			break;
+	}
+};
+
+export type ProjectType = 'softflix' | 'skillsive' | 'eygvrt' | 'tradeanalytics' | 'kolejoweABC' | 'frankenstein';
+
+type ProjectData = {
+	name: string;
+	description: string;
+	img: StaticImageData;
+	link: string;
+	logo: StaticImageData;
+	tech: ReactNode;
+};

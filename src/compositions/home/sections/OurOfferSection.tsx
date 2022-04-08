@@ -11,7 +11,7 @@ type Props = {
 
 const Container = styled.div<Props>`
 	width: 100%;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 	animation: ${props => (props.isVisible ? AppearAnimation() : '')} 2s;
 
 	h2 {
@@ -73,8 +73,8 @@ export const OurOfferSection = (): JSX.Element => {
 	const isVisible = useIntersection(ref, '0px');
 
 	return (
-		<Container ref={ref} isVisible={isVisible}>
-			<h2>What can we do for you?</h2>
+		<Container ref={ref} isVisible={isVisible} id='offer'>
+			<h2>What do we offer?</h2>
 			<TilesContainer>
 				<StyledCard>
 					<AntDesignOutlined style={{ fontSize: '56px' }} />

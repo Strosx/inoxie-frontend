@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 const Container = styled.div`
 	min-height: 100vh;
-	background-color: ${props => props.theme.colors.primary.default};
+	background-color: #f5f5f5;
 `;
 
 type Props = {

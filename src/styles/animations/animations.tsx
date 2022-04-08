@@ -28,3 +28,26 @@ export const ChangeGrayscaleAnimation = (target: number) => keyframes`
         filter: grayscale(${target});   
     }
 `;
+
+export const SlideLeftAnimation = () => keyframes`
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+`;
+
+export const SlideRightAnimation = () => keyframes`
+	from {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+
+`;

@@ -11,10 +11,9 @@ const VideoContainer = styled.div`
 
 	video {
 		position: absolute;
-		margin-top: calc(-50vw / 3);
+		margin-top: -150px;
 		z-index: 0;
 		width: 100vw;
-
 		filter: grayscale(0.5);
 	}
 

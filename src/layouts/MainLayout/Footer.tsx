@@ -1,8 +1,17 @@
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-	background-color: #b0b0b0;
-	min-height: 20rem;
+	background-color: #0e0e0e;
+	padding: 3px 20px 3px 20px;
+
+	div {
+		text-align: right;
+		color: white;
+	}
 `;
 
-export const Footer = (): JSX.Element => <Container />;
+export const Footer = (): JSX.Element => (
+	<Container>
+		<div>Designed and developed by Inoxie 2022</div>
+	</Container>
+);

@@ -30,7 +30,12 @@ const Logo = ({ variant, isClickable = true }: Props) => {
 	if (isClickable) {
 		return (
 			<Link href={'/'} passHref>
-				<a>
+				<a
+					onClick={e => {
+						e.preventDefault();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					}}
+				>
 					<Image src={getLogo()} layout='fill' />
 				</a>
 			</Link>

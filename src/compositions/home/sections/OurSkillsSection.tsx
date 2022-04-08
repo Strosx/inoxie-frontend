@@ -20,7 +20,7 @@ type Props = {
 
 const Content = styled.div<Props>`
 	width: 100%;
-	margin-bottom: 200px;
+	margin-bottom: 100px;
 	animation: ${props => (props.isVisible ? AppearAnimation() : '')} 2s;
 	h2 {
 		font-size: 50px;
@@ -48,7 +48,7 @@ export const OurSkillsSections = (): JSX.Element => {
 
 	return (
 		<>
-			<Content ref={ref} isVisible={isVisible}>
+			<Content ref={ref} isVisible={isVisible} id='technologies'>
 				<h2>Our skills</h2>
 
 				<LogosContainer>

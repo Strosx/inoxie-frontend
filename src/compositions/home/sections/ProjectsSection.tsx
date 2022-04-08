@@ -10,7 +10,7 @@ type Props = {
 
 const Content = styled.div<Props>`
 	width: 100%;
-	margin-bottom: 200px;
+	margin-bottom: 100px;
 	animation: ${props => (props.isVisible ? AppearAnimation() : '')} 2s;
 
 	h2 {
@@ -24,7 +24,7 @@ const ProjectsContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 `;
 
 export const ProjectsSection = (): JSX.Element => {
@@ -33,21 +33,25 @@ export const ProjectsSection = (): JSX.Element => {
 
 	return (
 		<>
-			<Content ref={ref} isVisible={isVisible}>
-				<h2>Projects</h2>
+			<Content ref={ref} isVisible={isVisible} id='projects'>
+				<h2>Our Projects</h2>
 
 				<ProjectsContainer>
 					<ProjectTile project='softflix' />
 
 					<ProjectTile project='skillsive' />
+				</ProjectsContainer>
 
+				<h2>We were part of this projects too</h2>
+
+				<ProjectsContainer>
 					<ProjectTile project='eygvrt' />
 
 					<ProjectTile project='tradeanalytics' />
 
-					<ProjectTile project='kolejoweABC' />
-
 					<ProjectTile project='frankenstein' />
+
+					<ProjectTile project='kolejoweABC' />
 				</ProjectsContainer>
 			</Content>
 		</>

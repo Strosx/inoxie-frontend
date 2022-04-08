@@ -1,10 +1,9 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Button } from 'antd';
-import Image from 'next/image';
 import Link from 'next/link';
-/* import Logo from 'public/images/logo.png';
- */ import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { LinkButtonWithScroll } from 'src/components/link-button-with-scroll';
 import Logo from 'src/components/logo';
 
 type StyleProps = {
@@ -37,7 +36,7 @@ const HeaderContainer = styled.div<StyleProps>`
 	padding: 0 90px;
 `;
 
-const NaviContainer = styled.div`
+const NaviContainer = styled.div<StyleProps>`
 	min-width: 500px;
 	display: flex;
 	justify-content: end;
@@ -45,7 +44,7 @@ const NaviContainer = styled.div`
 
 	a {
 		text-decoration: none;
-		color: ${props => props.theme.colors.text.default};
+		color: ${props => (props.isScrolled ? props.theme.colors.text.default : 'white')};
 	}
 
 	> * {
@@ -77,26 +76,17 @@ export const Header = (): JSX.Element => {
 	return (
 		<HeaderContainer isScrolled={scrolled}>
 			<div style={{ position: 'relative', width: '160px', height: '25px' }}>
-				<Logo variant='black' />
+				<Logo variant={scrolled ? 'black' : 'white'} />
 			</div>
-			{/* 			<Image src={Logo} width={150} height={67.5} />
-			 */}
-			<NaviContainer>
-				<Link href='/' passHref>
-					<LinkButton type='link'>Products</LinkButton>
-				</Link>
-				<Link href='/' passHref>
-					<LinkButton type='link'>Portfolio</LinkButton>
-				</Link>
-				<Link href='/' passHref>
-					<LinkButton type='link'>Technologies</LinkButton>
-				</Link>
-			</NaviContainer>
 
-			<NaviContainer>
-				<Link href='/' passHref>
-					<LinkButton type='link'>Contact Us</LinkButton>
-				</Link>
+			<NaviContainer isScrolled={scrolled}>
+				<LinkButtonWithScroll name='Technologies' id='technologies' />
+				<LinkButtonWithScroll name='Projects' id='projects' />
+				<LinkButtonWithScroll name='Offer' id='development' />
+
+				<LinkButtonWithScroll name='Open Source' id='open-source' />
+
+				<LinkButtonWithScroll style={{ color: 'white' }} name='Contact Us' id='contact-us' type='primary' />
 			</NaviContainer>
 		</HeaderContainer>
 	);
