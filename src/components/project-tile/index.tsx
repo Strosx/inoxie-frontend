@@ -7,6 +7,8 @@ import { ChangeGrayscaleAnimation } from 'src/styles/animations/animations';
 const { Meta } = Card;
 
 const StyledCard = styled(Card)`
+	margin: 20px 0;
+
 	border-radius: 10px;
 	filter: grayscale(1);
 

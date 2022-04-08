@@ -18,7 +18,7 @@ const Content = styled.div`
 	flex-direction: column;
 	align-items: center;
 
-	width: 1300px;
+	width: 1400px;
 `;
 
 const Home: NextPageWithLayout = () => {

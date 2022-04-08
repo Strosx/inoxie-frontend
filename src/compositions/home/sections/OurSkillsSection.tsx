@@ -22,7 +22,6 @@ const Content = styled.div<Props>`
 	width: 100%;
 	margin-bottom: 200px;
 	animation: ${props => (props.isVisible ? AppearAnimation() : '')} 2s;
-
 	h2 {
 		font-size: 50px;
 		font-weight: 800;

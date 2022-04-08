@@ -14,6 +14,8 @@ const VideoContainer = styled.div`
 		margin-top: calc(-50vw / 3);
 		z-index: 0;
 		width: 100vw;
+
+		filter: grayscale(0.5);
 	}
 
 	.content {
@@ -26,7 +28,7 @@ const VideoContainer = styled.div`
 export const BackgroundVideo = (): JSX.Element => {
 	return (
 		<VideoContainer>
-			<video src='/images/covervideo.mp4' autoPlay loop muted></video>
+			<video src='/images/covervideo2.mp4' autoPlay loop muted></video>
 		</VideoContainer>
 	);
 };

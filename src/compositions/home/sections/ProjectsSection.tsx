@@ -23,6 +23,7 @@ const Content = styled.div<Props>`
 const ProjectsContainer = styled.div`
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
 `;
 
@@ -39,6 +40,14 @@ export const ProjectsSection = (): JSX.Element => {
 					<ProjectTile project='softflix' />
 
 					<ProjectTile project='skillsive' />
+
+					<ProjectTile project='eygvrt' />
+
+					<ProjectTile project='tradeanalytics' />
+
+					<ProjectTile project='kolejoweABC' />
+
+					<ProjectTile project='frankenstein' />
 				</ProjectsContainer>
 			</Content>
 		</>
