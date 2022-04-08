@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import LogoBlack from 'public/images/logos/Inoxie-black-transparent.png';
-import LogoWhite from 'public/images/logos/Inoxie-white-transparent.png';
+import LogoBlack from 'public/images/logos/inoxie-black-transparent.png';
+import LogoWhite from 'public/images/logos/inoxie-white-transparent.png';
 import LogoColor from 'public/images/logos/inoxie-color-transparent.png';
 import { useCallback } from 'react';
 import Link from 'next/link';
