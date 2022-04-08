@@ -28,8 +28,27 @@ export const ProjectTile = ({ project }: Props): JSX.Element => {
 	const { name, description, img, link, logo, tech } = useProjectData(project);
 
 	return (
-		<Link href={link} passHref>
-			<a target='_blank'>
+		<>
+			{link ? (
+				<Link href={link} passHref>
+					<a target='_blank'>
+						<StyledCard style={{ width: 600, height: 600 }} cover={<Image src={img} />}>
+							<Meta
+								avatar={<Image src={logo} width={40} height={40} />}
+								title={<h3>{name}</h3>}
+								description={
+									<>
+										<p>{description}</p>
+
+										<p>Technologies used:</p>
+										{tech}
+									</>
+								}
+							/>
+						</StyledCard>
+					</a>
+				</Link>
+			) : (
 				<StyledCard style={{ width: 600, height: 600 }} cover={<Image src={img} />}>
 					<Meta
 						avatar={<Image src={logo} width={40} height={40} />}
@@ -44,7 +63,7 @@ export const ProjectTile = ({ project }: Props): JSX.Element => {
 						}
 					/>
 				</StyledCard>
-			</a>
-		</Link>
+			)}
+		</>
 	);
 };

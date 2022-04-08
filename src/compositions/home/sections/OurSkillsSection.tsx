@@ -12,6 +12,7 @@ import ZohoLogo from 'public/images/logos/zoho-logo.png';
 import DevopsLogo from 'public/images/logos/devops-logo.png';
 import ElasticLogo from 'public/images/logos/elastic-logo.svg';
 import VercelLogo from 'public/images/logos/vercel-logo.png';
+import XrLogo from 'public/images/logos/xr-logo.png';
 import Image from 'next/image';
 
 type Props = {
@@ -49,7 +50,7 @@ export const OurSkillsSections = (): JSX.Element => {
 	return (
 		<>
 			<Content ref={ref} isVisible={isVisible} id='technologies'>
-				<h2>Our skills</h2>
+				<h2>Technologies we use</h2>
 
 				<LogosContainer>
 					<div className='img-container'>
@@ -65,10 +66,14 @@ export const OurSkillsSections = (): JSX.Element => {
 						<Image src={SqlLogo} width={120} height={100} />
 					</div>
 					<div className='img-container'>
-						<Image src={UnityLogo} width={250} height={100} />
+						<Image src={UnityLogo} width={200} height={100} />
+					</div>
+
+					<div className='img-container'>
+						<Image src={XrLogo} width={200} height={100} />
 					</div>
 					<div className='img-container'>
-						<Image src={ZohoLogo} width={220} height={100} />
+						<Image src={ZohoLogo} width={150} height={100} />
 					</div>
 					<div className='img-container'>
 						<Image src={ElasticLogo} width={250} height={100} />

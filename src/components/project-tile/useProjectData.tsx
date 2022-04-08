@@ -10,6 +10,8 @@ import KolejoweHome from 'public/images/projects/kolejoweABC/home.jpg';
 import KolejoweLogo from 'public/images/projects/kolejoweABC/logo.jpg';
 import FrankensteinLogo from 'public/images/projects/frankenstein/logo.jpg';
 import FrankensteinHome from 'public/images/projects/frankenstein/home.jpg';
+import CryptoHome from 'public/images/projects/cryptogambling/home.png';
+import BhpAppsHome from 'public/images/projects/bhpvrapps/home.png';
 import { ReactNode } from 'react';
 import Image from 'next/image';
 import NetLogo from 'public/images/logos/net-logo.png';
@@ -70,7 +72,7 @@ export const useProjectData = (project: ProjectType): ProjectData => {
 						<Image src={ReactLogo} width={60} height={30} />
 						<Image src={NextJsLogo} width={60} height={30} />
 						<Image src={DevopsLogo} width={75} height={30} />
-						<Image src={UnityLogo} width={75} height={30} />
+						<Image src={UnityLogo} width={50} height={30} />
 					</TechContainer>
 				)
 			};
@@ -118,7 +120,7 @@ export const useProjectData = (project: ProjectType): ProjectData => {
 				logo: KolejoweLogo,
 				tech: (
 					<TechContainer>
-						<Image src={UnityLogo} width={75} height={30} />
+						<Image src={UnityLogo} width={50} height={30} />
 					</TechContainer>
 				)
 			};
@@ -132,22 +134,63 @@ export const useProjectData = (project: ProjectType): ProjectData => {
 				logo: FrankensteinLogo,
 				tech: (
 					<TechContainer>
-						<Image src={UnityLogo} width={75} height={30} />
+						<Image src={UnityLogo} width={50} height={30} />
 					</TechContainer>
 				)
+			};
+		case 'cryptogambling':
+			return {
+				name: 'Crypto Casino',
+				description:
+					'Application for cryptocurrency lottery, customers could register, add funds by blockchain payment and join jackpot lotery. Technologies used React, ASP.NET Core, MS SQL Server, Azure Cloud. Unfortunatly application never started, client decided to abandon project.',
+				tech: (
+					<TechContainer>
+						<Image src={NetLogo} width={30} height={30} />
+						<Image src={AzureLogo} width={60} height={30} />
+						<Image src={ReactLogo} width={60} height={30} />
+						<Image src={DevopsLogo} width={75} height={30} />
+					</TechContainer>
+				),
+				img: CryptoHome,
+				logo: FrankensteinLogo
+			};
+		case 'bhpapps':
+			return {
+				name: 'VR Trainings Apps',
+				description:
+					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform application with React, Next.js, ASP.NET Core and SQL Server.',
+				tech: (
+					<TechContainer>
+						<Image src={UnityLogo} width={50} height={30} />
+						<Image src={NetLogo} width={30} height={30} />
+						<Image src={AzureLogo} width={60} height={30} />
+						<Image src={DevopsLogo} width={75} height={30} />
+					</TechContainer>
+				),
+				logo: SkillsiveLogo,
+				img: BhpAppsHome,
+				link: 'https://www.skillsive.com'
 			};
 		default:
 			break;
 	}
 };
 
-export type ProjectType = 'softflix' | 'skillsive' | 'eygvrt' | 'tradeanalytics' | 'kolejoweABC' | 'frankenstein';
+export type ProjectType =
+	| 'softflix'
+	| 'skillsive'
+	| 'eygvrt'
+	| 'tradeanalytics'
+	| 'kolejoweABC'
+	| 'frankenstein'
+	| 'bhpapps'
+	| 'cryptogambling';
 
 type ProjectData = {
 	name: string;
 	description: string;
 	img: StaticImageData;
-	link: string;
+	link?: string;
 	logo: StaticImageData;
 	tech: ReactNode;
 };

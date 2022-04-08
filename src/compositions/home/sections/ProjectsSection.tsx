@@ -40,6 +40,10 @@ export const ProjectsSection = (): JSX.Element => {
 					<ProjectTile project='softflix' />
 
 					<ProjectTile project='skillsive' />
+
+					<ProjectTile project='bhpapps' />
+
+					<ProjectTile project='cryptogambling' />
 				</ProjectsContainer>
 
 				<h2>We were part of this projects too</h2>

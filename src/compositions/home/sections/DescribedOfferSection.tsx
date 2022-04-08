@@ -49,7 +49,7 @@ export const DescribedOfferSection = (): JSX.Element => {
 					will help you to increase sales and reduce costs by automating a lot of manual work. Examples of recent integrations: Microsoft Dynamics 365 CRM,
 					external invoicing software, customer localization services, external electronic software distrbutor (keys API), synchronizing products with computer games database IGDB, 
 					connecting customer system to trading API on Binance, integrate with different kind of payment gateway like PayPal or Stripe, customer Azure Active Directory authorization integration,
-					connecting SendGrid email sender for customer app newsletters and many many more. If you are planning integration with software you are using, please contact us, our development team
+					connecting SendGrid email sender for customer app newsletters, blockchain payments (bitcoin, ethereum) integration and many many more. If you are planning integration with software you are using, please contact us, our development team
 					will help you to find the best possible way.'
 				/>
 
