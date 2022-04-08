@@ -18,3 +18,13 @@ export const ChangeColorAnimation = (color: string) => keyframes`
         background-color:  ${color}
     }
 `;
+
+export const ChangeGrayscaleAnimation = (target: number) => keyframes`
+    0% {
+        filter: grayscale(1);
+    }
+
+    100% {
+        filter: grayscale(${target});   
+    }
+`;

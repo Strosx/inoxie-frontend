@@ -3,8 +3,9 @@ import styled from '@emotion/styled';
 import { Button } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from 'public/images/logo.png';
-import { useEffect, useState } from 'react';
+/* import Logo from 'public/images/logo.png';
+ */ import { useEffect, useState } from 'react';
+import Logo from 'src/components/logo';
 
 type StyleProps = {
 	isScrolled: boolean;
@@ -75,8 +76,11 @@ export const Header = (): JSX.Element => {
 
 	return (
 		<HeaderContainer isScrolled={scrolled}>
-			<Image src={Logo} width={150} height={67.5} />
-
+			<div style={{ position: 'relative', width: '160px', height: '25px' }}>
+				<Logo variant='black' />
+			</div>
+			{/* 			<Image src={Logo} width={150} height={67.5} />
+			 */}
 			<NaviContainer>
 				<Link href='/' passHref>
 					<LinkButton type='link'>Products</LinkButton>
