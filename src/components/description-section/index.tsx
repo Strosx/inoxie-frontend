@@ -49,14 +49,15 @@ type Props = {
 	title: string;
 	subTitle: string;
 	imagePosition: 'left' | 'right';
+	id?: string;
 };
 
-export const DescriptionSection = ({ imageUrl, title, subTitle, imagePosition }: Props) => {
+export const DescriptionSection = ({ imageUrl, title, subTitle, imagePosition, id }: Props) => {
 	const ref = useRef();
 	const isVisible = useIntersection(ref, '0px');
 
 	return (
-		<Container imagePosition={imagePosition} ref={ref} isVisible={isVisible}>
+		<Container id={id} imagePosition={imagePosition} ref={ref} isVisible={isVisible}>
 			<ImageContainer imagePosition={imagePosition} isVisible={isVisible}>
 				<Image src={imageUrl} layout='fill' />
 			</ImageContainer>

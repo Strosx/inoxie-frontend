@@ -34,11 +34,11 @@ const Home: NextPageWithLayout = () => {
 	return (
 		<>
 			<Head>
-				<title>We will build you custom software application - Inoxie Software House</title>
+				<title>Inoxie - We will build you custom software application - Software House</title>
 				<meta
 					name='description'
 					content='We are building custom software applications, sas, modern websites, databases, backend systems,
-				VR applications development, IT consulting, Business Design - Inoxie Software House'
+							VR applications development, IT consulting, Business Design - Inoxie Software House'
 				/>
 			</Head>
 			<Root>

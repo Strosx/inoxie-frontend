@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Button, Input } from 'antd';
+import { scrollToId } from 'src/components/link-button-with-scroll';
 
 const TitleContainer = styled.div`
 	//	padding: 30px;
@@ -36,7 +37,7 @@ export const TitleSection = (): JSX.Element => {
 
 			<ContactUsContainer>
 				<Input placeholder='Leave us your email address...' size='large' />
-				<Button size='large' type='primary'>
+				<Button size='large' type='primary' onClick={e => scrollToId(e, 'contact-us')}>
 					Confirm
 				</Button>
 			</ContactUsContainer>

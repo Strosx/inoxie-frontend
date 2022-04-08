@@ -85,6 +85,7 @@ export const DescribedOfferSection = (): JSX.Element => {
 				/>
 
 				<DescriptionSection
+					id='business-design'
 					imagePosition='right'
 					imageUrl={BusinessDesignImage}
 					title='Business Design'
@@ -94,6 +95,7 @@ export const DescribedOfferSection = (): JSX.Element => {
 				/>
 
 				<DescriptionSection
+					id='consulting'
 					imagePosition='left'
 					imageUrl={ConsultingImage}
 					title='Consulting'

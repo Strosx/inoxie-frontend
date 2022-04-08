@@ -24,9 +24,7 @@ export const LinkButtonWithScroll = ({ name, id, style, type = 'link' }: Props):
 				size='large'
 				style={style}
 				onClick={e => {
-					let el = document.getElementById(id);
-					e.preventDefault();
-					el && window.scrollTo({ top: el.offsetTop + 100, behavior: 'smooth' });
+					scrollToId(e, id);
 				}}
 				type={type}
 			>
@@ -34,4 +32,10 @@ export const LinkButtonWithScroll = ({ name, id, style, type = 'link' }: Props):
 			</LinkButton>
 		</Link>
 	);
+};
+
+export const scrollToId = (e: any, id: string) => {
+	let el = document.getElementById(id);
+	e.preventDefault();
+	el && window.scrollTo({ top: el.offsetTop + 100, behavior: 'smooth' });
 };

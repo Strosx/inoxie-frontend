@@ -4,6 +4,7 @@ import { AppearAnimation, ChangeColorAnimation } from 'src/styles/animations/ani
 import { PhoneOutlined, AntDesignOutlined, CodepenOutlined } from '@ant-design/icons';
 import { useRef } from 'react';
 import { useIntersection } from 'src/shared/hooks/useIntersection';
+import { scrollToId } from 'src/components/link-button-with-scroll';
 
 type Props = {
 	isVisible: boolean;
@@ -77,21 +78,22 @@ export const OurOfferSection = (): JSX.Element => {
 			<h2>What do we offer?</h2>
 			<TilesContainer>
 				<StyledCard>
-					<AntDesignOutlined style={{ fontSize: '56px' }} />
-					<div>
-						<h3>Business Design</h3>
-						<p>Team of highly qualified and experienced developers will create modern application.</p>
-						<Button type='primary' id='showmore'>
-							Show more
-						</Button>
-					</div>
-				</StyledCard>
-				<StyledCard>
 					<CodepenOutlined style={{ fontSize: '56px' }} />
 					<div>
 						<h3>Development</h3>
 						<p>Our team will help you to a technologies and develop software for your business</p>
-						<Button type='primary' id='showmore'>
+						<Button type='primary' id='showmore'  onClick={e => scrollToId(e, 'development')}>
+							Show more
+						</Button>
+					</div>
+				</StyledCard>
+
+				<StyledCard>
+					<AntDesignOutlined style={{ fontSize: '56px' }} />
+					<div>
+						<h3>Business Design</h3>
+						<p>Team of highly qualified and experienced developers will create modern application.</p>
+						<Button type='primary' id='showmore' onClick={e => scrollToId(e, 'business-design')}>
 							Show more
 						</Button>
 					</div>
@@ -101,7 +103,7 @@ export const OurOfferSection = (): JSX.Element => {
 					<div>
 						<h3>Consulting</h3>
 						<p>If you plan to expand your software, our experienced team will help you.</p>
-						<Button type='primary' id='showmore'>
+						<Button type='primary' id='showmore' onClick={e => scrollToId(e, 'consulting')}>
 							Show more
 						</Button>
 					</div>
