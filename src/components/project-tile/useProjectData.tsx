@@ -61,7 +61,7 @@ export const useProjectData = (project: ProjectType): ProjectData => {
 			return {
 				name: 'Skillsive',
 				description:
-					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform application with React, Next.js, ASP.NET Core and SQL Server.',
+					'Digital platform for virtual reality trainings, which includes a web application, API and SDK for Unity. The web application consists of admin panel (customer management), dev panel (course configuration) and client panel (results preview). In this application, we used WebSockets which allowed remote control of VR applications from the client panel level.',
 				img: SkillsiveHome,
 				link: 'https://www.skillsive.com',
 				logo: SkillsiveLogo,
@@ -114,7 +114,7 @@ export const useProjectData = (project: ProjectType): ProjectData => {
 			return {
 				name: 'Kolejowe ABC',
 				description:
-					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform.',
+					'A series of mini-games commissioned by the Office of Rail Transportation. All games were created on the Unity engine and adapted to the Android and IOS mobile platforms. The applications in an easy and fun way teach children the rules of safety and proper behavior on railway areas.',
 				img: KolejoweHome,
 				link: 'https://kolejoweabc.pl/ABC/aktualnosci/730-podrozuj-z-edukacyjna-gra-kolejowe-abc?fbclid=IwAR2Th4ELEP41p6MXTRqCKe_wXX-akpHBBDAIP4lcgQJOR-rVC0iJB-HW3mI',
 				logo: KolejoweLogo,
@@ -128,7 +128,7 @@ export const useProjectData = (project: ProjectType): ProjectData => {
 			return {
 				name: 'Frankenstein: Beyond the Time',
 				description:
-					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform.',
+					'High-quality graphics, multiplatform VR game created on Unity game engine. The game has been adapted to all the most popular VR devices at that time, such as HTC Vive, Oculus Rift, PSVR. Part of our team participated in developing the features and optimization this game.',
 				img: FrankensteinHome,
 				link: 'https://store.steampowered.com/app/863380/Frankenstein_Beyond_the_Time',
 				logo: FrankensteinLogo,
@@ -156,9 +156,9 @@ export const useProjectData = (project: ProjectType): ProjectData => {
 			};
 		case 'bhpapps':
 			return {
-				name: 'VR Trainings Apps',
+				name: 'Skillsive SDK and VR Training Apps',
 				description:
-					'Digital selling platform, designed and developed by Inoxie. System is integrated with distributors APIs, Zoho CRM, Zoho Books, TawkTo chatbot, IGDB products API, PayPal, Stripe payment gateways and many more. Built as fully responsible multi-platform application with React, Next.js, ASP.NET Core and SQL Server.',
+					'The SDK was created with two things in mind: networking and VR features. Networking is an API connection that allows you to receive and send data to SQL Server and Azure Storage. VR features such as hand gesture recognition, calibration, interaction and motion systems have been added. Over 10 VR applications have been built on the basis of the SDK.',
 				tech: (
 					<TechContainer>
 						<Image src={UnityLogo} width={50} height={30} />

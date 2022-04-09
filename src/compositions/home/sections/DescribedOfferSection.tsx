@@ -56,21 +56,15 @@ export const DescribedOfferSection = (): JSX.Element => {
 				<DescriptionSection
 					imagePosition='left'
 					imageUrl={VirtualRealityImage}
-					title='Virtual Reality Applications'
-					subTitle='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
-						standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-						type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-						remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-						Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-						Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable
-						content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-						distribution of letters, as opposed to using Content here, content here, making it look like readable English.'
+					title='XR/VR/AR - Extended Reality Applications'
+					subTitle='We have been working with VR technology from the moment it enters the market. We went through smartphone-based VR headset like the Gear VR, standalone 3DOF Oculus Go, and desktop devices connected to Oculus Rift and HTC Vive computers. We are currently working mainly with Oculus Quest 2 and Microsoft HoloLens 2, and our solutions related to XR technology are developed on the Unity engine.
+					Thanks to the experience of our team in game design and knowledge of the games market and XR technology, we are able to design and develop AR / VR applications and games and advise our clients on this matter. We have over 8 different XR devices and we are able to create applications that work with PC VR headset (e.g. Valve Index), standalone VR headset (e.g. Oculus Quest 2), AR applications for HoloLens 2 and AR / VR applications for the phone (Android / iPhone). In addition, we are able to create more advanced Unity systems based on Azure cloud services.'
 				/>
 
 				<DescriptionSection
 					imagePosition='right'
 					imageUrl={CrmImage}
-					title='Zoho Integrations'
+					title='Zoho Ecosystem'
 					subTitle='Our team specializes in integrating Zoho ecosystem to different companies software. Zoho is huge software made to ease running small and bigger business.
 					Zoho offering Books section, CRM section, Warehouse section, People section and many more. Integrating your company system with application like Zoho will help your organization
 					to go to higher organization level. Our expierienced consultant will help to choose what are your need and how you can apply them in your every day work.'
