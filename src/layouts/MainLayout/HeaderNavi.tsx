@@ -87,6 +87,7 @@ export const HeaderNavi = ({ isScrolled }: Props): JSX.Element => {
 				<LinkButtonWithScroll name='Technologies' id='technologies' />
 				<LinkButtonWithScroll name='Projects' id='projects' />
 				<LinkButtonWithScroll name='Offer' id='development' />
+				<LinkButtonWithScroll name='Open source' id='open-source' />
 				<LinkButtonWithScroll style={{ color: 'white' }} name='Contact Us' id='contact-us' type='primary' />
 			</NaviContainer>
 
@@ -131,6 +132,16 @@ export const HeaderNavi = ({ isScrolled }: Props): JSX.Element => {
 
 						<Menu.Item
 							style={{ color: 'white' }}
+							icon={<DollarOutlined />}
+							onClick={() => {
+								scrollToId('open-source');
+							}}
+						>
+							Open source
+						</Menu.Item>
+
+						<Menu.Item
+							style={{ color: 'white' }}
 							icon={<PhoneOutlined />}
 							onClick={() => {
 								scrollToId('contact-us');
@@ -138,17 +149,6 @@ export const HeaderNavi = ({ isScrolled }: Props): JSX.Element => {
 						>
 							Contact
 						</Menu.Item>
-						{/* 
-						<LinkButtonWithScroll onClick={() => setIsOpened(false)} name='Technologies' id='technologies' />
-						<LinkButtonWithScroll onClick={() => setIsOpened(false)} name='Projects' id='projects' />
-						<LinkButtonWithScroll onClick={() => setIsOpened(false)} name='Offer' id='development' />
-						<LinkButtonWithScroll
-							onClick={() => setIsOpened(false)}
-							style={{ color: 'white' }}
-							name='Contact Us'
-							id='contact-us'
-							type='primary'
-						/> */}
 					</Menu>
 				)}
 			</MobileNaviContainer>

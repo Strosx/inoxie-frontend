@@ -1,7 +1,11 @@
 export { default } from 'src/compositions/home/index';
 
-export const getStaticProps = async ({ req, locale }) => {
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+export const getStaticProps = async ({ locale }) => {
 	return {
-		props: {}
+		props: {
+			...(await serverSideTranslations(locale, ['home']))
+		}
 	};
 };

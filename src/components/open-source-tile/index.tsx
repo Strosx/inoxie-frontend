@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
-import { Avatar, Card } from 'antd';
+import { Card } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ProjectType, useProjectData } from 'src/components/project-tile/useProjectData';
 import { ChangeGrayscaleAnimation } from 'src/styles/animations/animations';
 const { Meta } = Card;
 import { useRef } from 'react';
 import { useIntersection } from 'src/shared/hooks/useIntersection';
+import { OpenSourceProjectType, useOpenSourceData } from 'src/components/open-source-tile/useOpenSourceData';
 
 type StyleProps = {
 	isVisible: boolean;
@@ -16,7 +16,7 @@ const Container = styled.div<StyleProps>`
 	.card {
 		margin: 20px 0;
 		width: 600px;
-		height: 600px;
+		height: 520px;
 
 		border-radius: 10px;
 		filter: grayscale(1);
@@ -32,17 +32,17 @@ const Container = styled.div<StyleProps>`
 			animation: ${props => (props.isVisible ? ChangeGrayscaleAnimation(0) : '')} 2s linear;
 
 			width: 100vw;
-			height: 600px;
+			height: 500px;
 		}
 	}
 `;
 
 type Props = {
-	project: ProjectType;
+	project: OpenSourceProjectType;
 };
 
-export const ProjectTile = ({ project }: Props): JSX.Element => {
-	const { name, description, img, link, logo, tech } = useProjectData(project);
+export const OpenSourceTile = ({ project }: Props): JSX.Element => {
+	const { name, description, img, link, logo, tech } = useOpenSourceData(project);
 	const ref = useRef();
 	const isVisible = useIntersection(ref, '0px');
 
