@@ -38,7 +38,7 @@ const Home: NextPageWithLayout = () => {
 	return (
 		<>
 			<Head>
-				<title>Inoxie - We will build you custom software application - Software House</title>
+				<title>Inoxie Software - We will build you custom software - Software House</title>
 				<meta
 					name='description'
 					content='We are building custom software applications, sas, modern websites, databases, backend systems,
@@ -53,8 +53,6 @@ const Home: NextPageWithLayout = () => {
 					<OurSkillsSections />
 					<ProjectsSection />
 					<DescribedOfferSection />
-					{/* 		<OpenSourceSection />
-					 */}
 					<ContactUsSection />
 				</Content>
 			</Root>
