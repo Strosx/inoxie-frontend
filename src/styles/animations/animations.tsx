@@ -35,11 +35,14 @@ export const SlideLeftAnimation = () => keyframes`
 		-webkit-opactity: 0;
 
 		transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+
 	}
 	to {
 		opacity: 1;
 
 		transform: translateX(0%);
+		-webkit-transform: translateX(0%);
 	}
 `;
 
