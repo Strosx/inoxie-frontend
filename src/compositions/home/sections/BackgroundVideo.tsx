@@ -1,6 +1,4 @@
 import styled from '@emotion/styled';
-import Image from 'next/image';
-import CoverImg from 'public/images/coverimg.png';
 
 const VideoContainer = styled.div`
 	overflow: hidden;
@@ -10,7 +8,7 @@ const VideoContainer = styled.div`
 	width: 100vw;
 	height: 70vh;
 
-	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+	@media (max-width: ${props => props.theme.breakpoints.desktop}px) {
 		height: 50vh;
 	}
 
@@ -22,7 +20,7 @@ const VideoContainer = styled.div`
 		filter: grayscale(0.5);
 		box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 
-		@media (max-width: ${props => props.theme.breakpoints.mobile}px) {
+		@media (max-width: ${props => props.theme.breakpoints.desktop}px) {
 			zoom: 2.5;
 			transform: translateX(-20%);
 		}

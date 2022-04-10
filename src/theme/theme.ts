@@ -3,7 +3,7 @@ import { Theme } from '@emotion/react';
 export const Breakpoints = {
 	mobile: 425,
 	tablet: 768,
-	dekstop: 2560
+	desktop: 1360
 };
 
 export const defaultTheme: Theme = {
@@ -28,7 +28,7 @@ export const defaultTheme: Theme = {
 	breakpoints: {
 		mobile: Breakpoints.mobile,
 		tablet: Breakpoints.tablet,
-		dekstop: Breakpoints.dekstop
+		desktop: Breakpoints.desktop
 	}
 };
 
