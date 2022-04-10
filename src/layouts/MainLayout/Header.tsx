@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { LinkButtonWithScroll } from 'src/components/link-button-with-scroll';
 import Logo from 'src/components/logo';
+import { HeaderNavi } from 'src/layouts/MainLayout/HeaderNavi';
 
 type StyleProps = {
 	isScrolled: boolean;
@@ -34,29 +35,22 @@ const HeaderContainer = styled.div<StyleProps>`
 	width: 100%;
 	z-index: 999;
 	padding: 0 90px;
-`;
 
-const NaviContainer = styled.div<StyleProps>`
-	min-width: 500px;
-	display: flex;
-	justify-content: end;
-	flex-direction: row;
-
-	a {
-		text-decoration: none;
-		color: ${props => (props.isScrolled ? props.theme.colors.text.default : 'white')};
-	}
-
-	> * {
-		margin: 0 30px;
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		padding: 0 10px;
+		height: 56px;
 	}
 `;
 
-const LinkButton = styled(Button)`
-	display: flex;
-	align-items: center;
-	font-weight: 700;
-	font-size: 14px;
+const LogoContainer = styled.div`
+	position: relative;
+	width: 160px;
+	height: 25px;
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		width: 120px;
+		height: 18px;
+	}
 `;
 
 export const Header = (): JSX.Element => {
@@ -75,19 +69,11 @@ export const Header = (): JSX.Element => {
 
 	return (
 		<HeaderContainer isScrolled={scrolled}>
-			<div style={{ position: 'relative', width: '160px', height: '25px' }}>
+			<LogoContainer>
 				<Logo variant={scrolled ? 'black' : 'white'} />
-			</div>
+			</LogoContainer>
 
-			<NaviContainer isScrolled={scrolled}>
-				<LinkButtonWithScroll name='Technologies' id='technologies' />
-				<LinkButtonWithScroll name='Projects' id='projects' />
-				<LinkButtonWithScroll name='Offer' id='development' />
-
-				<LinkButtonWithScroll name='Open Source' id='open-source' />
-
-				<LinkButtonWithScroll style={{ color: 'white' }} name='Contact Us' id='contact-us' type='primary' />
-			</NaviContainer>
+			<HeaderNavi isScrolled={scrolled} />
 		</HeaderContainer>
 	);
 };

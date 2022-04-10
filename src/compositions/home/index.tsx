@@ -27,7 +27,11 @@ const Content = styled.div`
 	flex-direction: column;
 	align-items: center;
 
-	width: 1400px;
+	max-width: 1400px;
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		max-width: 100vw;
+	}
 `;
 
 const Home: NextPageWithLayout = () => {
@@ -45,17 +49,12 @@ const Home: NextPageWithLayout = () => {
 				<BackgroundVideo />
 				<Content>
 					<TitleSection />
-
 					<OurOfferSection />
-
 					<OurSkillsSections />
-
 					<ProjectsSection />
-
 					<DescribedOfferSection />
-
-					<OpenSourceSection />
-
+					{/* 		<OpenSourceSection />
+					 */}
 					<ContactUsSection />
 				</Content>
 			</Root>

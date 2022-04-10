@@ -3,7 +3,6 @@ import { Button, Input } from 'antd';
 import { scrollToId } from 'src/components/link-button-with-scroll';
 
 const TitleContainer = styled.div`
-	//	padding: 30px;
 	margin-left: 20px;
 	height: 60vh;
 	align-self: flex-start;
@@ -12,6 +11,17 @@ const TitleContainer = styled.div`
 		font-size: 70px;
 		font-weight: 900;
 		color: white;
+	}
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		align-self: center;
+		height: 30vh;
+
+		h1 {
+			font-size: 30px;
+			font-weight: 900;
+			color: white;
+		}
 	}
 `;
 
@@ -25,6 +35,20 @@ const ContactUsContainer = styled.div`
 	button {
 		margin-left: -5px;
 		height: 50px;
+	}
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		height: 30px;
+		font-size: 10px;
+
+		input {
+			font-size: 12px;
+		}
+
+		button {
+			height: 30px;
+			font-size: 12px;
+		}
 	}
 `;
 

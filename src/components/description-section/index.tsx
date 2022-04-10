@@ -1,8 +1,8 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import { useIntersection } from 'src/shared/hooks/useIntersection';
 import Image from 'next/image';
 import styled from '@emotion/styled';
-import { AppearAnimation, SlideLeftAnimation, SlideRightAnimation } from 'src/styles/animations/animations';
+import { AppearAnimation } from 'src/styles/animations/animations';
 
 type StyleProps = {
 	imagePosition: 'left' | 'right';
@@ -15,33 +15,35 @@ const Container = styled.div<StyleProps>`
 	margin: 100px 0;
 	animation: ${props => (props.isVisible ? AppearAnimation() : '')} 2s;
 
-	> * {
-		margin: 0 30px;
-	}
-
 	h3 {
 		font-size: 30px;
 		font-weight: 600;
 		color: ${props => props.theme.colors.primary.default};
 	}
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		flex-direction: column;
+	}
 `;
 
-const ImageContainer = styled.div<StyleProps>`
+const ImageContainer = styled.div`
 	position: relative;
 
 	min-width: 600px;
 	min-height: 400px;
-	opacity: 1;
-	/* 	transform: translateX(0%);
 
-	animation: ${props => (props.imagePosition == 'left' ? SlideRightAnimation() : SlideLeftAnimation())} 2s;
- */
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		min-width: 100vw;
+		aspect-ratio: 16/9;
+		min-height: auto;
+	}
 `;
 
 const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin: 0 30px;
 `;
 
 type Props = {
@@ -58,7 +60,7 @@ export const DescriptionSection = ({ imageUrl, title, subTitle, imagePosition, i
 
 	return (
 		<Container id={id} imagePosition={imagePosition} ref={ref} isVisible={isVisible}>
-			<ImageContainer imagePosition={imagePosition} isVisible={isVisible}>
+			<ImageContainer>
 				<Image src={imageUrl} layout='fill' />
 			</ImageContainer>
 

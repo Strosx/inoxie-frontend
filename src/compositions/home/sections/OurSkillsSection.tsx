@@ -23,10 +23,19 @@ const Content = styled.div<Props>`
 	width: 100%;
 	margin-bottom: 100px;
 	animation: ${props => (props.isVisible ? AppearAnimation() : '')} 2s;
+
 	h2 {
 		font-size: 50px;
 		font-weight: 800;
 		text-align: center;
+	}
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		h2 {
+			font-size: 30px;
+			font-weight: 800;
+			text-align: center;
+		}
 	}
 `;
 

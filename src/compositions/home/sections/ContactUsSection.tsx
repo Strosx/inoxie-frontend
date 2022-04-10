@@ -13,6 +13,17 @@ const Content = styled.div`
 		font-weight: 800;
 		text-align: center;
 	}
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		margin-bottom: 100px;
+
+
+		h2 {
+			font-size: 30px;
+			font-weight: 800;
+			text-align: center;
+		}
+	}
 `;
 
 type Props = {

@@ -20,16 +20,32 @@ const Container = styled.div<Props>`
 		font-weight: 800;
 		text-align: center;
 	}
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+		margin-top: 50px;
+		margin-bottom: 0px;
+
+		h2 {
+			font-size: 30px;
+			font-weight: 800;
+			text-align: center;
+		}
+	}
 `;
 
 const TilesContainer = styled.div`
 	margin-top: 50px;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-around;
+
+	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+	}
 `;
 
 const StyledCard = styled.div`
+	margin: 10px;
 	padding: 30px;
 	background-color: white;
 	width: 400px;
@@ -52,6 +68,11 @@ const StyledCard = styled.div`
 		opacity: 0;
 
 		align-self: baseline;
+
+		@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
+			opacity: 1;
+			align-self: flex-end;
+		}
 	}
 
 	:hover {
@@ -82,7 +103,7 @@ export const OurOfferSection = (): JSX.Element => {
 					<div>
 						<h3>Development</h3>
 						<p>Our team will help you to a technologies and develop software for your business</p>
-						<Button type='primary' id='showmore'  onClick={e => scrollToId(e, 'development')}>
+						<Button type='primary' id='showmore' onClick={e => scrollToId(e, 'development')}>
 							Show more
 						</Button>
 					</div>

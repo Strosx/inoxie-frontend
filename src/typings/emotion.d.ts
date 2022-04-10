@@ -19,5 +19,11 @@ declare module '@emotion/react' {
                 dark: string;
             }
 		};
+
+		breakpoints: {
+			mobile: number,
+			tablet: number,
+			dekstop: number,
+		}
 	}
 }

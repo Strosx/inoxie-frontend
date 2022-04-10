@@ -1,5 +1,11 @@
 import { Theme } from '@emotion/react';
 
+export const Breakpoints = {
+	mobile: 425,
+	tablet: 768,
+	dekstop: 2560
+};
+
 export const defaultTheme: Theme = {
 	colors: {
 		primary: {
@@ -17,6 +23,12 @@ export const defaultTheme: Theme = {
 			dark: '#adadad',
 			light: '#F7F7F7'
 		}
+	},
+
+	breakpoints: {
+		mobile: Breakpoints.mobile,
+		tablet: Breakpoints.tablet,
+		dekstop: Breakpoints.dekstop
 	}
 };
 
