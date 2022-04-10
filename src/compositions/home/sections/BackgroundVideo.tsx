@@ -21,8 +21,7 @@ const VideoContainer = styled.div`
 		box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 
 		@media (max-width: ${props => props.theme.breakpoints.desktop}px) {
-			zoom: 2.5;
-			transform: translateX(-20%);
+			transform: translateY(20%) scale(2.8);
 		}
 	}
 
