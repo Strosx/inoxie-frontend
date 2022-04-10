@@ -47,6 +47,7 @@ const MobileNaviContainer = styled.div<StyleProps>`
 		right: 0;
 
 		animation: ${SlideLeftAnimation()} 0.5s;
+		-webkit-animation: ${SlideLeftAnimation()} 0.5s;
 
 		width: 250px;
 		height: 100vh;

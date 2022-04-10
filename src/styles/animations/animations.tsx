@@ -32,10 +32,13 @@ export const ChangeGrayscaleAnimation = (target: number) => keyframes`
 export const SlideLeftAnimation = () => keyframes`
 	from {
 		opacity: 0;
+		-webkit-opactity: 0;
+
 		transform: translateX(100%);
 	}
 	to {
 		opacity: 1;
+
 		transform: translateX(0%);
 	}
 `;
