@@ -35,7 +35,7 @@ const VideoContainer = styled.div`
 export const BackgroundVideo = (): JSX.Element => {
 	return (
 		<VideoContainer>
-			<video src='/images/covervideo2.mp4' autoPlay loop muted />
+			<video src='/images/covervideo2.mp4' autoPlay loop muted playsInline/>
 		</VideoContainer>
 	);
 };
