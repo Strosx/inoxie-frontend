@@ -52,7 +52,11 @@ const ContactUsContainer = styled.div`
 	}
 `;
 
-export const TitleSection = (): JSX.Element => {
+type Props = {
+	setCustomerEmail: (value: string) => void;
+};
+
+export const TitleSection = ({ setCustomerEmail }: Props): JSX.Element => {
 	return (
 		<TitleContainer>
 			<h1>
@@ -60,8 +64,14 @@ export const TitleSection = (): JSX.Element => {
 			</h1>
 
 			<ContactUsContainer>
-				<Input placeholder='Leave us your email address...' size='large' />
-				<Button size='large' type='primary' onClick={e => scrollToId(e, 'contact-us')}>
+				<Input placeholder='Leave us your email address...' size='large' onChange={e => setCustomerEmail(e.target.value)} />
+				<Button
+					size='large'
+					type='primary'
+					onClick={e => {
+						scrollToId(e, 'contact-us');
+					}}
+				>
 					Confirm
 				</Button>
 			</ContactUsContainer>

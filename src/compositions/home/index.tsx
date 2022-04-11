@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
+import { HomePageSeo } from 'src/compositions/home/HomePageSeo';
 import { BackgroundVideo } from 'src/compositions/home/sections/BackgroundVideo';
 import { ContactUsSection } from 'src/compositions/home/sections/ContactUsSection';
 import { DescribedOfferSection } from 'src/compositions/home/sections/DescribedOfferSection';
@@ -36,38 +35,16 @@ const Content = styled.div`
 `;
 
 const Home: NextPageWithLayout = () => {
-	const router = useRouter();
-
-	const getUrl = (): string => {
-		const asPath = router?.asPath == '/' ? '' : router?.asPath;
-		const locale = router?.locale;
-
-		if (locale == 'en-US') {
-			return 'https://inoxiesoft.com/' + asPath;
-		}
-
-		return 'https://inoxiesoft.com/' + locale + asPath;
-	};
+	const [customerEmail, setCustomerEmail] = useState('');
 
 	return (
 		<>
-			<Head>
-				<title>Inoxie Software - We will build you custom software - Software House</title>
-				<meta
-					name='description'
-					key='description'
-					content='We are building custom software applications, sas, modern websites, databases, backend systems,
-							VR applications development, games. Our team provide also IT consulting and Business Design - Inoxie Software House - We will build your custom application'
-				/>
+			<HomePageSeo />
 
-				<link rel='alternate' hrefLang='en' href='https://inoxiesoft.com/en-US' />
-				<link rel='alternate' hrefLang='pl' href='https://inoxiesoft.com/pl-PL' />
-				<link rel='canonical' href={getUrl()} />
-			</Head>
 			<Root>
 				<BackgroundVideo />
 				<Content>
-					<TitleSection />
+					<TitleSection setCustomerEmail={email => setCustomerEmail(email)} />
 					<OurOfferSection />
 					<OurSkillsSections />
 
@@ -75,7 +52,7 @@ const Home: NextPageWithLayout = () => {
 					<DescribedOfferSection />
 					<OpenSourceSection />
 
-					<ContactUsSection />
+					<ContactUsSection email={customerEmail} />
 				</Content>
 			</Root>
 		</>

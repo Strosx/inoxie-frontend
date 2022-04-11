@@ -102,7 +102,7 @@ export const useOpenSourceData = (project: OpenSourceProjectType): OpenSourceDat
 			};
 		case 'inoxiesoftwebsite':
 			return {
-				name: 'Inoxie Software Website',
+				name: 'InoxieSoft Website',
 				description:
 					'Website creates by us with NextJs and Vercel deployement server. Website is optimized for search engine traffic, mobile devices, it is fully responsible with SEO included.',
 				img: InoxieWebsiteImg,

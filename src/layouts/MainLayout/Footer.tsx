@@ -12,6 +12,6 @@ const Container = styled.div`
 
 export const Footer = (): JSX.Element => (
 	<Container>
-		<div>@ Designed and developed by Inoxie Software 2022</div>
+		<div>@ Designed and developed by InoxieSoft 2022</div>
 	</Container>
 );

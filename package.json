@@ -9,6 +9,7 @@
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@types/gtag.js": "^0.0.10",
     "antd": "^4.19.2",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
