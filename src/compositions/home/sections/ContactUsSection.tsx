@@ -122,7 +122,7 @@ export const ContactUsSection = ({ email }: Props): JSX.Element => {
 						</p>
 
 						<p>
-							Maciej Kamieniak (+48798943352) <br /> Aleksander Górka (+48798943352)
+							Maciej Kamieniak (+48798943352) <br /> Aleksander Górka (+48511542174)
 						</p>
 
 						<p>

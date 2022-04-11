@@ -15,15 +15,13 @@ import BhpAppsHome from 'public/images/projects/bhpvrapps/home.png';
 import { ReactNode } from 'react';
 import Image from 'next/image';
 import NetLogo from 'public/images/logos/net-logo.png';
-import SqlLogo from 'public/images/logos/sql-logo.png';
 import NextJsLogo from 'public/images/logos/next-js-logo.png';
 import AzureLogo from 'public/images/logos/azure-logo.png';
 import ReactLogo from 'public/images/logos/react-logo.png';
 import UnityLogo from 'public/images/logos/unity-logo.png';
 import ZohoLogo from 'public/images/logos/zoho-logo.png';
 import DevopsLogo from 'public/images/logos/devops-logo.png';
-import ElasticLogo from 'public/images/logos/elastic-logo.svg';
-import VercelLogo from 'public/images/logos/vercel-logo.png';
+import InoxieLogo from 'public/images/logos/inoxie-black-transparent-square.png';
 
 import styled from '@emotion/styled';
 
@@ -152,7 +150,7 @@ export const useProjectData = (project: ProjectType): ProjectData => {
 					</TechContainer>
 				),
 				img: CryptoHome,
-				logo: FrankensteinLogo
+				logo: InoxieLogo
 			};
 		case 'bhpapps':
 			return {
