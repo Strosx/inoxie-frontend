@@ -4,7 +4,8 @@ import { useForm } from 'antd/lib/form/Form';
 import TextArea from 'antd/lib/input/TextArea';
 import { useCallback, useEffect, useState } from 'react';
 import Logo from 'src/components/logo';
-import { GASendFormData, GoogleFormData } from 'src/shared/google-events/events';
+import { ContactFormData, sendContact } from 'src/shared/emailjs';
+import { GASendFormConversion } from 'src/shared/google-events/events';
 
 const Content = styled.div`
 	width: 100%;
@@ -84,20 +85,16 @@ export const ContactUsSection = ({ email }: Props): JSX.Element => {
 	const [form] = useForm();
 	const [isLoading, setIsLoading] = useState(false);
 
-	const onSubmit = useCallback((values: GoogleFormData) => {
+	const onSubmit = useCallback((values: ContactFormData) => {
 		setIsLoading(true);
-		GASendFormData(values);
-		delayAction(() => {
-			setIsLoading(false);
-			form.resetFields();
-			message.success('Succesfully sent, we will get back to you as soon as possible :)');
-		});
-	}, []);
-
-	const delayAction = useCallback((action: () => void) => {
-		setTimeout(function () {
-			action();
-		}, 2000);
+		GASendFormConversion();
+		sendContact(values)
+			.then(() => {
+				message.success('Succesfully sent, we will get back to you as soon as possible :)');
+				form.resetFields();
+			})
+			.catch(() => message.error('Could not send, please try again later'))
+			.finally(() => setIsLoading(false));
 	}, []);
 
 	useEffect(() => {
