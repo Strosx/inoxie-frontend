@@ -119,7 +119,7 @@ export const ContactUsSection = ({ email }: Props): JSX.Element => {
 						</p>
 
 						<p>
-							Maciej Kamieniak (+48798943352) <br /> Aleksander Górka (+48511542174) <br /> King Lenart <br /> Ewelina Lenart
+							Maciej Kamieniak (+48798943352) <br /> Aleksander Górka (+48511542174) <br /> Kinga Lenart <br /> Ewelina Lenart
 						</p>
 
 						<div style={{ display: 'flex', flexDirection: 'column', width: '300px', gap: '5px' }}>
