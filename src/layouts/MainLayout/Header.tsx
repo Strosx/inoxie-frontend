@@ -1,9 +1,6 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Button } from 'antd';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { LinkButtonWithScroll } from 'src/components/link-button-with-scroll';
 import Logo from 'src/components/logo';
 import { HeaderNavi } from 'src/layouts/MainLayout/HeaderNavi';
 
