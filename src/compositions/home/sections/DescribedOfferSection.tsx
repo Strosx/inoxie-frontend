@@ -84,8 +84,10 @@ export const DescribedOfferSection = (): JSX.Element => {
 					imagePosition='left'
 					imageUrl={DevOpsImage}
 					title='MS Azure Cloud'
-					subTitle='We specialize in Microsoft Azure Cloud, Microsoft Azure DevOps and Docker containers. Our team will help you to migrate to cloud, choose correct resource on Azure Cloud,
-					advice on migrating/improving your architecture and automate all your Continous Integration and Continous Delivery process.'
+					subTitle='At InoxieSoft, we are experts in developing custom software solutions on the Microsoft Azure Cloud platform. Our team of developers and architects are highly skilled in working with Azures powerful tools and services, enabling us to deliver scalable, secure, and efficient cloud-based solutions for your business needs.
+					Whether you need to migrate your applications to the cloud, build new cloud-native applications, or leverage the power of big data and AI, our Azure experts can help. Our Azure-based solutions enable you to take full advantage of the platforms flexibility, scalability, and cost-effectiveness, ensuring you get the most out of your investment.			
+					We understand that every business has unique needs and challenges, which is why we work closely with our clients to create customized solutions that are tailored to their specific requirements. We leverage Azures powerful services such as Azure Functions, Azure Kubernetes Service, Azure Logic Apps, and more, to deliver secure and efficient solutions that meet your business needs.			
+					At InoxieSoft, we are committed to helping our clients stay ahead of the curve by providing them with innovative and cutting-edge cloud solutions. Contact us today to learn more about how our Microsoft Azure Cloud services can help your business achieve its goals.'
 				/>
 
 				<DescriptionSection
