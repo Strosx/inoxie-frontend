@@ -34,8 +34,6 @@ const Content = styled.div`
 `;
 
 const Home: NextPageWithLayout = () => {
-	const [customerEmail, setCustomerEmail] = useState('');
-
 	return (
 		<>
 			<HomePageSeo />
@@ -43,12 +41,11 @@ const Home: NextPageWithLayout = () => {
 
 			<Root>
 				<Content>
-					<OurOfferSection />
+					<DescribedOfferSection />
 					<OurSkillsSections />
 					<ProjectsSection />
-					<DescribedOfferSection />
 					<OpenSourceSection />
-					<ContactUsSection email={customerEmail} />
+					<ContactUsSection email={''} />
 				</Content>
 			</Root>
 		</>

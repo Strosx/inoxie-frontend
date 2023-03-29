@@ -73,7 +73,7 @@ const NavLink = styled.a<Props>`
 	cursor: pointer;
 
 	:hover {
-		color: #0da237;
+		//color: #0da237;
 		//	color: #0fc742;
 	}
 `;
@@ -151,10 +151,6 @@ const Header = () => {
 		};
 	}, []);
 
-	const handleMobileMenuClick = () => {
-		setIsMobileMenuOpen(!isMobileMenuOpen);
-	};
-
 	return (
 		<HeaderContainer>
 			<HeaderWrapper isScrolled={isScrolled}>
@@ -187,45 +183,8 @@ const Header = () => {
 							<NavLink isScrolled={isScrolled}>Contact</NavLink>
 						</Link>
 					</NavItem>
-					{/* 					<HamburgerMenu onClick={handleMobileMenuClick}>
-						<HamburgerIcon isScrolled={isScrolled} />
-						<HamburgerIcon isScrolled={isScrolled} />
-						<HamburgerIcon isScrolled={isScrolled} />
-					</HamburgerMenu>
- */}{' '}
 				</NavList>
 			</HeaderWrapper>
-			{/* 		{isMobileMenuOpen && (
-				<MobileMenu isScrolled={isScrolled}>
-					<MobileMenuList>
-						<MobileMenuItem>
-							<Link passHref href={'/technologies'}>
-								<MobileMenuLink>Technologies</MobileMenuLink>
-							</Link>
-						</MobileMenuItem>
-						<MobileMenuItem>
-							<Link passHref href={'/portfolio'}>
-								<MobileMenuLink>Portfolio</MobileMenuLink>
-							</Link>
-						</MobileMenuItem>
-						<MobileMenuItem>
-							<Link passHref href={'/offer'}>
-								<MobileMenuLink>Offer</MobileMenuLink>
-							</Link>
-						</MobileMenuItem>
-						<MobileMenuItem>
-							<Link passHref href={'/open-source'}>
-								<MobileMenuLink>Open Source</MobileMenuLink>
-							</Link>
-						</MobileMenuItem>
-						<MobileMenuItem>
-							<Link passHref href={'/contact'}>
-								<MobileMenuLink>Contact</MobileMenuLink>
-							</Link>
-						</MobileMenuItem>
-					</MobileMenuList>
-				</MobileMenu>
-			)} */}
 		</HeaderContainer>
 	);
 };

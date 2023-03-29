@@ -32,7 +32,7 @@ const Container = styled.div<StyleProps>`
 			animation: ${props => (props.isVisible ? ChangeGrayscaleAnimation(0) : '')} 2s linear;
 
 			width: 100vw;
-			height: 600px;
+			height: 700px;
 		}
 	}
 `;

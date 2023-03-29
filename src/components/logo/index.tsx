@@ -36,7 +36,7 @@ const Logo = ({ variant, isClickable = true }: Props) => {
 						window.scrollTo({ top: 0, behavior: 'smooth' });
 					}}
 				>
-					<Image src={getLogo()} layout='fill' />
+					<Image priority={true} src={getLogo()} layout='fill' />
 				</a>
 			</Link>
 		);
