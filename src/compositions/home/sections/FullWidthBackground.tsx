@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import Bg from 'public/images/widetopbg.jpg';
+import Bg from 'public/images/widetopbg.webp';
 
 const FullWidthBackgroundContainer = styled.div`
 	position: relative;
