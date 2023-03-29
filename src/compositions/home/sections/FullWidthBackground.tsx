@@ -44,7 +44,7 @@ const SubSloganText = styled.p`
 const FullWidthBackground = () => {
 	return (
 		<FullWidthBackgroundContainer>
-			<Image src={Bg} alt='background-cover-img' layout='fill' objectFit='cover' />
+			<Image priority={true} src={Bg} alt='background-cover-img' layout='fill' objectFit='cover' />
 			<SloganContainer>
 				<SloganText>Innovative Solutions, Unmatched Expertise - InoxieSoft</SloganText>
 				<SubSloganText>Your Software Development Partner</SubSloganText>
