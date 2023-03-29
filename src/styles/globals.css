@@ -1,6 +1,71 @@
 body {
-	font-family: 'Roboto', sans-serif !important;
-	overflow: overlay;
+	font-family: 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+	margin-top: 1.2em;
+	margin-bottom: 0.6em;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+/* Paragraphs */
+p {
+	font-size: 1rem;
+	margin-top: 0;
+	margin-bottom: 1.2em;
+	line-height: 1.6;
+}
+
+/* Spans */
+span {
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+/* Adjust heading font sizes for smaller screens */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
 }
 
 #__next {

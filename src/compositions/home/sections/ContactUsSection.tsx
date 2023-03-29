@@ -118,22 +118,11 @@ export const ContactUsSection = ({ email }: Props): JSX.Element => {
 							InoxieSoft <br /> Mieszczańska 11/17 <br /> 50-201 Wrocław, Poland
 						</p>
 
-						<p>
-							Maciej Kamieniak (+48798943352) <br /> Aleksander Górka (+48511542174) <br /> Kinga Lenart <br /> Ewelina Lenart
-						</p>
+						<p>Maciej Kamieniak (+48 798943352)</p>
 
 						<div style={{ display: 'flex', flexDirection: 'column', width: '300px', gap: '5px' }}>
 							<Button type='primary'>
 								<a href='mailto: m.kamieniak@inoxiesoft.com'>m.kamieniak@inoxiesoft.com</a>
-							</Button>
-							<Button type='primary'>
-								<a href='mailto: a.gorka@inoxiesoft.com'>a.gorka@inoxiesoft.com</a>
-							</Button>
-							<Button type='primary'>
-								<a href='mailto: k.lenart@inoxiesoft.com'>k.lenart@inoxiesoft.com</a>
-							</Button>
-							<Button type='primary'>
-								<a href='mailto: e.lenart@inoxiesoft.com'>e.lenart@inoxiesoft.com</a>
 							</Button>
 						</div>
 					</div>

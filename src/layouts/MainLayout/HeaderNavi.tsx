@@ -37,7 +37,6 @@ const MobileNaviContainer = styled.div<StyleProps>`
 	}
 
 	.icon {
-		font-size: 24px;
 		color: ${props => (props.isScrolled ? props.theme.colors.text.default : 'white')};
 	}
 

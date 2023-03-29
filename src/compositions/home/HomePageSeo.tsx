@@ -17,7 +17,7 @@ export const HomePageSeo = (): JSX.Element => {
 					'@type': 'ContactPoint',
 					contactType: 'customer support',
 					telephone: '+48798943352',
-					email: 'k.lenart@inoxiesoft.com'
+					email: 'm.kamieniak@inoxiesoft.com'
 				},
 				address: {
 					'@type': 'PostalAddress',
@@ -33,12 +33,11 @@ export const HomePageSeo = (): JSX.Element => {
 	return (
 		<>
 			<Head>
-				<title>InoxieSoft - Custom software development company - NET, C#, React, SQL</title>
+				<title>Custom Software Development Company | InoxieSoft - Your Partner in Innovation</title>
 				<meta
 					name='description'
 					key='description'
-					content='We are developing custom software applications, sas, modern websites, databases, backend systems,
-							VR applications development, games. Tech NET, C#, React, SQL - InoxieSoft Software House'
+					content='Looking for a reliable custom software development company? InoxieSoft is your partner in innovation, offering expert software development services tailored to your unique needs. Contact us today to bring your ideas to life with our top-notch software solutions.'
 				/>
 
 				<script type='application/ld+json' dangerouslySetInnerHTML={addOrganizationJsonLd()} key='organization-jsonld' />

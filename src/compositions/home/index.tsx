@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
 import { ReactElement, useState } from 'react';
 import { HomePageSeo } from 'src/compositions/home/HomePageSeo';
-import { BackgroundVideo } from 'src/compositions/home/sections/BackgroundVideo';
 import { ContactUsSection } from 'src/compositions/home/sections/ContactUsSection';
 import { DescribedOfferSection } from 'src/compositions/home/sections/DescribedOfferSection';
+import FullWidthBackground from 'src/compositions/home/sections/FullWidthBackground';
 import { OpenSourceSection } from 'src/compositions/home/sections/OpenSourceSection';
 import { OurOfferSection } from 'src/compositions/home/sections/OurOfferSection';
 import { OurSkillsSections } from 'src/compositions/home/sections/OurSkillsSection';
 import { ProjectsSection } from 'src/compositions/home/sections/ProjectsSection';
-import { TitleSection } from 'src/compositions/home/sections/TitleSection';
 import MainLayout from 'src/layouts/MainLayout';
 import { NextPageWithLayout } from 'src/typings/layout';
 
@@ -21,7 +20,7 @@ const Content = styled.div`
 	position: relative;
 	z-index: 1;
 
-	margin-top: 20vh;
+	margin-top: 20px;
 
 	display: flex;
 	flex-direction: column;
@@ -40,18 +39,15 @@ const Home: NextPageWithLayout = () => {
 	return (
 		<>
 			<HomePageSeo />
+			<FullWidthBackground />
 
 			<Root>
-				<BackgroundVideo />
 				<Content>
-					<TitleSection setCustomerEmail={email => setCustomerEmail(email)} />
 					<OurOfferSection />
 					<OurSkillsSections />
-
 					<ProjectsSection />
 					<DescribedOfferSection />
 					<OpenSourceSection />
-
 					<ContactUsSection email={customerEmail} />
 				</Content>
 			</Root>

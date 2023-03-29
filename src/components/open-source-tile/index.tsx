@@ -16,7 +16,7 @@ const Container = styled.div<StyleProps>`
 	.card {
 		margin: 20px 0;
 		width: 600px;
-		height: 520px;
+		height: 650px;
 
 		border-radius: 10px;
 		filter: grayscale(1);

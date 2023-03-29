@@ -12,6 +12,6 @@ const Container = styled.div`
 
 export const Footer = (): JSX.Element => (
 	<Container>
-		<div style={{ fontSize: '12px' }}>@ Designed and developed by InoxieSoft 2022</div>
+		<div>@ Designed and developed by InoxieSoft 2023</div>
 	</Container>
 );

@@ -107,6 +107,16 @@ export const DescribedOfferSection = (): JSX.Element => {
 					 our experienced developers can help you to solve the issue	and advice on the next steps. We also offer whole day software development training for your IT teams,
 					 to get more details please contact us by email or phone.'
 				/>
+
+				<DescriptionSection
+					id='ai'
+					imagePosition='right'
+					imageUrl={IntegrationsImage}
+					title='AI Automation'
+					subTitle='At InoxieSoft, we specialize in developing custom software solutions that automate your business processes using the power of artificial intelligence (AI). Our expert team of developers and data scientists work together to create intelligent systems that can learn from your data and make intelligent decisions on your behalf.
+					Whether you need to automate customer service, optimize your supply chain, or improve your marketing efforts, our AI-powered software can help you achieve your goals. By reducing the need for manual intervention and streamlining your operations, we can help you save time and money while improving the quality of your output.				
+					At InoxieSoft, we believe that AI is the future of business, and were committed to helping our clients stay ahead of the curve. Contact us today to learn more about our AI-powered software solutions and how we can help you automate your business processes.'
+				/>
 			</Content>
 		</>
 	);
