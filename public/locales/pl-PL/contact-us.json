@@ -1,4 +1,11 @@
 {
-    "meta-titla":"Inoxiesoft - Indywidualne Rozwiązania IT | Skontaktuj się z nami",
-    "meta-description": "Skontaktuj się z Inoxiesoft, Twoją zaufaną firmą specjalizującą się w indywidualnych rozwiązaniach IT. Tworzymy dopasowane do potrzeb Twojej firmy. Napisz do nas już dziś i umów się na darmową konsultację!"
+	"meta-title": "Inoxiesoft - Custom Software Development | Contact Us Today",
+	"meta-description": "Get in touch with Inoxiesoft, your trusted custom software development service provider. We create tailored solutions to meet your business needs. Contact us now for a free consultation!",
+	"messageSent": "Message sent successfully, we'll get back to you as soon as possible :)",
+	"messageFailed": "Failed to send message, please try again later",
+	"emailAddress": "Email address",
+	"firstName": "First name",
+	"lastName": "Last name",
+	"describeProject": "Describe your project...",
+	"send": "Send"
 }

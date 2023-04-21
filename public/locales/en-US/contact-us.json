@@ -1,11 +1,11 @@
 {
-	"meta-title": "Inoxiesoft - Tworzenie Oprogramowania Na Zamówienie | Skontaktuj Się Z Nami Dziś",
-	"meta-description": "Skontaktuj się z Inoxiesoft, Twoim zaufanym dostawcą usług tworzenia niestandardowego oprogramowania. Tworzymy dopasowane rozwiązania, aby zaspokoić potrzeby Twojego biznesu. Skontaktuj się z nami teraz, aby otrzymać darmową konsultację!",
-	"messageSent": "Wiadomość wysłana pomyślnie, skontaktujemy się z Tobą najszybciej jak to możliwe :)",
-	"messageFailed": "Nie udało się wysłać wiadomości, spróbuj ponownie później",
-	"emailAddress": "Adres e-mail",
-	"firstName": "Imię",
-	"lastName": "Nazwisko",
-	"describeProject": "Opisz swój projekt...",
-	"send": "Wyślij"
+	"meta-title": "Inoxiesoft - Custom Software Development | Contact Us Today",
+	"meta-description": "Get in touch with Inoxiesoft, your trusted custom software development service provider. We create tailored solutions to meet your business needs. Contact us now for a free consultation!",
+	"messageSent": "Message sent successfully, we'll get back to you as soon as possible :)",
+	"messageFailed": "Failed to send message, please try again later",
+	"emailAddress": "Email address",
+	"firstName": "First name",
+	"lastName": "Last name",
+	"describeProject": "Describe your project...",
+	"send": "Send"
 }
