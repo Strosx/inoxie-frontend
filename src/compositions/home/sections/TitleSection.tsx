@@ -25,7 +25,7 @@ const TitleContainer = styled.div`
 export const TitleSection = (): JSX.Element => {
 	return (
 		<TitleContainer>
-			<h1>Innovative Solutions, Unmatched Expertise - InoxieSoft, Your Software Development Partner </h1>
+			<h1>Innovative Solutions, Unmatched Expertise - Inoxiesoft, Your Software Development Partner </h1>
 		</TitleContainer>
 	);
 };

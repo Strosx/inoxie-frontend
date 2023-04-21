@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
-import { ReactElement, useState } from 'react';
-import { HomePageSeo } from 'src/compositions/home/HomePageSeo';
+import { ReactElement } from 'react';
 import { ContactUsSection } from 'src/compositions/home/sections/ContactUsSection';
 import { DescribedOfferSection } from 'src/compositions/home/sections/DescribedOfferSection';
-import FullWidthBackground from 'src/compositions/home/sections/FullWidthBackground';
 import { OpenSourceSection } from 'src/compositions/home/sections/OpenSourceSection';
 import { OurOfferSection } from 'src/compositions/home/sections/OurOfferSection';
 import { OurSkillsSections } from 'src/compositions/home/sections/OurSkillsSection';
 import { ProjectsSection } from 'src/compositions/home/sections/ProjectsSection';
 import MainLayout from 'src/layouts/MainLayout';
+import { SharedPageSeo } from 'src/seo/SharedPagesSeo';
 import { NextPageWithLayout } from 'src/typings/layout';
 
 const Root = styled.div`
@@ -19,8 +18,6 @@ const Root = styled.div`
 const Content = styled.div`
 	position: relative;
 	z-index: 1;
-
-	margin-top: 20px;
 
 	display: flex;
 	flex-direction: column;
@@ -36,14 +33,15 @@ const Content = styled.div`
 const Home: NextPageWithLayout = () => {
 	return (
 		<>
-			<HomePageSeo />
-			<FullWidthBackground />
+			<SharedPageSeo pageName='home' />
 
 			<Root>
 				<Content>
+					<OurOfferSection />
+
 					<DescribedOfferSection />
 					<OurSkillsSections />
-					<ProjectsSection />
+					<ProjectsSection title='Portfolio' />
 					<OpenSourceSection />
 					<ContactUsSection email={''} />
 				</Content>

@@ -17,7 +17,10 @@ declare module '@emotion/react' {
                 default: string;
                 light: string;
                 dark: string;
-            }
+            },
+			background: {
+				slightlyDark: string;
+			}
 		};
 
 		breakpoints: {

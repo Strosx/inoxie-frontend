@@ -6,12 +6,12 @@ export const HomePageSeo = (): JSX.Element => {
 			__html: JSON.stringify({
 				'@context': 'http://schema.org',
 				'@type': 'Organization',
-				name: 'InoxieSoft',
+				name: 'Inoxiesoft',
 				url: 'https://www.inoxiesoft.com',
 				logo: 'https://www.inoxiesoft.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finoxie-black-transparent.1476b534.png&w=3840&q=75',
 				foundingDate: '2020',
 				description:
-					'We are developing custom software applications, sas, modern websites, databases, backend systems, VR applications development, games. Our team provide also IT consulting and Business Design, tech NET, C#, React, SQL - InoxieSoft Software House',
+					'We are developing custom software applications, sas, modern websites, databases, backend systems, VR applications development, games. Our team provide also IT consulting and Business Design, tech NET, C#, React, SQL - Inoxiesoft Software House',
 				sameAs: [SocialLinks.FACEBOOK, SocialLinks.LINKEDIN],
 				contactPoint: {
 					'@type': 'ContactPoint',
@@ -33,11 +33,11 @@ export const HomePageSeo = (): JSX.Element => {
 	return (
 		<>
 			<Head>
-				<title>Custom Software Development Company | InoxieSoft - Your Partner in Innovation</title>
+				<title>Custom Software Development Company | Inoxiesoft - Your Partner in Innovation</title>
 				<meta
 					name='description'
 					key='description'
-					content='Looking for a reliable custom software development company? InoxieSoft is your partner in innovation, offering expert software development services tailored to your unique needs. Contact us today to bring your ideas to life with our top-notch software solutions.'
+					content='Looking for a reliable custom software development company? Inoxiesoft is your partner in innovation, offering expert software development services tailored to your unique needs. Contact us today to bring your ideas to life with our top-notch software solutions.'
 				/>
 
 				<script type='application/ld+json' dangerouslySetInnerHTML={addOrganizationJsonLd()} key='organization-jsonld' />
@@ -50,6 +50,6 @@ export const HomePageSeo = (): JSX.Element => {
 };
 
 export enum SocialLinks {
-	FACEBOOK = 'https://www.facebook.com/InoxieSoft-104119575667227',
+	FACEBOOK = 'https://www.facebook.com/Inoxiesoft-104119575667227',
 	LINKEDIN = 'https://www.linkedin.com/company/inoxiesoft'
 }

@@ -6,6 +6,12 @@ export const Breakpoints = {
 	desktop: 1360
 };
 
+export const ThemeStatics = {
+	TopHeaderHeight: 48,
+	BottomHeaderHeight: 74,
+	ContainerMaxWidth: 1366,
+}
+
 export const defaultTheme: Theme = {
 	colors: {
 		primary: {
@@ -19,9 +25,12 @@ export const defaultTheme: Theme = {
 			light: '#66ffa6'
 		},
 		text: {
-			default: 'black',
-			dark: '#adadad',
+			default: '#393939',
+			dark: 'black',
 			light: '#F7F7F7'
+		},
+		background: {
+			slightlyDark: '#f4f4f4'
 		}
 	},
 

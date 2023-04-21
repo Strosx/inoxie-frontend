@@ -1,18 +1,17 @@
-import SoftflixHome from 'public/images/projects/softflix/softflix-home.png';
-import { ReactNode } from 'react';
-import Image from 'next/image';
-import NetLogo from 'public/images/logos/net-logo.png';
-import AzureLogo from 'public/images/logos/azure-logo.png';
-import NugetLogo from 'public/images/nuget-logo.svg';
-import VercelLogo from 'public/images/logos/vercel-logo.png';
-import NextJsLogo from 'public/images/logos/next-js-logo.png';
+import Image, { StaticImageData } from 'next/image';
 import ApiImg from 'public/images/apiservices.jpg';
 import DataProcessorImg from 'public/images/dataprocessor.jpg';
-import RespositoryImg from 'public/images/repository.jpg';
 import ExceptionsImg from 'public/images/exceptions.jpg';
 import InoxieWebsiteImg from 'public/images/inoxiewebsite.png';
-import RedisImage from 'public/images/redis.jpg';
+import AzureLogo from 'public/images/logos/azure-logo.png';
 import InoxieLogo from 'public/images/logos/inoxie-black-transparent-square.png';
+import NetLogo from 'public/images/logos/net-logo.png';
+import NextJsLogo from 'public/images/logos/next-js-logo.png';
+import VercelLogo from 'public/images/logos/vercel-logo.png';
+import NugetLogo from 'public/images/nuget-logo.svg';
+import RedisImage from 'public/images/redis.jpg';
+import RespositoryImg from 'public/images/repository.jpg';
+import { ReactNode } from 'react';
 
 import styled from '@emotion/styled';
 
@@ -37,7 +36,7 @@ export const useOpenSourceData = (project: OpenSourceProjectType): OpenSourceDat
 				logo: NugetLogo,
 				tech: (
 					<TechContainer>
-						<Image src={NetLogo} width={30} height={30} />
+						<Image src={NetLogo} width={30} height={30} alt='dotnet-logo' />
 					</TechContainer>
 				)
 			};
@@ -52,7 +51,7 @@ export const useOpenSourceData = (project: OpenSourceProjectType): OpenSourceDat
 				logo: NugetLogo,
 				tech: (
 					<TechContainer>
-						<Image src={NetLogo} width={30} height={30} />
+						<Image src={NetLogo} width={30} height={30} alt='dotnet-logo' />
 					</TechContainer>
 				)
 			};
@@ -66,8 +65,8 @@ export const useOpenSourceData = (project: OpenSourceProjectType): OpenSourceDat
 				logo: NugetLogo,
 				tech: (
 					<TechContainer>
-						<Image src={NetLogo} width={30} height={30} />
-						<Image src={AzureLogo} width={60} height={30} />
+						<Image src={NetLogo} width={30} height={30} alt='dotnet-logo' />
+						<Image src={AzureLogo} width={60} height={30} alt='azure-logo' />
 					</TechContainer>
 				)
 			};
@@ -81,8 +80,8 @@ export const useOpenSourceData = (project: OpenSourceProjectType): OpenSourceDat
 				logo: NugetLogo,
 				tech: (
 					<TechContainer>
-						<Image src={NetLogo} width={30} height={30} />
-						<Image src={AzureLogo} width={60} height={30} />
+						<Image src={NetLogo} width={30} height={30} alt='dotnet-logo' />
+						<Image src={AzureLogo} width={60} height={30} alt='azure-logo' />
 					</TechContainer>
 				)
 			};
@@ -96,23 +95,23 @@ export const useOpenSourceData = (project: OpenSourceProjectType): OpenSourceDat
 				logo: NugetLogo,
 				tech: (
 					<TechContainer>
-						<Image src={NetLogo} width={30} height={30} />
+						<Image src={NetLogo} width={30} height={30} alt='dotnet-logo' />
 					</TechContainer>
 				)
 			};
 		case 'inoxiesoftwebsite':
 			return {
-				name: 'InoxieSoft Website',
+				name: 'Inoxiesoft Website',
 				description:
-					'Website creates by us with NextJs and Vercel deployement server. Website is optimized for search engine traffic, mobile devices, it is fully responsible with SEO included.',
+					'Website created by us with NextJs and Vercel deployement server. Website is optimized for search engine traffic, mobile devices, it is fully responsible with SEO included.',
 				img: InoxieWebsiteImg,
 				link: 'https://github.com/Strosx/inoxie-frontend',
 				logo: InoxieLogo,
 				tech: (
 					<TechContainer>
-						<Image src={NetLogo} width={30} height={30} />
-						<Image src={NextJsLogo} width={60} height={30} />
-						<Image src={VercelLogo} width={60} height={30} />
+						<Image src={NetLogo} width={30} height={30} alt='dotne-logo' />
+						<Image src={NextJsLogo} width={60} height={30} alt='next-js-logo' />
+						<Image src={VercelLogo} width={60} height={30} alt='vercel-logo' />
 					</TechContainer>
 				)
 			};

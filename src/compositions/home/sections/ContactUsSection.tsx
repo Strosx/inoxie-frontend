@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { Button, Form, Input, message } from 'antd';
 import { useForm } from 'antd/lib/form/Form';
 import TextArea from 'antd/lib/input/TextArea';
+import { useTranslation } from 'next-i18next';
 import { useCallback, useEffect, useState } from 'react';
 import Logo from 'src/components/logo';
 import { ContactFormData, sendContact } from 'src/shared/emailjs';
@@ -9,7 +10,6 @@ import { GASendFormConversion } from 'src/shared/google-events/events';
 
 const Content = styled.div`
 	width: 100%;
-	margin-bottom: 200px;
 	padding: 20px;
 
 	h2 {
@@ -21,7 +21,7 @@ const Content = styled.div`
 	.company-data-container {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-evenly;
 
 		> * {
 			width: 48%;
@@ -39,7 +39,6 @@ const Content = styled.div`
 	}
 
 	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
-		margin-bottom: 100px;
 		padding: 5px;
 
 		h2 {
@@ -84,16 +83,17 @@ type Props = {
 export const ContactUsSection = ({ email }: Props): JSX.Element => {
 	const [form] = useForm();
 	const [isLoading, setIsLoading] = useState(false);
+	const { t } = useTranslation(['contact-us', 'shared']);
 
 	const onSubmit = useCallback((values: ContactFormData) => {
 		setIsLoading(true);
 		GASendFormConversion();
 		sendContact(values)
 			.then(() => {
-				message.success('Succesfully sent, we will get back to you as soon as possible :)');
+				message.success(t('messageSent'));
 				form.resetFields();
 			})
-			.catch(() => message.error('Could not send, please try again later'))
+			.catch(() => message.error(t('messageFailed')))
 			.finally(() => setIsLoading(false));
 	}, []);
 
@@ -105,8 +105,6 @@ export const ContactUsSection = ({ email }: Props): JSX.Element => {
 
 	return (
 		<Content id='contact-us'>
-			<h2>Contact us</h2>
-
 			<div className='company-data-container'>
 				<div>
 					<LogoContainer>
@@ -115,39 +113,42 @@ export const ContactUsSection = ({ email }: Props): JSX.Element => {
 
 					<div style={{ marginTop: '20px' }}>
 						<p>
-							InoxieSoft <br /> Mieszczańska 11/17 <br /> 50-201 Wrocław, Poland
+							Maciej Kamieniak Inoxie <br /> PL9910535234 <br />
+							Kolejowa 14 <br /> 46-073 Chróscina, Poland <br />
+							Maciej Kamieniak (+48 798943352)
 						</p>
-
-						<p>Maciej Kamieniak (+48 798943352)</p>
 
 						<div style={{ display: 'flex', flexDirection: 'column', width: '300px', gap: '5px' }}>
 							<Button type='primary'>
 								<a href='mailto: m.kamieniak@inoxiesoft.com'>m.kamieniak@inoxiesoft.com</a>
+							</Button>
+							<Button type='primary'>
+								<a href='mailto: inoxiesoft@gmail.com'>inoxiesoft@gmail.com</a>
 							</Button>
 						</div>
 					</div>
 				</div>
 
 				<Form layout='vertical' requiredMark form={form} onFinish={onSubmit}>
-					<Form.Item name='email' rules={[{ required: true, message: 'This field is required' }]}>
-						<Input size='large' placeholder='Email address' />
+					<Form.Item name='email' rules={[{ required: true, message: t('shared:fieldRequired') }]}>
+						<Input size='large' placeholder={t('emailAddress')} />
 					</Form.Item>
 
-					<Form.Item name='firstName' rules={[{ required: true, message: 'This field is required' }]}>
-						<Input size='large' placeholder='First Name' />
+					<Form.Item name='firstName' rules={[{ required: true, message: t('shared:fieldRequired') }]}>
+						<Input size='large' placeholder={t('firstName')} />
 					</Form.Item>
 
-					<Form.Item name='lastName' rules={[{ required: true, message: 'This field is required' }]}>
-						<Input size='large' placeholder='Last Name' />
+					<Form.Item name='lastName' rules={[{ required: true, message: t('shared:fieldRequired') }]}>
+						<Input size='large' placeholder={t('lastName')} />
 					</Form.Item>
 
-					<Form.Item name='description' rules={[{ required: true, message: 'This field is required' }]}>
-						<TextArea rows={10} size='large' placeholder='Describe your project...' />
+					<Form.Item name='description' rules={[{ required: true, message: t('shared:fieldRequired') }]}>
+						<TextArea rows={10} size='large' placeholder={t('describeProject')} />
 					</Form.Item>
 
 					<div className='button-container'>
 						<Button loading={isLoading} htmlType='submit' size='large' type='primary'>
-							Send
+							{t('send')}
 						</Button>
 					</div>
 				</Form>

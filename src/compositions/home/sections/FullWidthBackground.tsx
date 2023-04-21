@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Bg from 'public/images/widetopbg.webp';
 
 const FullWidthBackgroundContainer = styled.div`
-	position: relative;
+	position: absolute;
 	width: 100%;
 	height: 100vh;
 
@@ -44,9 +44,9 @@ const SubSloganText = styled.p`
 const FullWidthBackground = () => {
 	return (
 		<FullWidthBackgroundContainer>
-			<Image priority={true} src={Bg} alt='background-cover-img' layout='fill' objectFit='cover' />
+			<Image priority={true} src={Bg} alt='background-cover-img' fill style={{ objectFit: 'cover' }} />
 			<SloganContainer>
-				<SloganText>Innovative Solutions, Unmatched Expertise - InoxieSoft</SloganText>
+				<SloganText>Innovative Solutions, Unmatched Expertise - Inoxiesoft</SloganText>
 				<SubSloganText>Your Software Development Partner</SubSloganText>
 			</SloganContainer>
 		</FullWidthBackgroundContainer>

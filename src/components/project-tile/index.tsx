@@ -1,18 +1,22 @@
 import styled from '@emotion/styled';
-import { Avatar, Card } from 'antd';
+import { Card } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
 import { ProjectType, useProjectData } from 'src/components/project-tile/useProjectData';
+import { useIntersection } from 'src/shared/hooks/useIntersection';
 import { ChangeGrayscaleAnimation } from 'src/styles/animations/animations';
 const { Meta } = Card;
-import { useRef } from 'react';
-import { useIntersection } from 'src/shared/hooks/useIntersection';
 
 type StyleProps = {
 	isVisible: boolean;
 };
 
 const Container = styled.div<StyleProps>`
+	h3 {
+		margin-top: 0;
+	}
+
 	.card {
 		margin: 20px 0;
 		width: 600px;
@@ -49,28 +53,40 @@ export const ProjectTile = ({ project }: Props): JSX.Element => {
 	return (
 		<Container ref={ref} isVisible={isVisible}>
 			{link ? (
-				<Link href={link} passHref>
-					<a target='_blank'>
-						<Card className='card' cover={<Image src={img} />}>
-							<Meta
-								avatar={<Image src={logo} width={40} height={40} />}
-								title={<h3>{name}</h3>}
-								description={
-									<>
-										<p>{description}</p>
+				<Link href={link} target='_blank'>
+					<Card
+						className='card'
+						cover={
+							<div style={{ position: 'relative', width: '100%', height: 'auto', aspectRatio: '16/9' }}>
+								<Image src={img} alt='project-img' fill style={{ objectFit: 'cover' }} />
+							</div>
+						}
+					>
+						<Meta
+							avatar={<Image src={logo} width={40} height={40} alt='project-avatar' />}
+							title={<h3>{name}</h3>}
+							description={
+								<>
+									<p>{description}</p>
 
-										<p>Technologies used:</p>
-										{tech}
-									</>
-								}
-							/>
-						</Card>
-					</a>
+									<p>Technologies used:</p>
+									{tech}
+								</>
+							}
+						/>
+					</Card>
 				</Link>
 			) : (
-				<Card className='card' cover={<Image src={img} />}>
+				<Card
+					className='card'
+					cover={
+						<div style={{ position: 'relative', width: '100%', height: 'auto', aspectRatio: '16/9' }}>
+							<Image src={img} alt='project-img' fill style={{ objectFit: 'cover' }} />
+						</div>
+					}
+				>
 					<Meta
-						avatar={<Image src={logo} width={40} height={40} />}
+						avatar={<Image src={logo} width={40} height={40} alt='project-avatar' />}
 						title={<h3>{name}</h3>}
 						description={
 							<>

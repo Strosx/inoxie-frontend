@@ -1,0 +1,38 @@
+{
+	"meta-title": "Portfolio Wyróżnionych Projektów: Rozwój Stron WWW, Aplikacji Mobilnych, Sztucznej Inteligencji | Inoxiesoft",
+	"meta-description": "Sprawdź nasze najnowsze projekty rozwoju oprogramowania w Inoxiesoft, w tym platformę handlową SOFTFLIX, platformę Skillsive, kasyno kryptowalutowe, TradeAnalytics oraz narzędzie do raportowania podatku VAT dla EY Global. Nasz zespół wykwalifikowanych programistów i projektantów dedykowany jest dostarczaniu rozwiązań najwyższej jakości, które spełniają unikalne potrzeby naszych klientów.",
+	"h1Title": "Tworzenie Rozwiązań, które Sprawiają Różnicę: Nasz Portfolio Projektów",
+	"h2Title": "Nasze Sukcesy: Przynosimy Pomysły do Życia z Inoxiesoft",
+	"softflix": {
+		"name": "Softflix",
+		"description": "Platforma sprzedaży cyfrowej, zaprojektowana i opracowana przez Inoxie. System jest zintegrowany z interfejsami API dystrybutorów, Zoho CRM, Zoho Books, czatem TawkTo, IGDB API produktów, bramkami płatniczymi PayPal i Stripe oraz wieloma innymi. Zbudowany jako w pełni responsywna aplikacja wieloplatformowa z wykorzystaniem React, Next.js, ASP.NET Core i SQL Server."
+	},
+	"skillsive": {
+		"name": "Skillsive",
+		"description": "Cyfrowa platforma do szkoleń wirtualnej rzeczywistości, która obejmuje aplikację internetową, API i SDK dla Unity. Aplikacja internetowa składa się z panelu administracyjnego (zarządzanie klientami), panelu deweloperskiego (konfiguracja kursów) oraz panelu klienta (podgląd wyników). W tej aplikacji użyliśmy WebSockets, co umożliwiło zdalną kontrolę aplikacji VR z poziomu panelu klienta."
+	},
+	"eygvrt": {
+		"name": "EY Global Vat Reporting Tool",
+		"description": "Wzięliśmy udział w rozwoju Global Vat Reporting Tool dla EY GDS Polska. Ta aplikacja została stworzona do obliczania deklaracji podatkowych dla dużych, międzynarodowych korporacji. Aplikacja była zintegrowana z bazą danych Azure Cosmos, systemem weryfikacji numerów VAT Vies i wieloma innymi. Opracowana z wykorzystaniem ASP.NET Core i React na frontendzie."
+	},
+	"tradeanalytics": {
+		"name": "Trade Analytics",
+		"description": "Nasi programiści byli częścią zespołu deweloperskiego TradeAnalytics.pl (podczas pracy w Ceneo.pl). Głównym celem projektu było umożliwienie sprzedawcom Allegro analizowania swoich sprzedaży na różnego rodzaju wykresach i tabelach podsumowujących. Użyliśmy ElasticSearch do przechowywania danych, ASP.NET Core do logiki backendowej i Angular do frontendu."
+	},
+	"kolejoweABC": {
+		"name": "Kolejowe ABC",
+		"description": "Seria mini-gier zlecona przez Urząd Transportu Kolejowego. Wszystkie gry zostały stworzone na silniku Unity i dostosowane do platform mobilnych Android i IOS. Aplikacje w łatwy i przyjemny sposób uczą dzieci zasad bezpieczeństwa i właściwego zachowania na obszarach kolejowych."
+	},
+	"frankenstein": {
+		"name": "Frankenstein: Beyond the Time",
+		"description": "Wysokiej jakości grafiki, wieloplatformowa gra VR stworzona na silniku Unity. Gra została dostosowana do wszystkich najpopularniejszych urządzeń VR tamtej epoki, takich jak HTC Vive, Oculus Rift, PSVR. Część naszego zespołu brała udział w opracowywaniu funkcji i optymalizacji tej gry."
+	},
+	"cryptogambling": {
+		"name": "Kasyno Kryptowalutowe",
+		"description": "Aplikacja dla kryptowalutowej loterii, klienci mogli zarejestrować się, dodać środki poprzez płatność blockchain i dołączyć do loterii jackpot. Wykorzystane technologie to React, ASP.NET Core, MS SQL Server, Azure Cloud. Niestety aplikacja nigdy się nie rozpoczęła, klient zdecydował się zrezygnować z projektu."
+	},
+	"bhpapps": {
+		"name": "Skillsive SDK i Aplikacje do Szkoleń VR",
+		"description": "SDK zostało stworzone z myślą o sieciowaniu i funkcjach VR. Sieciowanie to połączenie API, które umożliwia odbieranie i wysyłanie danych do SQL Server i Azure Storage. Dodano funkcje VR, takie jak rozpoznawanie gestów ręki, kalibrację, interakcję i systemy ruchu. Na podstawie SDK zbudowano ponad 10 aplikacji VR."
+	}
+}

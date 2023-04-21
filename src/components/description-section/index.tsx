@@ -1,7 +1,7 @@
+import styled from '@emotion/styled';
+import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
 import { useIntersection } from 'src/shared/hooks/useIntersection';
-import Image from 'next/image';
-import styled from '@emotion/styled';
 import { AppearAnimation } from 'src/styles/animations/animations';
 
 type StyleProps = {
@@ -61,7 +61,7 @@ export const DescriptionSection = ({ imageUrl, title, subTitle, imagePosition, i
 	return (
 		<Container id={id} imagePosition={imagePosition} ref={ref} isVisible={isVisible}>
 			<ImageContainer>
-				<Image src={imageUrl} layout='fill' />
+				<Image src={imageUrl} fill alt='description-section-img' />
 			</ImageContainer>
 
 			<TextContainer>

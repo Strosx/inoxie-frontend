@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import LogoBlack from 'public/images/logos/inoxie-black-transparent.png';
-import LogoWhite from 'public/images/logos/inoxie-white-transparent.png';
-import LogoColor from 'public/images/logos/inoxie-color-transparent.png';
-import { useCallback } from 'react';
 import Link from 'next/link';
+import LogoBlack from 'public/images/logos/inoxie-black-transparent.png';
+import LogoColor from 'public/images/logos/inoxie-color-transparent.png';
+import LogoWhite from 'public/images/logos/inoxie-white-transparent.png';
+import { useCallback } from 'react';
 
 type Props = {
 	variant: LogoVariant;
@@ -29,20 +29,18 @@ const Logo = ({ variant, isClickable = true }: Props) => {
 
 	if (isClickable) {
 		return (
-			<Link href={'/'} passHref>
-				<a
-					onClick={e => {
-						e.preventDefault();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-					}}
-				>
-					<Image priority={true} src={getLogo()} layout='fill' />
-				</a>
+			<Link
+				href={'/'}
+				onClick={e => {
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				}}
+			>
+				<Image priority={true} src={getLogo()} fill alt='logo' />
 			</Link>
 		);
 	}
 
-	return <Image src={getLogo()} layout='fill' />;
+	return <Image src={getLogo()} fill alt='inoxiesoft-logo' />;
 };
 
 export default Logo;

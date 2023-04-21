@@ -14,19 +14,11 @@ const Content = styled.div<Props>`
 	animation: ${props => (props.isVisible ? AppearAnimation() : '')} 2s;
 
 	h2 {
-		font-size: 50px;
-		font-weight: 800;
 		text-align: center;
 	}
 
 	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
 		margin-bottom: 0px;
-
-		h2 {
-			font-size: 30px;
-			font-weight: 800;
-			text-align: center;
-		}
 	}
 `;
 
@@ -37,14 +29,14 @@ const ProjectsContainer = styled.div`
 	justify-content: space-around;
 `;
 
-export const ProjectsSection = (): JSX.Element => {
+export const ProjectsSection = ({ title }): JSX.Element => {
 	const ref = useRef();
 	const isVisible = useIntersection(ref, '0px');
 
 	return (
 		<>
 			<Content ref={ref} isVisible={isVisible} id='projects'>
-				<h2>Our Projects</h2>
+				<h2>{title}</h2>
 
 				<ProjectsContainer>
 					<ProjectTile project='softflix' />

@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 import { Card } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
+import { OpenSourceProjectType, useOpenSourceData } from 'src/components/open-source-tile/useOpenSourceData';
+import { useIntersection } from 'src/shared/hooks/useIntersection';
 import { ChangeGrayscaleAnimation } from 'src/styles/animations/animations';
 const { Meta } = Card;
-import { useRef } from 'react';
-import { useIntersection } from 'src/shared/hooks/useIntersection';
-import { OpenSourceProjectType, useOpenSourceData } from 'src/components/open-source-tile/useOpenSourceData';
 
 type StyleProps = {
 	isVisible: boolean;
@@ -49,28 +49,40 @@ export const OpenSourceTile = ({ project }: Props): JSX.Element => {
 	return (
 		<Container ref={ref} isVisible={isVisible}>
 			{link ? (
-				<Link href={link} passHref>
-					<a target='_blank'>
-						<Card className='card' cover={<Image src={img} />}>
-							<Meta
-								avatar={<Image src={logo} width={40} height={40} />}
-								title={<h3>{name}</h3>}
-								description={
-									<>
-										<p>{description}</p>
+				<Link href={link} target='_blank'>
+					<Card
+						className='card'
+						cover={
+							<div style={{ position: 'relative', width: '100%', height: 'auto', aspectRatio: '16/9' }}>
+								<Image src={img} alt='open-source-img' fill style={{ objectFit: 'cover' }} />
+							</div>
+						}
+					>
+						<Meta
+							avatar={<Image src={logo} width={40} height={40} alt='open-source-avatar' />}
+							title={<h3>{name}</h3>}
+							description={
+								<>
+									<p>{description}</p>
 
-										<p>Technologies used:</p>
-										{tech}
-									</>
-								}
-							/>
-						</Card>
-					</a>
+									<p>Technologies used:</p>
+									{tech}
+								</>
+							}
+						/>
+					</Card>
 				</Link>
 			) : (
-				<Card className='card' cover={<Image src={img} />}>
+				<Card
+					className='card'
+					cover={
+						<div style={{ position: 'relative', width: '100%', height: 'auto', aspectRatio: '16/9' }}>
+							<Image src={img} alt='open-source-img' fill style={{ objectFit: 'cover' }} />
+						</div>
+					}
+				>
 					<Meta
-						avatar={<Image src={logo} width={40} height={40} />}
+						avatar={<Image src={logo} width={40} height={40} alt='open-source-avatar' />}
 						title={<h3>{name}</h3>}
 						description={
 							<>

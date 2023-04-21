@@ -1,10 +1,10 @@
+import { AntDesignOutlined, CodepenOutlined, PhoneOutlined } from '@ant-design/icons';
 import styled from '@emotion/styled';
 import { Button } from 'antd';
-import { AppearAnimation, ChangeColorAnimation } from 'src/styles/animations/animations';
-import { PhoneOutlined, AntDesignOutlined, CodepenOutlined } from '@ant-design/icons';
+import { useTranslation } from 'next-i18next';
 import { useRef } from 'react';
-import { useIntersection } from 'src/shared/hooks/useIntersection';
 import { scrollToId } from 'src/components/link-button-with-scroll';
+import { AppearAnimation, ChangeColorAnimation } from 'src/styles/animations/animations';
 
 type Props = {
 	isVisible: boolean;
@@ -16,18 +16,17 @@ const Container = styled.div<Props>`
 	animation: ${props => (props.isVisible ? AppearAnimation() : '')} 2s;
 
 	h2 {
-		font-size: 50px;
-		font-weight: 800;
+		//	font-size: 50px;
+		//	font-weight: 800;
 		text-align: center;
 	}
 
 	@media (max-width: ${props => props.theme.breakpoints.tablet}px) {
-		margin-top: 50px;
 		margin-bottom: 0px;
 
 		h2 {
-			font-size: 30px;
-			font-weight: 800;
+			//	font-size: 30px;
+			//	font-weight: 800;
 			text-align: center;
 		}
 	}
@@ -47,7 +46,7 @@ const TilesContainer = styled.div`
 const StyledCard = styled.div`
 	margin: 10px;
 	padding: 30px;
-	background-color: white;
+	background-color: #f6f6f6;
 	width: 400px;
 	border-radius: 10px;
 
@@ -65,7 +64,7 @@ const StyledCard = styled.div`
 	}
 
 	#showmore {
-		opacity: 0;
+		opacity: 1;
 
 		align-self: baseline;
 
@@ -92,40 +91,39 @@ const StyledCard = styled.div`
 
 export const OurOfferSection = (): JSX.Element => {
 	const ref = useRef();
-	const isVisible = useIntersection(ref, '0px');
+	const { t } = useTranslation('home');
 
 	return (
-		<Container ref={ref} isVisible={isVisible} id='offer'>
-			<h2>What do we offer?</h2>
+		<Container ref={ref} isVisible={false} id='offer'>
+			<h2>{t('ourOfferSection.title')}</h2>
 			<TilesContainer>
 				<StyledCard>
 					<CodepenOutlined style={{ fontSize: '56px' }} />
 					<div>
-						<h3>Development</h3>
-						<p>Our team will help you to a technologies and develop software for your business</p>
+						<h3>{t('ourOfferSection.card1.title')}</h3>
+						<p>{t('ourOfferSection.card1.description')}</p>
 						<Button type='primary' id='showmore' onClick={e => scrollToId(e, 'development')}>
-							Show more
+							{t('ourOfferSection.card1.button')}
 						</Button>
 					</div>
 				</StyledCard>
-
 				<StyledCard>
 					<AntDesignOutlined style={{ fontSize: '56px' }} />
 					<div>
-						<h3>Business Design</h3>
-						<p>Team of highly qualified and experienced developers will create modern application.</p>
+						<h3>{t('ourOfferSection.card2.title')}</h3>
+						<p>{t('ourOfferSection.card2.description')}</p>
 						<Button type='primary' id='showmore' onClick={e => scrollToId(e, 'business-design')}>
-							Show more
+							{t('ourOfferSection.card2.button')}
 						</Button>
 					</div>
 				</StyledCard>
 				<StyledCard>
 					<PhoneOutlined style={{ fontSize: '56px' }} />
 					<div>
-						<h3>Consulting</h3>
-						<p>If you plan to expand your software, our experienced team will help you.</p>
+						<h3>{t('ourOfferSection.card3.title')}</h3>
+						<p>{t('ourOfferSection.card3.description')}</p>
 						<Button type='primary' id='showmore' onClick={e => scrollToId(e, 'consulting')}>
-							Show more
+							{t('ourOfferSection.card3.button')}
 						</Button>
 					</div>
 				</StyledCard>
