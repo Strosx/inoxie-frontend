@@ -1,5 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useCallback } from 'react';
 import { OrganizationSeo } from 'src/seo/OrganizationSeo';
 
 type Props = {
@@ -8,6 +10,42 @@ type Props = {
 
 export const SharedPageSeo = ({ pageName }: Props): JSX.Element => {
 	const { t } = useTranslation(pageName);
+	const router = useRouter();
+
+	const getCanonical = useCallback(() => {
+		if (router.asPath === '/') {
+			if (router.locale === 'en-US') {
+				return '';
+			}
+			return '/' + router.locale;
+		} else {
+			if (router.locale === 'en-US') {
+				return router.asPath;
+			}
+			return '/' + router.locale + router.asPath;
+		}
+	}, [router]);
+
+	const getHrefAlternatePage = useCallback(
+		(locale: string) => {
+			if (locale === 'pl-PL') {
+				if (router.asPath === '/') {
+					return '/pl-PL';
+				} else {
+					return '/pl-PL' + router.asPath;
+				}
+			}
+
+			if (locale == 'en-US') {
+				if (router.asPath === '/') {
+					return '';
+				} else {
+					return router.asPath;
+				}
+			}
+		},
+		[router]
+	);
 
 	return (
 		<>
@@ -17,9 +55,9 @@ export const SharedPageSeo = ({ pageName }: Props): JSX.Element => {
 
 				<OrganizationSeo />
 
-				<link rel='alternate' hrefLang='pl' href={`https://www.inoxiesoft.com/pl-PL/${pageName}`} />
-				<link rel='alternate' hrefLang='en' href={`https://www.inoxiesoft.com/${pageName}`} />
-				<link rel='canonical' href={`https://www.inoxiesoft.com/${pageName}`} />
+				<link rel='alternate' hrefLang='pl-PL' href={`https://www.inoxiesoft.com${getHrefAlternatePage('pl-PL')}`} />
+				<link rel='alternate' hrefLang='en-US' href={`https://www.inoxiesoft.com${getHrefAlternatePage('en-US')}`} />
+				<link rel='canonical' href={`https://www.inoxiesoft.com${getCanonical()}`} />
 			</Head>
 		</>
 	);
