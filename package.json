@@ -16,7 +16,7 @@
 		"i18next": "^22.4.14",
 		"i18next-browser-languagedetector": "^7.0.1",
 		"i18next-http-backend": "^2.2.0",
-		"next": "^13.3.0",
+		"next": "canary",
 		"next-compose-plugins": "^2.2.1",
 		"next-i18next": "^11.0.0",
 		"next-sitemap": "^4.0.7",
@@ -24,7 +24,7 @@
 		"react-dom": "^18.2.0",
 		"react-i18next": "^12.2.0",
 		"react-markdown": "^8.0.7",
-		"sharp": "0.32.0"
+		"sharp": "0.32.1"
 	},
 	"devDependencies": {
 		"@types/node": "^12.12.21",
