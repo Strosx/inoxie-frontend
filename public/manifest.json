@@ -1,0 +1,21 @@
+{
+  "name": "InoxieSoft - Automatyzacja AI i Oprogramowanie",
+  "short_name": "InoxieSoft",
+  "description": "Tworzymy oprogramowanie na zamówienie i automatyzujemy procesy biznesowe z AI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

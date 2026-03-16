@@ -1,9 +1,14 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://www.inoxiesoft.com
+Sitemap: https://inoxiesoft.com/sitemap.xml
 
-# Sitemaps
-Sitemap: https://www.inoxiesoft.com/sitemap.xml
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /

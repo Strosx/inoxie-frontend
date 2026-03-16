@@ -1,37 +1,39 @@
 {
-	"private": true,
-	"scripts": {
-		"dev": "next",
-		"build": "next build",
-		"postbuild": "next-sitemap --config next-sitemap-config.js",
-		"start": "next start",
-		"type-check": "tsc"
-	},
-	"dependencies": {
-		"@ant-design/icons": "^5.0.1",
-		"@emotion/react": "^11.10.6",
-		"@emotion/styled": "^11.10.6",
-		"@types/gtag.js": "^0.0.10",
-		"antd": "5.4.2",
-		"i18next": "^22.4.14",
-		"i18next-browser-languagedetector": "^7.0.1",
-		"i18next-http-backend": "^2.2.0",
-		"next": "canary",
-		"next-compose-plugins": "^2.2.1",
-		"next-i18next": "^11.0.0",
-		"next-sitemap": "^4.0.7",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-i18next": "^12.2.0",
-		"react-markdown": "^8.0.7",
-		"sharp": "0.32.1"
-	},
-	"devDependencies": {
-		"@types/node": "^12.12.21",
-		"@types/react": "^18.0.1",
-		"@types/react-dom": "^18.0.11",
-		"eslint": "^8.11.0",
-		"prettier": "^2.6.0",
-		"typescript": "5.0.4"
-	}
+  "name": "inoxie-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "lead-finder": "ts-node scripts/lead-finder/index.ts",
+    "analyze": "node scripts/simple-analyze.js"
+  },
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.4.2",
+    "@tailwindcss/postcss": "^4.2.1",
+    "autoprefixer": "^10.4.27",
+    "axios": "^1.13.6",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^17.3.1",
+    "framer-motion": "^12.36.0",
+    "lucide-react": "^0.577.0",
+    "next": "16.1.6",
+    "postcss": "^8.5.8",
+    "puppeteer": "^24.39.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.58.1",
+    "@types/node": "^20.19.37",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
 }
