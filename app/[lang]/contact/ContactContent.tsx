@@ -87,7 +87,7 @@ function Navbar({ lang }: { lang: string }) {
   const navLinks = [
     { href: lang === 'pl' ? '/' : '/en', label: t.start },
     { href: lang === 'pl' ? '/oferta' : '/en/oferta', label: t.oferta },
-    { href: lang === 'pl' ? '/o-nas' : '/en/o-nas', label: t.oNas },
+    { href: lang === 'pl' ? '/about-us' : '/en/about-us', label: t.oNas },
     { href: lang === 'pl' ? '/kontakt' : '/en/kontakt', label: t.kontakt },
   ];
 

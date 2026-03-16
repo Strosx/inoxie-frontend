@@ -84,7 +84,7 @@ function Navbar({ lang }: { lang: string }) {
   const navLinks = [
     { href: '/', label: 'Start' },
     { href: '/oferta', label: 'Oferta' },
-    { href: '/o-nas', label: 'O nas' },
+    { href: '/about-us', label: 'O nas' },
     { href: '/kontakt', label: 'Kontakt' },
   ];
 

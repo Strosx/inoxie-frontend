@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: PageProps) {
     description: translations[lang].about.subtitle,
     alternates: {
       languages: {
-        'pl': 'https://inoxiesoft.com/o-nas',
-        'en': 'https://inoxiesoft.com/about-us',
+        'pl': 'https://inoxiesoft.com/pl/about-us',
+        'en': 'https://inoxiesoft.com/en/about-us',
       },
     },
   };
