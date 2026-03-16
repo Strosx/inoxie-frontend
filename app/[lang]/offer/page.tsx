@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: PageProps) {
     description: translations[lang].offer.subtitle,
     alternates: {
       languages: {
-        'pl': 'https://inoxiesoft.com/oferta',
-        'en': 'https://inoxiesoft.com/en/oferta',
+        'pl': 'https://inoxiesoft.com/offer',
+        'en': 'https://inoxiesoft.com/en/offer',
       },
     },
   };

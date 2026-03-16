@@ -64,7 +64,7 @@ function LanguageSwitcher({ currentLang }: { currentLang: string }) {
           {languages.map((lang) => (
             <Link
               key={lang.code}
-              href={lang.code === 'pl' ? '/kontakt' : '/en/kontakt'}
+              href={lang.code === 'pl' ? '/contact' : '/en/contact'}
               onClick={() => setIsOpen(false)}
               className={`flex items-center gap-3 px-4 py-2 text-sm hover:bg-stone-50 ${currentLang === lang.code ? 'text-accent font-medium bg-accent/5' : 'text-stone-600'}`}
             >
@@ -83,9 +83,9 @@ function Navbar({ lang }: { lang: string }) {
   
   const navLinks = [
     { href: '/', label: 'Start' },
-    { href: '/oferta', label: 'Oferta' },
+    { href: '/offer', label: 'Oferta' },
     { href: '/about-us', label: 'O nas' },
-    { href: '/kontakt', label: 'Kontakt' },
+    { href: '/contact', label: 'Kontakt' },
   ];
 
   return (

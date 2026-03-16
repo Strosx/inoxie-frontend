@@ -66,7 +66,7 @@ function LanguageSwitcher({ currentLang }: { currentLang: string }) {
           {languages.map((lang) => (
             <Link
               key={lang.code}
-              href={lang.code === 'pl' ? '/oferta' : '/en/oferta'}
+              href={lang.code === 'pl' ? '/offer' : '/en/offer'}
               onClick={() => setIsOpen(false)}
               className={`flex items-center gap-3 px-4 py-2 text-sm hover:bg-stone-50 ${currentLang === lang.code ? 'text-accent font-medium bg-accent/5' : 'text-stone-600'}`}
             >
@@ -86,9 +86,9 @@ function Navbar({ lang }: { lang: string }) {
   
   const navLinks = [
     { href: lang === 'pl' ? '/' : '/en', label: t.start },
-    { href: lang === 'pl' ? '/oferta' : '/en/oferta', label: t.oferta },
+    { href: lang === 'pl' ? '/offer' : '/en/offer', label: t.oferta },
     { href: lang === 'pl' ? '/about-us' : '/en/about-us', label: t.oNas },
-    { href: lang === 'pl' ? '/kontakt' : '/en/kontakt', label: t.kontakt },
+    { href: lang === 'pl' ? '/contact' : '/en/contact', label: t.kontakt },
   ];
 
   return (
@@ -120,7 +120,7 @@ function Navbar({ lang }: { lang: string }) {
 
           <div className="hidden md:block">
             <Link
-              href={lang === 'pl' ? '/kontakt' : '/en/kontakt'}
+              href={lang === 'pl' ? '/contact' : '/en/contact'}
               className="bg-accent text-white px-5 py-2 rounded-lg font-medium hover:bg-accent-hover transition-colors"
             >
               {t.darmowaKonsultacja}
@@ -433,7 +433,7 @@ export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
                   : 'Contact us and let us discuss your needs. We will help you acquire more customers.'}
               </p>
               <Link
-                href={lang === 'pl' ? '/kontakt' : '/en/kontakt'}
+                href={lang === 'pl' ? '/contact' : '/en/contact'}
                 className="inline-block bg-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-accent-hover transition-all hover:shadow-lg hover:shadow-accent/25"
               >
                 {lang === 'pl' ? 'Skontaktuj się z nami' : 'Contact Us'}

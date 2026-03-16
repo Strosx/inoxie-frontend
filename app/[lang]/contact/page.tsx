@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: PageProps) {
     description: translations[lang].contact.description,
     alternates: {
       languages: {
-        'pl': 'https://inoxiesoft.com/kontakt',
-        'en': 'https://inoxiesoft.com/en/kontakt',
+        'pl': 'https://inoxiesoft.com/contact',
+        'en': 'https://inoxiesoft.com/en/contact',
       },
     },
   };
