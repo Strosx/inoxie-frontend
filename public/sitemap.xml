@@ -67,5 +67,53 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Blog - English -->
+  <url>
+    <loc>https://inoxiesoft.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/blog/ai-agents-2026-business-automation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/blog/llm-integration-guide-polish-companies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/blog/ai-roi-polish-enterprises-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog - Polish -->
+  <url>
+    <loc>https://inoxiesoft.com/pl/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/blog/agenci-ai-2026-automatyzacja-biznesowa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/blog/integracja-llm-przewodnik-polskie-firmy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/blog/roi-ai-polskie-przedsiebiorstwa-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>

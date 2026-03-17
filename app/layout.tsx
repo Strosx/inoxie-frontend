@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description: "Tworzymy oprogramowanie na zlecenie i automatyzujemy procesy biznesowe z wykorzystaniem AI. Agenci AI, integracje LLM, szkolenia.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "InoxieSoft - Automatyzacja AI i Oprogramowanie",
@@ -79,12 +79,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
+  const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "InoxieSoft",
     "url": "https://inoxiesoft.com",
-    "logo": "https://inoxiesoft.com/logo.png",
+    "logo": "https://inoxiesoft.com/logo.svg",
     "description": "Tworzymy oprogramowanie na zamówienie i automatyzujemy procesy biznesowe z AI. Zmniejszamy koszty, zwiększamy efektywność.",
     "founder": {
       "@type": "Person",
@@ -124,6 +124,31 @@ export default function RootLayout({
     "yearsInBusiness": 5
   };
 
+  // LocalBusiness schema for local SEO
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "InoxieSoft",
+    "image": "https://inoxiesoft.com/logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kolejowa 14",
+      "postalCode": "46-073",
+      "addressLocality": "Chróscina",
+      "addressCountry": "PL"
+    },
+    "telephone": "+48-798-943-352",
+    "email": "m.kamieniak@inoxiesoft.com",
+    "url": "https://inoxiesoft.com",
+    "priceRange": "$$",
+    "openingHours": ["Mo-Fr 09:00-17:00"],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Poland"
+    },
+    "serviceType": ["Automatyzacja AI", "Oprogramowanie na zamówienie", "Agenci AI"]
+  };
+
   return (
     <html lang="pl">
       <head>
@@ -131,7 +156,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.svg" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
       </head>
       <body className="bg-stone-50 antialiased">

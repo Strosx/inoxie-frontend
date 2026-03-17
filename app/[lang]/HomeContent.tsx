@@ -242,7 +242,7 @@ function Hero({ t }: { t: Translations }) {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80"
-                alt="Developer"
+                alt="InoxieSoft AI Developer - Automatyzacja procesów biznesowych z wykorzystaniem sztucznej inteligencji"
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover"
@@ -471,8 +471,28 @@ function WhyChooseUs({ t }: { t: Translations }) {
 function FAQ({ t }: { t: Translations }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  // FAQ Schema for Rich Snippets
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": t.faq.questions.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <section className="py-20 lg:py-28 bg-stone-50" id="faq">
+      {/* FAQ Schema for Google Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

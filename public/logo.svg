@@ -1,0 +1,7 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="40" height="40" rx="8" fill="#4f46e5"/>
+  <path d="M10 15h7.5v15H10V15z" fill="white"/>
+  <path d="M20 15h10v5H20V15z" fill="white"/>
+  <path d="M20 22.5h10v7.5H20V22.5z" fill="white"/>
+  <text x="55" y="28" font-family="Arial" font-size="20" font-weight="bold" fill="#4f46e5">InoxieSoft</text>
+</svg>
