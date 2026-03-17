@@ -1,5 +1,7 @@
 import { pl } from './pl';
 import { en } from './en';
+import { blogPl } from './blog-pl';
+import { blogEn } from './blog-en';
 
 export const languages = {
   pl: 'Polski',
@@ -11,6 +13,11 @@ export const defaultLang = 'pl';
 export const translations = {
   pl,
   en,
+} as const;
+
+export const blogTranslations = {
+  pl: blogPl,
+  en: blogEn,
 } as const;
 
 export type Lang = keyof typeof translations;

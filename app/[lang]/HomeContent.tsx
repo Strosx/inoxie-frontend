@@ -86,6 +86,7 @@ function Navbar({ t, lang }: { t: Translations; lang: Lang }) {
   const navLinks = [
     { href: `/${lang === 'pl' ? '' : lang + '/'}`, label: t.nav.start },
     { href: `/${lang === 'pl' ? 'offer' : 'en/offer'}`, label: t.nav.oferta },
+    { href: `/${lang === 'pl' ? 'blog' : 'en/blog'}`, label: t.nav.blog },
     { href: `/${lang === 'pl' ? 'about-us' : 'en/about-us'}`, label: t.nav.oNas },
     { href: `/${lang === 'pl' ? 'contact' : 'en/contact'}`, label: t.nav.kontakt },
   ];

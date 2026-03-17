@@ -6,6 +6,7 @@ export const en = {
     oNas: 'About',
     kontakt: 'Contact',
     cennik: 'Pricing',
+    blog: 'Blog',
     darmowaKonsultacja: 'Free Consultation',
   },
 

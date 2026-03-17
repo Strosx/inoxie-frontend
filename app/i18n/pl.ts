@@ -6,6 +6,7 @@ export const pl = {
     oNas: 'O nas',
     kontakt: 'Kontakt',
     cennik: 'Cennik',
+    blog: 'Blog',
     darmowaKonsultacja: 'Darmowa konsultacja',
   },
 
