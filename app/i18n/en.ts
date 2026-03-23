@@ -347,4 +347,13 @@ export const en = {
     title: 'InoxieSoft | AI Automation + Custom Software Development',
     description: 'We create custom software and automate business processes using AI. AI agents, LLM integrations, training. We reduce costs, increase efficiency. Contact us!',
   },
+
+  // Featured Blogs (Home Page)
+  featuredBlogs: {
+    title: 'Popular Articles',
+    subtitle: 'Discover the latest trends in AI and business automation',
+    ctaButton: 'View all articles',
+    readMore: 'Read more',
+    minRead: 'min read',
+  },
 };

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { type BlogPost } from '../../i18n/blog-posts';
 import type { Lang } from '../../i18n';
 import { translations, type Translations } from '../../i18n';
@@ -17,6 +18,19 @@ interface BlogListProps {
     minRead: string;
   };
   lang: Lang;
+}
+
+// Get image based on category
+function getCategoryImage(category: string): string {
+  const images: Record<string, string> = {
+    'AI Agents': 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+    'Agenci AI': 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+    'AI Integration': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    'Integracja AI': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    'Business AI': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    'AI w biznesie': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+  };
+  return images[category] || 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80';
 }
 
 // Language Switcher Component
@@ -271,9 +285,16 @@ export default function BlogList({ posts, t, lang }: BlogListProps) {
                     key={post.slug} 
                     className="bg-stone-50 rounded-2xl border border-stone-200 hover:border-accent/30 hover:shadow-lg transition-all overflow-hidden flex flex-col"
                   >
-                    {/* Category Badge */}
-                    <div className="p-6 pb-0">
-                      <span className="inline-block px-3 py-1 text-xs font-semibold bg-accent/10 text-accent rounded-full">
+                    {/* Featured Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={getCategoryImage(post.category)}
+                        alt={post.title}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <span className="absolute top-4 left-4 inline-block px-3 py-1 text-xs font-semibold bg-accent text-white rounded-full">
                         {post.category}
                       </span>
                     </div>

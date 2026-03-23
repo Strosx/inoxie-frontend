@@ -347,4 +347,13 @@ export const pl = {
     title: 'InoxieSoft | Automatyzacja AI + Oprogramowanie na Zamówienie',
     description: 'Tworzymy oprogramowanie na zlecenie i automatyzujemy procesy biznesowe z wykorzystaniem AI. Agenci AI, integracje LLM, szkolenia. Zmniejszamy koszty, zwiększamy efektywność. Skontaktuj się!',
   },
+
+  // Featured Blogs (Home Page)
+  featuredBlogs: {
+    title: 'Popularne artykuły',
+    subtitle: 'Poznaj najnowsze trendy w AI i automatyzacji biznesowej',
+    ctaButton: 'Zobacz wszystkie artykuły',
+    readMore: 'Czytaj więcej',
+    minRead: 'min czytania',
+  },
 };

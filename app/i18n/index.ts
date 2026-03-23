@@ -21,6 +21,7 @@ export const blogTranslations = {
 } as const;
 
 export type Lang = keyof typeof translations;
+export type Translations = typeof translations.pl;
 
 export function useTranslations(lang: Lang) {
   return translations[lang];

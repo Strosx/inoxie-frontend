@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import type { Lang } from '../i18n';
+import FeaturedBlogs from '../components/FeaturedBlogs';
 
 type Translations = typeof import('../i18n/pl').pl;
 
@@ -621,6 +622,7 @@ export default function HomeContent({ t, lang }: HomeContentProps) {
         <Hero t={t} />
         <Services t={t} />
         <AIAutomation t={t} />
+        <FeaturedBlogs t={t} lang={lang} />
         <WhyChooseUs t={t} />
         <FAQ t={t} />
       </main>
