@@ -95,8 +95,6 @@ function parseMarkdown(content: string): string {
   html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong class="font-bold"><em>$1</em></strong>');
   html = html.replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold text-stone-900">$1</strong>');
   html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
-  // Remove placeholder patterns (UL_, OL_, CODEBLOCK_, etc.) - don't convert to italic
-  html = html.replace(/___(UL_|OL_|CODEBLOCK_|INLINECODE_|TABLE_|QUOTE_)\d+___/g, '');
   
   // Process tables
   const tableBlocks: string[] = [];
@@ -177,7 +175,9 @@ function parseMarkdown(content: string): string {
         .replace(/___CODEBLOCK_(\d+)___/g, (_, idx) => codeBlocks[parseInt(idx)] || '')
         .replace(/___INLINECODE_(\d+)___/g, (_, idx) => inlineCode[parseInt(idx)] || '')
         .replace(/___TABLE_(\d+)___/g, (_, idx) => tableBlocks[parseInt(idx)] || '')
-        .replace(/___QUOTE_(\d+)___/g, (_, idx) => quoteBlocks[parseInt(idx)] || '');
+        .replace(/___QUOTE_(\d+)___/g, (_, idx) => quoteBlocks[parseInt(idx)] || '')
+        .replace(/___UL_(\d+)___/g, (_, idx) => listItems.ul[parseInt(idx)] || '')
+        .replace(/___OL_(\d+)___/g, (_, idx) => listItems.ol[parseInt(idx)] || '');
       
       // Check for Key Takeaways
       if (processed.includes('<strong class="font-semibold text-stone-900">Key Takeaways:</strong>')) {
