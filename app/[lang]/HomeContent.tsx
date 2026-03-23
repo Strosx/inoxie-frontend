@@ -617,16 +617,12 @@ function Footer({ t, lang }: { t: Translations; lang: Lang }) {
 export default function HomeContent({ t, lang }: HomeContentProps) {
   return (
     <>
-      <Navbar t={t} lang={lang} />
-      <main>
-        <Hero t={t} />
-        <Services t={t} />
-        <AIAutomation t={t} />
-        <FeaturedBlogs t={t} lang={lang} />
-        <WhyChooseUs t={t} />
-        <FAQ t={t} />
-      </main>
-      <Footer t={t} lang={lang} />
+      <Hero t={t} />
+      <Services t={t} />
+      <AIAutomation t={t} />
+      <FeaturedBlogs t={t} lang={lang} />
+      <WhyChooseUs t={t} />
+      <FAQ t={t} />
     </>
   );
 }

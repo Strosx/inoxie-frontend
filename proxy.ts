@@ -7,18 +7,18 @@ const defaultLocale = 'en';
 function getLocale(request: NextRequest): string {
   // Check Accept-Language header
   const acceptLanguage = request.headers.get('Accept-Language');
-  
+
   if (acceptLanguage) {
     // Check if browser prefers Polish
     if (acceptLanguage.toLowerCase().includes('pl')) {
       return 'pl';
     }
   }
-  
+
   return defaultLocale;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Skip for static files, api routes, etc.
