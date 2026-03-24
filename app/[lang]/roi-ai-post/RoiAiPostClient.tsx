@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
@@ -488,12 +489,11 @@ function RoiBarChart() {
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 
 export default function RoiAiPostClient({
-  t,
   lang,
 }: {
-  t: typeof import('../../i18n').translations.pl;
   lang: Lang;
 }) {
+  const t = useTranslations('blogPost');
   const isPL = lang === 'pl';
 
   const content = isPL ? {

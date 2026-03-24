@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
@@ -684,12 +685,11 @@ function FaqItem({ faq, index, lang }: { faq: typeof postData.faqs[0]; index: nu
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 
 export default function AiAgentsPostClient({
-  t,
   lang,
 }: {
-  t: typeof import('../../i18n').translations.pl;
   lang: Lang;
 }) {
+  const t = useTranslations('blogPost');
   const isPL = lang === 'pl';
 
   const formatDate = (dateStr: string) => {

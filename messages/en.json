@@ -1,0 +1,304 @@
+{
+  "nav": {
+    "start": "Home",
+    "oferta": "Services",
+    "oNas": "About",
+    "kontakt": "Contact",
+    "cennik": "Pricing",
+    "blog": "Blog",
+    "darmowaKonsultacja": "Free Consultation",
+    "waas": "Website as a Service"
+  },
+  "hero": {
+    "badge": "AI Automation + Custom Software",
+    "headline": "Accelerate Your Business",
+    "headlineAccent": " with AI",
+    "subheadline": "We create custom software and automate business processes using AI. We reduce costs, increase efficiency.",
+    "ctaPrimary": "Free Consultation",
+    "ctaSecondary": "View Services",
+    "projects": "50+ projects",
+    "rating": "5.0/5.0 rating",
+    "aiActive": "AI Active",
+    "efficiency": "efficiency",
+    "efficiencyValue": "+70%"
+  },
+  "services": {
+    "title": "What We Do",
+    "subtitle": "We combine programming with AI automation to deliver solutions that really impact your business results.",
+    "services": [
+      {
+        "title": "Custom Software",
+        "description": "We create custom web applications, ERP, CRM and other solutions tailored to your needs. Full development cycle - from concept to implementation.",
+        "features": ["Web Applications", "ERP/CRM Systems", "API Integrations", "Legacy Modernization"]
+      },
+      {
+        "title": "AI Automation",
+        "description": "We implement AI agents and automate business processes using the latest LLM models. Save time and resources.",
+        "features": ["AI Agents", "Workflow Automation", "Chatbots", "LLM Integrations"]
+      },
+      {
+        "title": "AI in Business",
+        "description": "We help you leverage AI in daily work - from AI assistants to advanced data analysis. Boost your team productivity.",
+        "features": ["AI Assistants", "Data Analysis", "Predictions", "Process Optimization"]
+      },
+      {
+        "title": "AI Training",
+        "description": "We teach how to effectively use AI in your company. Training for teams at every level of expertise.",
+        "features": ["Group Training", "Practical Workshops", "Individual Consulting", "Educational Materials"]
+      }
+    ],
+    "ctaTitle": "Not sure which solution is best for your company?",
+    "ctaButton": "Book Free Consultation",
+    "learnMore": "Learn more →"
+  },
+  "aiAutomation": {
+    "title": "AI Process Automation",
+    "subtitle": "We use the latest LLM models and AI agents to automate repetitive tasks and free your team for strategic work.",
+    "stats": [
+      { "value": "70%", "label": "Time Savings" },
+      { "value": "24/7", "label": "Availability" },
+      { "value": "50%", "label": "Cost Reduction" },
+      { "value": "100%", "label": "Scalability" }
+    ],
+    "automations": [
+      {
+        "title": "AI Assistants",
+        "description": "Intelligent assistants that answer customer questions 24/7. Multi-language support, contextual conversation.",
+        "useCase": "Customer service, sales support"
+      },
+      {
+        "title": "Email Automation",
+        "description": "Intelligent message management - sorting, replying, categorizing.",
+        "useCase": "Message handling, follow-ups"
+      },
+      {
+        "title": "Document Processing",
+        "description": "AI analyzes, summarizes and extracts key information from documents and contracts.",
+        "useCase": "Legal, HR, accounting"
+      },
+      {
+        "title": "E-commerce AI",
+        "description": "Personalized recommendations, automatic order management, returns handling.",
+        "useCase": "Online stores"
+      },
+      {
+        "title": "Research & Analysis",
+        "description": "Automatic data collection and analysis from various sources. Reports and summaries.",
+        "useCase": "Market research, competition analysis"
+      },
+      {
+        "title": "Workflow Automation",
+        "description": "Automation of repetitive tasks and processes in the company. Time savings and error elimination.",
+        "useCase": "Business processes, operations"
+      }
+    ],
+    "cta": "Let's talk about your automation"
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "We combine technical knowledge with a business approach. We understand company challenges and deliver solutions that deliver real results.",
+    "benefits": [
+      { "title": "Experience", "description": "Years of practice in software development and AI automation. We know the latest technologies and trends." },
+      { "title": "Expert Team", "description": "Our developers and AI specialists are passionate people with many years of experience." },
+      { "title": "Security", "description": "Your data and systems are safe. We apply the highest protection standards." },
+      { "title": "Fast Delivery", "description": "We deliver projects on time. Your time is important to us." }
+    ],
+    "testimonials": {
+      "title": "Companies That Trusted Us",
+      "rating": "5.0/5.0 average rating",
+      "quotes": [
+        { "quote": "Inoxie implemented AI customer service automation for us. We save 70% of time on repetitive tasks.", "author": "John Smith", "position": "CEO, Example Corp" },
+        { "quote": "Professional approach, punctuality and great communication. I recommend to anyone who wants to automate processes in their company.", "author": "Jane Doe", "position": "Owner, online store" },
+        { "quote": "The AI training conducted by Inoxie changed the way our entire team works. We are more productive.", "author": "Michael Johnson", "position": "COO, manufacturing company" }
+      ]
+    },
+    "stats": [
+      { "value": "50+", "label": "Completed Projects" },
+      { "value": "30+", "label": "Happy Clients" },
+      { "value": "100%", "label": "Projects Delivered On Time" }
+    ]
+  },
+  "howItWorks": {
+    "title": "How We Work",
+    "subtitle": "Transparent cooperation process. From the first conversation to implementation and ongoing support - we are with you at every stage.",
+    "modelsTitle": "Cooperation Models",
+    "modelsSubtitle": "Choose the form that best fits your needs",
+    "cta": "Start Cooperation"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "We answer the most frequently asked questions about AI automation and our services.",
+    "ctaTitle": "Have more questions? We will gladly help!",
+    "ctaButton": "Contact us",
+    "questions": [
+      { "question": "Is AI automation safe for my company?", "answer": "Yes, security is our priority. We apply the highest data protection standards, end-to-end encryption and GDPR compliance. Before implementation, we conduct a security audit of your systems." },
+      { "question": "How long does AI automation implementation take?", "answer": "Implementation time depends on the complexity of the process. Simple automations can be implemented within 1-2 weeks. More advanced solutions, such as dedicated AI agents or integrations with enterprise systems, typically take 4-8 weeks." },
+      { "question": "Do I need AI experience?", "answer": "Absolutely not. Our team handles all the technical side. You focus on your business. We also offer training for your team so you can fully leverage AI capabilities." },
+      { "question": "What companies can benefit from AI automation?", "answer": "Our solutions are aimed at companies of all sizes - from small businesses to large corporations. We match the technologies and scale of automation to your needs and budget." },
+      { "question": "Can I integrate AI with my existing systems?", "answer": "Yes, we have experience integrating with most popular business systems, such as CRM (Salesforce, HubSpot), ERP systems, e-commerce platforms, project management tools and many more." },
+      { "question": "How much can I save with AI automation?", "answer": "Typical savings are 30-70% of time spent on repetitive tasks. This depends on the nature of your processes. We conduct a free analysis to estimate potential savings for your company." },
+      { "question": "Do you offer AI training for teams?", "answer": "Yes, we conduct training at various levels of expertise - from AI basics for beginners to advanced workshops for technical teams. Training can be conducted online or in-person." },
+      { "question": "What is the cost of AI automation?", "answer": "Cost depends on the scope and complexity of the project. We offer flexible cooperation models: one-time projects, team augmentation or a standing retainer. Contact us to receive a free quote." }
+    ]
+  },
+  "footer": {
+    "description": "We create custom software and automate business processes using AI. We reduce costs, increase efficiency.",
+    "industries": "Industries",
+    "industriesList": ["E-commerce", "Finance", "Manufacturing", "Services", "Healthcare", "Retail"],
+    "email": "m.kamieniak@inoxiesoft.com",
+    "phone": "+48 798943352",
+    "location": "Kolejowa 14, 46-073 Chroscina, Poland",
+    "servicesTitle": "Services",
+    "companyTitle": "Company",
+    "copyright": "All rights reserved.",
+    "nip": "NIP: PL9910535234",
+    "owner": "Maciej Kamieniak Inoxie"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk about your project",
+    "description": "We will gladly help you leverage AI in your business. Contact us and we will respond within 24 hours.",
+    "form": {
+      "title": "Write to us",
+      "name": "Name and surname",
+      "email": "Email address",
+      "phone": "Phone number",
+      "company": "Company name",
+      "message": "Your message",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent.",
+      "error": "Oops, something went wrong. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Availability"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We help companies leverage the power of AI",
+    "story": {
+      "title": "Our Story",
+      "content": "Inoxie was born from a passion for technology and a desire to help companies in digital transformation. We combine years of experience in programming with the latest achievements in artificial intelligence to deliver solutions that really impact our clients' business results."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "Democratizing AI in business. We want every company, regardless of size, to be able to use the possibilities that artificial intelligence offers. We enable companies to focus on what is most important - business development - while we take over the burden of automation and process optimization."
+    },
+    "values": {
+      "title": "Our Values"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Together we create the future of AI"
+    }
+  },
+  "offer": {
+    "title": "Services",
+    "subtitle": "Comprehensive AI solutions for your business",
+    "cta": {
+      "title": "Need something else?",
+      "description": "Contact us - we will find a solution tailored to your needs.",
+      "button": "Let's talk"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Flexible cooperation models tailored to your needs",
+    "custom": {
+      "title": "Custom Solutions",
+      "description": "Every project is different. Contact us to receive a quote tailored to your needs.",
+      "cta": "Request quote"
+    }
+  },
+  "seo": {
+    "title": "InoxieSoft | AI Automation + Custom Software Development | Wrocław, Poland",
+    "description": "InoxieSoft — AI automation and custom software development for SMBs. We build websites, SaaS applications, chatbots and backend systems. Serving clients in Wrocław, Warsaw, Kraków, Poznań, Katowice."
+  },
+  "featuredBlogs": {
+    "title": "Popular Articles",
+    "subtitle": "Discover the latest trends in AI and business automation",
+    "ctaButton": "View all articles",
+    "readMore": "Read more",
+    "minRead": "min read"
+  },
+  "waas": {
+    "title": "Website as a Service",
+    "subtitle": "A complete website for your business for a monthly fee. No hidden costs, no long-term commitments.",
+    "seo": {
+      "title": "Website as a Service — Professional Business Websites | InoxieSoft",
+      "description": "Website as a Service (WAAS) is a complete website creation and maintenance service for small businesses. From €79/month. No hidden costs, no commitments. Book a free presentation!"
+    },
+    "hero": {
+      "badge": "New offering",
+      "cta": "Book a free presentation",
+      "ctaSecondary": "See how it works"
+    },
+    "problem": {
+      "title": "You know your business should be online, but..."
+    },
+    "solution": {
+      "title": "Website as a Service — we'll do it for you",
+      "description": "Instead of a one-time expense, you pay a monthly fee. We handle everything: from finding your customers' businesses, through creating a professional website, to sending the first messages to potential customers."
+    },
+    "forWhom": {
+      "title": "Who is Website as a Service for?",
+      "description": "Our service works best for:"
+    },
+    "features": {
+      "title": "What's included in Website as a Service?",
+      "subtitle": "Everything you need to acquire customers through the internet."
+    },
+    "pricing": {
+      "title": "How much does Website as a Service cost?",
+      "subtitle": "Simple, predictable pricing. No hidden fees, no commitments.",
+      "guarantee": "30-day satisfaction guarantee. If you're not happy in the first month — we'll refund your money.",
+      "noContract": "No minimum contract. Cancel whenever you want."
+    },
+    "comparison": {
+      "title": "Comparison: WAAS vs. Traditional Website",
+      "subtitle": "See why Website as a Service is a better choice for small businesses."
+    },
+    "testimonials": {
+      "title": "What our clients say"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions about Website as a Service"
+    },
+    "eeat": {
+      "title": "Why can you trust us?",
+      "subtitle": "Inoxie is a team with experience in website creation and marketing automation."
+    },
+    "cta": {
+      "title": "Ready to acquire customers through the internet?",
+      "description": "Book a free 20-minute presentation. We'll explain how Website as a Service can help your business.",
+      "button": "Book a presentation",
+      "orCall": "Prefer to talk? Call: +48 798 943 352"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Discover the latest trends in AI and business automation",
+    "faq": "Frequently Asked Questions",
+    "author": "Author",
+    "minRead": "min read",
+    "tableOfContents": "Table of Contents",
+    "relatedPosts": "Related Articles",
+    "backToBlog": "Back to blog",
+    "seeAlso": "See also",
+    "contact": "Contact",
+    "contactDescription": "Want to learn more about AI automation in your business?",
+    "bookConsultation": "Book a free consultation",
+    "readMore": "Read more"
+  },
+  "servicePage": {
+    "seeMore": "See more",
+    "contact": "Contact",
+    "relatedServices": "Related Services",
+    "faq": "Frequently Asked Questions"
+  }
+}

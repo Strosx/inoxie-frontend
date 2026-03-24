@@ -1,4 +1,4 @@
-import { translations, type Lang } from '../../i18n';
+import { type Lang } from '../../i18n';
 import ServicePageClient from './ServicePageClient';
 
 interface PageProps {
@@ -37,7 +37,6 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang];
 
-  return <ServicePageClient t={t} lang={lang} />;
+  return <ServicePageClient lang={lang} />;
 }

@@ -3,11 +3,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { translations } from '../../i18n';
 import Breadcrumb, { BreadcrumbJsonLd } from '../../components/Breadcrumb';
 
 interface ServicePageClientProps {
-  t: typeof translations.pl;
   lang: string;
 }
 
@@ -124,7 +122,7 @@ const content = {
   },
 };
 
-export default function ServicePageClient({ t, lang }: ServicePageClientProps) {
+export default function ServicePageClient({ lang }: ServicePageClientProps) {
   const c = lang === 'pl' ? content.pl : content.en;
 
   return (

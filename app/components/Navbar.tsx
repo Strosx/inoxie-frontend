@@ -3,12 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import type { Lang } from '../i18n';
 
-type Translations = typeof import('../i18n/pl').pl;
-
 interface NavbarProps {
-  t: Translations;
   lang: Lang;
 }
 
@@ -81,16 +79,17 @@ function LanguageSwitcher({ currentLang }: { currentLang: Lang }) {
   );
 }
 
-export default function Navbar({ t, lang }: NavbarProps) {
+export default function Navbar({ lang }: NavbarProps) {
+  const t = useTranslations('nav');
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: lang === 'pl' ? '/' : `/${lang}`, label: t.nav.start },
-    { href: `/${lang}/offer`, label: t.nav.oferta },
-    { href: `/${lang}/waas`, label: t.nav.waas },
-    { href: `/${lang}/blog`, label: t.nav.blog },
-    { href: `/${lang}/about-us`, label: t.nav.oNas },
-    { href: `/${lang}/contact`, label: t.nav.kontakt },
+    { href: lang === 'pl' ? '/' : `/${lang}`, label: t('start') },
+    { href: `/${lang}/offer`, label: t('oferta') },
+    { href: `/${lang}/waas`, label: t('waas') },
+    { href: `/${lang}/blog`, label: t('blog') },
+    { href: `/${lang}/about-us`, label: t('oNas') },
+    { href: `/${lang}/contact`, label: t('kontakt') },
   ];
 
   return (
@@ -125,7 +124,7 @@ export default function Navbar({ t, lang }: NavbarProps) {
               href={`/${lang}/contact`}
               className="bg-accent text-white px-5 py-2 rounded-lg font-medium hover:bg-accent-hover transition-colors"
             >
-              {t.nav.darmowaKonsultacja}
+              {t('darmowaKonsultacja')}
             </Link>
           </div>
 

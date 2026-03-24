@@ -1,4 +1,4 @@
-import { translations, type Lang } from '../i18n';
+import type { Lang } from '../i18n';
 import HomeContent from './HomeContent';
 
 interface PageProps {
@@ -11,11 +11,21 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang].seo;
   
+  const meta = {
+    pl: {
+      title: 'InoxieSoft | Automatyzacja AI + Oprogramowanie na Zamówienie | Wrocław, Polska',
+      description: 'InoxieSoft — automatyzacja AI i oprogramowanie na zamówienie dla MŚP. Tworzymy strony www, aplikacje SaaS, chatboty i systemy backendowe. Wrocław, Warszawa, Kraków, Poznań, Katowice.',
+    },
+    en: {
+      title: 'InoxieSoft | AI Automation + Custom Software Development | Wrocław, Poland',
+      description: 'InoxieSoft — AI automation and custom software development for SMBs. We build websites, SaaS applications, chatbots and backend systems. Serving clients in Wrocław, Warsaw, Kraków, Poznań, Katowice.',
+    },
+  };
+
   return {
-    title: t.title,
-    description: t.description,
+    title: meta[lang].title,
+    description: meta[lang].description,
     alternates: {
       canonical: 'https://inoxiesoft.com/pl',
       languages: {
@@ -28,7 +38,6 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang];
   
-  return <HomeContent t={t} lang={lang} />;
+  return <HomeContent lang={lang} />;
 }

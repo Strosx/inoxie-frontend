@@ -1,16 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import type { Lang } from '../i18n';
 import FeaturedBlogs from '../components/FeaturedBlogs';
 
-type Translations = typeof import('../i18n/pl').pl;
-
 interface HomeContentProps {
-  t: Translations;
   lang: Lang;
 }
 
@@ -81,15 +79,16 @@ function LanguageSwitcher({ currentLang }: { currentLang: Lang }) {
 }
 
 // Navigation Component with Language Switcher
-function Navbar({ t, lang }: { t: Translations; lang: Lang }) {
+function Navbar({ lang }: { lang: Lang }) {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations('nav');
   
   const navLinks = [
-    { href: `/${lang === 'pl' ? '' : lang + '/'}`, label: t.nav.start },
-    { href: `/${lang === 'pl' ? 'offer' : 'en/offer'}`, label: t.nav.oferta },
-    { href: `/${lang === 'pl' ? 'blog' : 'en/blog'}`, label: t.nav.blog },
-    { href: `/${lang === 'pl' ? 'about-us' : 'en/about-us'}`, label: t.nav.oNas },
-    { href: `/${lang === 'pl' ? 'contact' : 'en/contact'}`, label: t.nav.kontakt },
+    { href: `/${lang === 'pl' ? '' : lang + '/'}`, label: t('start') },
+    { href: `/${lang === 'pl' ? 'offer' : 'en/offer'}`, label: t('oferta') },
+    { href: `/${lang === 'pl' ? 'blog' : 'en/blog'}`, label: t('blog') },
+    { href: `/${lang === 'pl' ? 'about-us' : 'en/about-us'}`, label: t('oNas') },
+    { href: `/${lang === 'pl' ? 'contact' : 'en/contact'}`, label: t('kontakt') },
   ];
 
   return (
@@ -124,7 +123,7 @@ function Navbar({ t, lang }: { t: Translations; lang: Lang }) {
               href={`/${lang === 'pl' ? 'contact' : 'en/contact'}`}
               className="bg-accent text-white px-5 py-2 rounded-lg font-medium hover:bg-accent-hover transition-colors"
             >
-              {t.nav.darmowaKonsultacja}
+              {t('darmowaKonsultacja')}
             </Link>
           </div>
 
@@ -158,7 +157,8 @@ function Navbar({ t, lang }: { t: Translations; lang: Lang }) {
 }
 
 // Hero Section
-function Hero({ t }: { t: Translations }) {
+function Hero() {
+  const t = useTranslations('hero');
   return (
     <section className="relative pt-20 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-stone-50 via-white to-accent/5" />
@@ -178,7 +178,7 @@ function Hero({ t }: { t: Translations }) {
               className="inline-flex items-center gap-2 bg-accent-light text-accent px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              {t.hero.badge}
+              {t('badge')}
             </motion.div>
 
             <motion.h1
@@ -187,8 +187,8 @@ function Hero({ t }: { t: Translations }) {
               transition={{ delay: 0.2 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 mb-6 leading-tight"
             >
-              {t.hero.headline}
-              <span className="text-accent">{t.hero.headlineAccent}</span>
+              {t('headline')}
+              <span className="text-accent">{t('headlineAccent')}</span>
             </motion.h1>
 
             <motion.p
@@ -197,7 +197,7 @@ function Hero({ t }: { t: Translations }) {
               transition={{ delay: 0.3 }}
               className="text-lg sm:text-xl text-stone-600 mb-8 max-w-xl"
             >
-              {t.hero.subheadline}
+              {t('subheadline')}
             </motion.p>
 
             <motion.div
@@ -210,13 +210,13 @@ function Hero({ t }: { t: Translations }) {
                 href="/contact"
                 className="bg-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-accent-hover transition-all hover:shadow-lg hover:shadow-accent/25 text-center"
               >
-                {t.hero.ctaPrimary}
+                {t('ctaPrimary')}
               </Link>
               <Link
                 href="/offer"
                 className="bg-white text-stone-900 px-8 py-4 rounded-xl font-semibold hover:bg-stone-50 transition-colors text-center border border-stone-200"
               >
-                {t.hero.ctaSecondary}
+                {t('ctaSecondary')}
               </Link>
             </motion.div>
 
@@ -227,10 +227,10 @@ function Hero({ t }: { t: Translations }) {
               className="flex items-center gap-6 text-sm text-stone-500"
             >
               <div className="flex items-center gap-2">
-                <span>{t.hero.projects}</span>
+                <span>{t('projects')}</span>
               </div>
               <span>•</span>
-              <span>⭐ {t.hero.rating}</span>
+              <span>⭐ {t('rating')}</span>
             </motion.div>
           </motion.div>
 
@@ -258,7 +258,13 @@ function Hero({ t }: { t: Translations }) {
 }
 
 // Services Section
-function Services({ t }: { t: Translations }) {
+function Services() {
+  const t = useTranslations('services');
+  const services = t.raw('services') as Array<{
+    title: string;
+    description: string;
+    features: string[];
+  }>;
   return (
     <section className="py-20 lg:py-28 bg-white" id="oferta">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,15 +275,15 @@ function Services({ t }: { t: Translations }) {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
-            {t.services.title}
+            {t('title')}
           </h2>
           <p className="text-lg text-stone-600 max-w-xl mx-auto">
-            {t.services.subtitle}
+            {t('subtitle')}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {t.services.services.map((service, index) => (
+          {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -300,7 +306,7 @@ function Services({ t }: { t: Translations }) {
                 ))}
               </ul>
               <Link href="/offer" className="text-accent font-medium hover:text-accent-hover">
-                {t.services.learnMore}
+                {t('learnMore')}
               </Link>
             </motion.div>
           ))}
@@ -312,12 +318,12 @@ function Services({ t }: { t: Translations }) {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <p className="text-stone-600 mb-4">{t.services.ctaTitle}</p>
+          <p className="text-stone-600 mb-4">{t('ctaTitle')}</p>
           <Link
             href="/contact"
             className="inline-block bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-accent-hover"
           >
-            {t.services.ctaButton}
+            {t('ctaButton')}
           </Link>
         </motion.div>
       </div>
@@ -326,7 +332,14 @@ function Services({ t }: { t: Translations }) {
 }
 
 // AI Automation Section
-function AIAutomation({ t }: { t: Translations }) {
+function AIAutomation() {
+  const t = useTranslations('aiAutomation');
+  const stats = t.raw('stats') as Array<{ value: string; label: string }>;
+  const automations = t.raw('automations') as Array<{
+    title: string;
+    description: string;
+    useCase: string;
+  }>;
   return (
     <section className="py-20 lg:py-28 bg-stone-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,8 +349,8 @@ function AIAutomation({ t }: { t: Translations }) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.aiAutomation.title}</h2>
-          <p className="text-lg text-stone-400 max-w-xl mx-auto">{t.aiAutomation.subtitle}</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('title')}</h2>
+          <p className="text-lg text-stone-400 max-w-xl mx-auto">{t('subtitle')}</p>
         </motion.div>
 
         <motion.div
@@ -346,7 +359,7 @@ function AIAutomation({ t }: { t: Translations }) {
           viewport={{ once: true }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
-          {t.aiAutomation.stats.map((stat, index) => (
+          {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl lg:text-5xl font-bold text-accent mb-2">{stat.value}</div>
               <div className="text-stone-500 text-sm">{stat.label}</div>
@@ -355,7 +368,7 @@ function AIAutomation({ t }: { t: Translations }) {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.aiAutomation.automations.map((item, index) => (
+          {automations.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -378,7 +391,7 @@ function AIAutomation({ t }: { t: Translations }) {
           className="mt-12 text-center"
         >
           <Link href="/contact" className="inline-block bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-accent-hover">
-            {t.aiAutomation.cta}
+            {t('cta')}
           </Link>
         </motion.div>
       </div>
@@ -387,7 +400,15 @@ function AIAutomation({ t }: { t: Translations }) {
 }
 
 // Why Choose Us Section
-function WhyChooseUs({ t }: { t: Translations }) {
+function WhyChooseUs() {
+  const t = useTranslations('whyChooseUs');
+  const benefits = t.raw('benefits') as Array<{ title: string; description: string }>;
+  const testimonials = t.raw('testimonials') as {
+    title: string;
+    rating: string;
+    quotes: Array<{ quote: string; author: string; position: string }>;
+  };
+  const stats = t.raw('stats') as Array<{ value: string; label: string }>;
   return (
     <section className="py-20 lg:py-28 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -397,12 +418,12 @@ function WhyChooseUs({ t }: { t: Translations }) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">{t.whyChooseUs.title}</h2>
-          <p className="text-lg text-stone-600 max-w-xl mx-auto">{t.whyChooseUs.subtitle}</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">{t('title')}</h2>
+          <p className="text-lg text-stone-600 max-w-xl mx-auto">{t('subtitle')}</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {t.whyChooseUs.benefits.map((benefit, index) => (
+          {benefits.map((benefit, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -424,12 +445,12 @@ function WhyChooseUs({ t }: { t: Translations }) {
           className="mb-16"
         >
           <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">{t.whyChooseUs.testimonials.title}</h3>
-            <p className="text-accent font-medium">{t.whyChooseUs.testimonials.rating}</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">{testimonials.title}</h3>
+            <p className="text-accent font-medium">{testimonials.rating}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {t.whyChooseUs.testimonials.quotes.map((quote, index) => (
+            {testimonials.quotes.map((quote, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -455,7 +476,7 @@ function WhyChooseUs({ t }: { t: Translations }) {
           className="bg-white rounded-2xl p-8 border border-stone-200"
         >
           <div className="grid sm:grid-cols-3 gap-8 text-center">
-            {t.whyChooseUs.stats.map((stat, index) => (
+            {stats.map((stat, index) => (
               <div key={index}>
                 <div className="text-3xl font-bold text-accent mb-1">{stat.value}</div>
                 <div className="text-stone-600 text-sm">{stat.label}</div>
@@ -469,14 +490,15 @@ function WhyChooseUs({ t }: { t: Translations }) {
 }
 
 // FAQ Section
-function FAQ({ t }: { t: Translations }) {
+function FAQ() {
+  const t = useTranslations('faq');
+  const questions = t.raw('questions') as Array<{ question: string; answer: string }>;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // FAQ Schema for Rich Snippets
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": t.faq.questions.map((faq) => ({
+    "mainEntity": questions.map((faq) => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
@@ -488,7 +510,6 @@ function FAQ({ t }: { t: Translations }) {
 
   return (
     <section className="py-20 lg:py-28 bg-stone-50" id="faq">
-      {/* FAQ Schema for Google Rich Snippets */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -501,12 +522,12 @@ function FAQ({ t }: { t: Translations }) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">{t.faq.title}</h2>
-          <p className="text-lg text-stone-600">{t.faq.subtitle}</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">{t('title')}</h2>
+          <p className="text-lg text-stone-600">{t('subtitle')}</p>
         </motion.div>
 
         <div className="space-y-4">
-          {t.faq.questions.map((faq, index) => (
+          {questions.map((faq, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -536,9 +557,9 @@ function FAQ({ t }: { t: Translations }) {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <p className="text-stone-600 mb-4">{t.faq.ctaTitle}</p>
+          <p className="text-stone-600 mb-4">{t('ctaTitle')}</p>
           <Link href="/contact" className="inline-block bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-accent-hover">
-            {t.faq.ctaButton}
+            {t('ctaButton')}
           </Link>
         </motion.div>
       </div>
@@ -546,83 +567,16 @@ function FAQ({ t }: { t: Translations }) {
   );
 }
 
-// Footer Component
-function Footer({ t, lang }: { t: Translations; lang: Lang }) {
-  return (
-    <footer className="bg-stone-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <Link href={`/${lang === 'pl' ? '' : lang}`} className="flex items-center gap-2 mb-4">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-accent">
-                <rect width="32" height="32" rx="6" className="fill-current text-accent"/>
-                <path d="M8 10h6v12H8V10z" fill="white"/>
-                <path d="M16 10h8v4h-8v-4z" fill="white"/>
-                <path d="M16 16h8v6h-8v-6z" fill="white"/>
-              </svg>
-              <span className="text-xl font-bold text-accent">InoxieSoft</span>
-            </Link>
-            <p className="text-stone-400 mb-6 max-w-md">{t.footer.description}</p>
-            <div className="mb-6">
-              <p className="text-stone-500 text-sm mb-2">{t.footer.industries}:</p>
-              <div className="flex flex-wrap gap-2">
-                {t.footer.industriesList.map((industry) => (
-                  <span key={industry} className="text-stone-400 text-sm">{industry}</span>
-                ))}
-              </div>
-            </div>
-            <div className="space-y-2 text-stone-400 text-sm">
-              <p>{t.footer.email}</p>
-              <p>{t.footer.phone}</p>
-              <p>{t.footer.location}</p>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">{t.footer.servicesTitle}</h4>
-            <ul className="space-y-2">
-              {t.footer.services.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-stone-400 hover:text-accent text-sm">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">{t.footer.companyTitle}</h4>
-            <ul className="space-y-2">
-              {t.footer.company.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-stone-400 hover:text-accent text-sm">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-stone-800 mt-8 pt-8 text-center text-stone-500 text-sm">
-          <p>© {new Date().getFullYear()} InoxieSoft. {t.footer.copyright}</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 // Main HomeContent Component
-export default function HomeContent({ t, lang }: HomeContentProps) {
+export default function HomeContent({ lang }: HomeContentProps) {
   return (
     <>
-      <Hero t={t} />
-      <Services t={t} />
-      <AIAutomation t={t} />
-      <FeaturedBlogs t={t} lang={lang} />
-      <WhyChooseUs t={t} />
-      <FAQ t={t} />
+      <Hero />
+      <Services />
+      <AIAutomation />
+      <FeaturedBlogs lang={lang} />
+      <WhyChooseUs />
+      <FAQ />
     </>
   );
 }

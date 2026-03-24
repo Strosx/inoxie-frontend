@@ -1,20 +1,21 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { translations } from '../../i18n';
 
 const citiesEN = ['Warsaw', 'Krakow', 'Wroclaw', 'Poznan', 'Gdansk', 'Lodz'];
 const citiesPL = ['Warszawa', 'Kraków', 'Wrocław', 'Poznań', 'Gdańsk', 'Łódź'];
 
 interface ContactContentProps {
-  t: typeof translations.pl;
   lang: string;
 }
 
-export default function ContactContent({ t, lang }: ContactContentProps) {
+export default function ContactContent({ lang }: ContactContentProps) {
+  const t = useTranslations('contact');
+  const tf = useTranslations('footer');
   const cities = lang === 'pl' ? citiesPL : citiesEN;
   const [formData, setFormData] = useState({
     name: '',
@@ -60,14 +61,14 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
                 className="inline-flex items-center gap-2 bg-accent-light text-accent px-4 py-2 rounded-full text-sm font-medium mb-6"
               >
                 <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                {t.contact.title}
+                {t('title')}
               </motion.div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 mb-6">
-                {t.contact.subtitle}
+                {t('subtitle')}
               </h1>
               <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto">
-                {t.contact.description}
+                {t('description')}
               </p>
             </motion.div>
           </div>
@@ -83,7 +84,7 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
                 viewport={{ once: true }}
               >
                 <h2 className="text-2xl font-bold text-stone-900 mb-6">
-                  {t.contact.info.title}
+                  {t('info.title')}
                 </h2>
                 
                 <div className="space-y-6">
@@ -92,9 +93,9 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
                       <span className="text-accent text-xl">✉</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-stone-900 mb-1">{t.contact.info.email}</h3>
-                      <a href={`mailto:${t.footer.email}`} className="text-stone-600 hover:text-accent">
-                        {t.footer.email}
+                      <h3 className="font-semibold text-stone-900 mb-1">{t('info.email')}</h3>
+                      <a href={`mailto:${tf('email')}`} className="text-stone-600 hover:text-accent">
+                        {tf('email')}
                       </a>
                     </div>
                   </div>
@@ -104,9 +105,9 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
                       <span className="text-accent text-xl">📞</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-stone-900 mb-1">{t.contact.info.phone}</h3>
-                      <a href={`tel:${t.footer.phone.replace(/\s/g, '')}`} className="text-stone-600 hover:text-accent">
-                        {t.footer.phone}
+                      <h3 className="font-semibold text-stone-900 mb-1">{t('info.phone')}</h3>
+                      <a href={`tel:${tf('phone').replace(/\s/g, '')}`} className="text-stone-600 hover:text-accent">
+                        {tf('phone')}
                       </a>
                     </div>
                   </div>
@@ -116,14 +117,14 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
                       <span className="text-accent text-xl">📍</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-stone-900 mb-1">{t.contact.info.location}</h3>
-                      <p className="text-stone-600">{t.footer.location}</p>
+                      <h3 className="font-semibold text-stone-900 mb-1">{t('info.location')}</h3>
+                      <p className="text-stone-600">{tf('location')}</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 p-6 bg-stone-50 rounded-xl border border-stone-100">
-                  <h3 className="font-semibold text-stone-900 mb-3">{t.contact.info.availability}</h3>
+                  <h3 className="font-semibold text-stone-900 mb-3">{t('info.availability')}</h3>
                   <p className="text-stone-600">{lang === 'pl' ? 'Pon - Pt: 9:00 - 18:00' : 'Mon - Fri: 9:00 - 18:00'}</p>
                   <p className="text-stone-500 text-sm mt-2">{lang === 'pl' ? 'Wsparcie dostępne 24/7 dla klientów Enterprise' : '24/7 support available for Enterprise clients'}</p>
                 </div>
@@ -159,7 +160,7 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
                         <span className="text-green-500 text-2xl">✓</span>
                       </div>
                       <h3 className="text-xl font-semibold text-stone-900 mb-2">
-                        {t.contact.form.success}
+                        {t('form.success')}
                       </h3>
                       <p className="text-stone-600">
                         {lang === 'pl' ? 'Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe.' : 'Thank you for contacting us. We will respond as soon as possible.'}
@@ -169,7 +170,7 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-2">
-                          {t.contact.form.name} *
+                          {t('form.name')} *
                         </label>
                         <input
                           type="text"
@@ -185,7 +186,7 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
 
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2">
-                          {t.contact.form.email} *
+                          {t('form.email')} *
                         </label>
                         <input
                           type="email"
@@ -201,7 +202,7 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
 
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-stone-700 mb-2">
-                          {t.contact.form.phone}
+                          {t('form.phone')}
                         </label>
                         <input
                           type="tel"
@@ -216,7 +217,7 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
 
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-2">
-                          {t.contact.form.message} *
+                          {t('form.message')} *
                         </label>
                         <textarea
                           id="message"
@@ -238,12 +239,12 @@ export default function ContactContent({ t, lang }: ContactContentProps) {
                         {isSubmitting ? (
                           <>
                             <span className="animate-spin">⟳</span>
-                            {t.contact.form.sending}
+                            {t('form.sending')}
                           </>
                         ) : (
                           <>
                             <span>→</span>
-                            {t.contact.form.submit}
+                            {t('form.submit')}
                           </>
                         )}
                       </button>

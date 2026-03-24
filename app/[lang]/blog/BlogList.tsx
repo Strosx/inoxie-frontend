@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { type BlogPost } from '../../i18n/blog-posts';
@@ -28,14 +29,6 @@ function getBlogUrl(slug: string, lang: Lang): string {
 
 interface BlogListProps {
   posts: BlogPost[];
-  t: {
-    title: string;
-    subtitle: string;
-    readMore: string;
-    published: string;
-    author: string;
-    minRead: string;
-  };
   lang: Lang;
 }
 
@@ -52,7 +45,8 @@ function getCategoryImage(category: string): string {
   return images[category] || 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80';
 }
 
-export default function BlogList({ posts, t, lang }: BlogListProps) {
+export default function BlogList({ posts, lang }: BlogListProps) {
+  const t = useTranslations('blog');
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
     return date.toLocaleDateString(lang === 'pl' ? 'pl-PL' : 'en-US', {
@@ -70,8 +64,8 @@ export default function BlogList({ posts, t, lang }: BlogListProps) {
             <div className="absolute top-20 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10" />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-3xl">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">{t.title}</h1>
-                <p className="text-xl text-stone-300">{t.subtitle}</p>
+                <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('title')}</h1>
+                <p className="text-xl text-stone-300">{t('subtitle')}</p>
               </div>
             </div>
           </section>
@@ -126,7 +120,7 @@ export default function BlogList({ posts, t, lang }: BlogListProps) {
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
-                          <span>{post.readingTime} {t.minRead}</span>
+                          <span>{post.readingTime} {t('minRead')}</span>
                         </div>
                       </div>
 
@@ -135,7 +129,7 @@ export default function BlogList({ posts, t, lang }: BlogListProps) {
                         href={getBlogUrl(post.slug, lang)}
                         className="mt-4 inline-flex items-center text-accent font-semibold hover:text-accent-hover transition-colors"
                       >
-                        {t.readMore}
+                        {t('readMore')}
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>

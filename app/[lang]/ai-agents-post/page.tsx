@@ -1,5 +1,5 @@
 import AiAgentsPostClient from './AiAgentsPostClient';
-import { translations, type Lang } from '../../i18n';
+import { type Lang } from '../../i18n';
 
 interface PageProps {
   params: Promise<{ lang: Lang }>;
@@ -35,6 +35,5 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang as Lang];
-  return <AiAgentsPostClient t={t} lang={lang as Lang} />;
+  return <AiAgentsPostClient lang={lang as Lang} />;
 }

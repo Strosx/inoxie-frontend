@@ -1,4 +1,4 @@
-import { translations, type Lang } from '../../i18n';
+import { type Lang } from '../../i18n';
 import ContactContent from './ContactContent';
 
 interface PageProps {
@@ -11,11 +11,21 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang].seo;
   
+  const meta = {
+    pl: {
+      title: 'Kontakt | InoxieSoft',
+      description: 'Porozmawiajmy o Twoim projekcie. Skontaktuj się z nami, aby omówić wdrożenie AI w Twojej firmie.',
+    },
+    en: {
+      title: 'Contact | InoxieSoft',
+      description: "Let's talk about your project. Contact us to discuss AI implementation for your business.",
+    },
+  };
+
   return {
-    title: `${translations[lang].contact.title} | InoxieSoft`,
-    description: translations[lang].contact.description,
+    title: meta[lang].title,
+    description: meta[lang].description,
     alternates: {
       languages: {
         'pl': 'https://inoxiesoft.com/pl/contact',
@@ -27,7 +37,6 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang];
   
-  return <ContactContent t={t} lang={lang} />;
+  return <ContactContent lang={lang} />;
 }

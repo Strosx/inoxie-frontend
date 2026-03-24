@@ -1,4 +1,4 @@
-import { translations, type Lang } from '../../i18n';
+import { type Lang } from '../../i18n';
 import AboutPageClient from '../../components/AboutPageClient';
 
 interface PageProps {
@@ -12,9 +12,20 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { lang } = await params;
   
+  const meta = {
+    pl: {
+      title: 'O nas | InoxieSoft',
+      description: 'Pomagamy firmom wykorzystywać moc sztucznej inteligencji.',
+    },
+    en: {
+      title: 'About Us | InoxieSoft',
+      description: 'We help companies leverage the power of artificial intelligence.',
+    },
+  };
+
   return {
-    title: `${translations[lang].about.title} | InoxieSoft`,
-    description: translations[lang].about.subtitle,
+    title: meta[lang].title,
+    description: meta[lang].description,
     alternates: {
       languages: {
         'pl': 'https://inoxiesoft.com/pl/about-us',
@@ -26,7 +37,6 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang];
   
-  return <AboutPageClient t={t} lang={lang} />;
+  return <AboutPageClient lang={lang} />;
 }

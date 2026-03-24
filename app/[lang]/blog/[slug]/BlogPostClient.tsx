@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { type BlogPost } from '../../../i18n/blog-posts';
@@ -9,14 +10,6 @@ import { FaqJsonLd } from './FaqJsonLd';
 interface BlogPostClientProps {
   post: BlogPost;
   relatedPosts: BlogPost[];
-  t: {
-    backToBlog: string;
-    published: string;
-    author: string;
-    minRead: string;
-    relatedPosts: string;
-    share: string;
-  };
   lang: Lang;
 }
 
@@ -209,7 +202,8 @@ function getCategoryImage(category: string): string {
   return images[category] || 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80';
 }
 
-export default function BlogPostClient({ post, relatedPosts, t, lang }: BlogPostClientProps) {
+export default function BlogPostClient({ post, relatedPosts, lang }: BlogPostClientProps) {
+  const t = useTranslations('blog');
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
     return date.toLocaleDateString(lang === 'pl' ? 'pl-PL' : 'en-US', {
@@ -295,7 +289,7 @@ export default function BlogPostClient({ post, relatedPosts, t, lang }: BlogPost
                 <li>/</li>
                 <li>
                   <Link href={`/${lang}/blog`} className="hover:text-accent">
-                    {t.backToBlog}
+                    {t('backToBlog')}
                   </Link>
                 </li>
                 <li>/</li>
@@ -345,7 +339,7 @@ export default function BlogPostClient({ post, relatedPosts, t, lang }: BlogPost
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span>{post.readingTime} {t.minRead}</span>
+                  <span>{post.readingTime} {t('minRead')}</span>
                 </div>
               </div>
             </div>
@@ -391,7 +385,7 @@ export default function BlogPostClient({ post, relatedPosts, t, lang }: BlogPost
           {relatedPosts.length > 0 && (
             <section className="py-12 lg:py-16 bg-stone-100">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl font-bold text-stone-900 mb-8">{t.relatedPosts}</h2>
+                <h2 className="text-2xl font-bold text-stone-900 mb-8">{t('relatedPosts')}</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   {relatedPosts.map(relatedPost => (
                     <article key={relatedPost.slug} className="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-accent/30 hover:shadow-lg transition-all">
@@ -418,7 +412,7 @@ export default function BlogPostClient({ post, relatedPosts, t, lang }: BlogPost
                           href={`/${lang}/blog/${relatedPost.slug}`}
                           className="text-accent font-semibold text-sm hover:text-accent-hover"
                         >
-                          {t.backToBlog} →
+                          {t('backToBlog')} →
                         </Link>
                       </div>
                     </article>

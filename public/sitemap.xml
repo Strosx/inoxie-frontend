@@ -184,27 +184,26 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://inoxiesoft.com/en/blog/ai-agents-2026-business-automation</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/ai-agents-2026-business-automation"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/agenci-ai-2026-automatyzacja-biznesowa"/>
+    <loc>https://inoxiesoft.com/en/roi-ai-post</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/roi-ai-post"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/roi-ai-post"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://inoxiesoft.com/en/blog/llm-integration-guide-polish-companies</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/llm-integration-guide-polish-companies"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/integracja-llm-przewodnik-polskie-firmy"/>
+    <loc>https://inoxiesoft.com/en/ai-agents-post</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/ai-agents-post"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/ai-agents-post"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://inoxiesoft.com/en/blog/ai-roi-polish-enterprises-2026</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/ai-roi-polish-enterprises-2026"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/roi-ai-polskie-przedsiebiorstwa-2026"/>
+    <loc>https://inoxiesoft.com/en/llm-integration-post</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/llm-integration-post"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/llm-integration-post"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
   <!-- Blog - Polish -->
   <url>
     <loc>https://inoxiesoft.com/pl/blog</loc>
@@ -214,23 +213,23 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://inoxiesoft.com/pl/blog/agenci-ai-2026-automatyzacja-biznesowa</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/agenci-ai-2026-automatyzacja-biznesowa"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/ai-agents-2026-business-automation"/>
+    <loc>https://inoxiesoft.com/pl/roi-ai-post</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/roi-ai-post"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/roi-ai-post"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://inoxiesoft.com/pl/blog/integracja-llm-przewodnik-polskie-firmy</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/integracja-llm-przewodnik-polskie-firmy"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/llm-integration-guide-polish-companies"/>
+    <loc>https://inoxiesoft.com/pl/ai-agents-post</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/ai-agents-post"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/ai-agents-post"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://inoxiesoft.com/pl/blog/roi-ai-polskie-przedsiebiorstwa-2026</loc>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/roi-ai-polskie-przedsiebiorstwa-2026"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/ai-roi-polish-enterprises-2026"/>
+    <loc>https://inoxiesoft.com/pl/llm-integration-post</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/llm-integration-post"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/llm-integration-post"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

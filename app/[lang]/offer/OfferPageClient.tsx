@@ -1,9 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { translations } from '../../i18n';
 
 const servicesEN = [
   { title: 'Custom Website Development', description: 'Professional business websites, e-commerce stores, and tailored solutions for your industry.', features: ['Business websites', 'E-commerce', 'Landing pages', 'Portfolios'], href: '/en/strona-internetowa-wroclaw' },
@@ -36,13 +36,13 @@ const cityServicesEN = [
 ];
 
 interface OfferPageClientProps {
-  t: typeof translations.pl;
   lang: string;
 }
 
-export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
+export default function OfferPageClient({ lang }: OfferPageClientProps) {
   const cityServices = lang === 'pl' ? cityServicesPL : cityServicesEN;
   const services = lang === 'pl' ? servicesPL : servicesEN;
+  const t = useTranslations('offer');
   
   return (
     <>
@@ -68,7 +68,7 @@ export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
               </motion.div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 mb-6">
-                {lang === 'pl' ? 'Profesjonalne strony www dla firm' : 'Professional Websites for Businesses'}
+                {t('subtitle')}
               </h1>
               <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto mb-8">
                 {lang === 'pl' 
@@ -207,7 +207,7 @@ export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
                       href={service.href}
                       className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover transition-colors"
                     >
-                      {lang === 'pl' ? 'Zobacz szczegóły →' : 'See details →'}
+                      {t('cta.button')}
                     </Link>
                   </div>
                 </motion.div>
@@ -284,7 +284,7 @@ export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
                 href={lang === 'pl' ? '/contact' : '/en/contact'}
                 className="inline-block bg-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-accent-hover transition-all hover:shadow-lg hover:shadow-accent/25"
               >
-                {lang === 'pl' ? 'Skontaktuj się z nami' : 'Contact Us'}
+                {t('cta.button')}
               </Link>
             </motion.div>
           </div>

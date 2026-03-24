@@ -1,0 +1,304 @@
+{
+  "nav": {
+    "start": "Start",
+    "oferta": "Oferta",
+    "oNas": "O nas",
+    "kontakt": "Kontakt",
+    "cennik": "Cennik",
+    "blog": "Blog",
+    "darmowaKonsultacja": "Darmowa konsultacja",
+    "waas": "Website as a Service"
+  },
+  "hero": {
+    "badge": "Automatyzacja AI + Oprogramowanie",
+    "headline": "Przyspieszamy Twój biznes",
+    "headlineAccent": " z AI",
+    "subheadline": "Tworzymy oprogramowanie na zamówienie i automatyzujemy procesy z wykorzystaniem AI. Zmniejszamy koszty, zwiększamy efektywność.",
+    "ctaPrimary": "Darmowa konsultacja",
+    "ctaSecondary": "Zobacz ofertę",
+    "projects": "50+ projektów",
+    "rating": "5.0/5.0 oceny",
+    "aiActive": "AI Active",
+    "efficiency": "efektywność",
+    "efficiencyValue": "+70%"
+  },
+  "services": {
+    "title": "Co robimy?",
+    "subtitle": "Łączymy programowanie z automatyzacją AI, aby dostarczać rozwiązania, które realnie wpływają na wyniki Twojego biznesu.",
+    "services": [
+      {
+        "title": "Oprogramowanie na Zamówienie",
+        "description": "Tworzymy dedykowane aplikacje webowe, systemy ERP, CRM i inne rozwiązania dopasowane do Twoich potrzeb. Pełen cykl realizacji - od koncepcji po wdrożenie.",
+        "features": ["Aplikacje webowe", "Systemy ERP/CRM", "Integracje API", "Modernizacja legacy"]
+      },
+      {
+        "title": "Automatyzacja AI",
+        "description": "Wdrażamy agentów AI i automatyzujemy procesy biznesowe z wykorzystaniem najnowszych modeli LLM. Oszczędzaj czas i zasoby.",
+        "features": ["Agenci AI", "Automatyzacja workflow", "Chatboty", "Integracje LLM"]
+      },
+      {
+        "title": "AI w Biznesie",
+        "description": "Pomagamy wykorzystać AI w codziennej pracy - od asystentów AI po zaawansowane analizy danych. Zwiększ produktywność swojego zespołu.",
+        "features": ["Asystenci AI", "Analiza danych", "Predykcje", "Optymalizacja procesów"]
+      },
+      {
+        "title": "Szkolenia z AI",
+        "description": "Uczymy jak efektywnie wykorzystywać AI w firmie. Szkolenia dla zespołów na każdym poziomie zaawansowania.",
+        "features": ["Szkolenia grupowe", "Warsztaty praktyczne", "Konsultacje indywidualne", "Materiały edukacyjne"]
+      }
+    ],
+    "ctaTitle": "Nie wiesz, które rozwiązanie będzie najlepsze dla Twojej firmy?",
+    "ctaButton": "Umów darmową konsultację",
+    "learnMore": "Dowiedz się więcej →"
+  },
+  "aiAutomation": {
+    "title": "Automatyzacja procesów z AI",
+    "subtitle": "Wykorzystujemy najnowsze modele LLM i agentów AI, aby zautomatyzować powtarzalne zadania i uwolnić Twój zespół do pracy strategicznej.",
+    "stats": [
+      { "value": "70%", "label": "Oszczędność czasu" },
+      { "value": "24/7", "label": "Dostępność" },
+      { "value": "50%", "label": "Redukcja kosztów" },
+      { "value": "100%", "label": "Skalowalność" }
+    ],
+    "automations": [
+      {
+        "title": "Asystenci AI",
+        "description": "Inteligentni asystenci, którzy odpowiadają na pytania klientów 24/7. Obsługa wielu języków, kontekstowa rozmowa.",
+        "useCase": "Obsługa klienta, wsparcie sprzedaży"
+      },
+      {
+        "title": "Automatyzacja Email",
+        "description": "Inteligentne zarządzanie wiadomościami - sortowanie, odpowiadanie, podział na kategorie.",
+        "useCase": "Obsługa wiadomości, follow-upy"
+      },
+      {
+        "title": "Przetwarzanie Dokumentów",
+        "description": "AI analizuje, podsumowuje i wyciąga kluczowe informacje z dokumentów i umów.",
+        "useCase": "Legal, HR, księgowość"
+      },
+      {
+        "title": "E-commerce AI",
+        "description": "Personalizowane rekomendacje, automatyczne zarządzanie zamówieniami, obsługa zwrotów.",
+        "useCase": "Sklepy internetowe"
+      },
+      {
+        "title": "Research & Analiza",
+        "description": "Automatyczne zbieranie i analiza danych z różnych źródeł. Raporty i podsumowania.",
+        "useCase": "Badania rynku, konkurencja"
+      },
+      {
+        "title": "Workflow Automation",
+        "description": "Automatyzacja powtarzalnych zadań i procesów w firmie. Oszczędność czasu i eliminacja błędów.",
+        "useCase": "Procesy biznesowe, operacje"
+      }
+    ],
+    "cta": "Porozmawiajmy o Twojej automatyzacji"
+  },
+  "whyChooseUs": {
+    "title": "Dlaczego my?",
+    "subtitle": "Łączymy wiedzę techniczną z biznesowym podejściem. Rozumiemy wyzwania firm i dostarczamy rozwiązania, które przynoszą realne rezultaty.",
+    "benefits": [
+      { "title": "Doświadczenie", "description": "Lata praktyki w tworzeniu oprogramowania i automatyzacji AI. Znamy najnowsze technologie i trendy." },
+      { "title": "Zespół ekspertów", "description": "Nasi programiści i specjaliści AI to pasjonaci z wieloletnim doświadczeniem." },
+      { "title": "Bezpieczeństwo", "description": "Twoje dane i systemy są bezpieczne. Stosujemy najwyższe standardy ochrony." },
+      { "title": "Szybka realizacja", "description": "Realizujemy projekty terminowo. Twój czas jest dla nas ważny." }
+    ],
+    "testimonials": {
+      "title": "Zaufały nam firmy",
+      "rating": "5.0/5.0 średnia ocen",
+      "quotes": [
+        { "quote": "Inoxie wdrożyło dla nas automatyzację obsługi klienta z AI. Oszczędzamy 70% czasu na powtarzalnych zadaniach.", "author": "Jan Kowalski", "position": "CEO, Firma xyz" },
+        { "quote": "Profesjonalne podejście, terminowość i świetny kontakt. Polecam każdemu kto chce zautomatyzować procesy w firmie.", "author": "Anna Nowak", "position": "Właścicielka, sklep online" },
+        { "quote": "Szkolenie z AI przeprowadzone przez Inoxie zmieniło sposób pracy całego naszego zespołu. Jesteśmy bardziej produktywni.", "author": "Michał Wiśniewski", "position": "Dyrektor operacyjny, firma produkcyjna" }
+      ]
+    },
+    "stats": [
+      { "value": "50+", "label": "Zrealizowanych projektów" },
+      { "value": "30+", "label": "Zadowolonych klientów" },
+      { "value": "100%", "label": "Projektów oddanych terminowo" }
+    ]
+  },
+  "howItWorks": {
+    "title": "Jak pracujemy?",
+    "subtitle": "Przejrzysty proces współpracy. Od pierwszej rozmowy po wdrożenie i ciągłe wsparcie - jesteś z nami na każdym etapie.",
+    "modelsTitle": "Modele współpracy",
+    "modelsSubtitle": "Wybierz formę, która najlepiej pasuje do Twoich potrzeb",
+    "cta": "Zacznij współpracę"
+  },
+  "faq": {
+    "title": "Częste pytania",
+    "subtitle": "Odpowiadamy na najczęściej zadawane pytania o automatyzację AI i nasze usługi.",
+    "ctaTitle": "Masz więcej pytań? Chętnie pomożemy!",
+    "ctaButton": "Skontaktuj się z nami",
+    "questions": [
+      { "question": "Czy automatyzacja AI jest bezpieczna dla mojej firmy?", "answer": "Tak, bezpieczeństwo jest naszym priorytetem. Stosujemy najwyższe standardy ochrony danych, szyfrowanie end-to-end i zgodność z RODO. Przed wdrożeniem przeprowadzamy audyt bezpieczeństwa Twoich systemów." },
+      { "question": "Ile czasu zajmuje wdrożenie automatyzacji AI?", "answer": "Czas wdrożenia zależy od złożoności procesu. Proste automatyzacje możemy wdrożyć w ciągu 1-2 tygodni. Bardziej zaawansowane rozwiązania, takie jak dedykowani agenci AI czy integracje z systemami firmowymi, zazwyczaj zajmują 4-8 tygodni." },
+      { "question": "Czy muszę mieć doświadczenie z AI?", "answer": "Absolutnie nie. Nasz zespół zajmuje się całą techniczną stroną. Ty skupiasz się na swoim biznesie. Oferujemy również szkolenia dla Twojego zespołu, abyś mógł w pełni wykorzystać możliwości AI." },
+      { "question": "Jakie firmy mogą skorzystać z automatyzacji AI?", "answer": "Nasze rozwiązania są skierowane do firm każdej wielkości - od małych przedsiębiorstw po duże korporacje. Dopasowujemy technologie i skalę automatyzacji do Twoich potrzeb i budżetu." },
+      { "question": "Czy mogę zintegrować AI z moimi istniejącymi systemami?", "answer": "Tak, posiadamy doświadczenie w integracji z większością popularnych systemów biznesowych, takich jak CRM (Salesforce, HubSpot), systemy ERP, platformy e-commerce, narzędzia do zarządzania projektami i wiele innych." },
+      { "question": "Ile mogę zaoszczędzić dzięki automatyzacji AI?", "answer": "Typowe oszczędności wynoszą 30-70% czasu poświęcanego na powtarzalne zadania. Zależy to od charakteru Twoich procesów. Przeprowadzamy bezpłatną analizę, aby oszacować potencjalne oszczędności dla Twojej firmy." },
+      { "question": "Czy oferujecie szkolenia z AI dla zespołu?", "answer": "Tak, prowadzimy szkolenia na różnych poziomach zaawansowania - od podstaw AI dla początkujących po zaawansowane warsztaty dla zespołów technicznych. Szkolenia mogą być prowadzone online lub stacjonarnie." },
+      { "question": "Jaki jest koszt automatyzacji AI?", "answer": "Koszt zależy od zakresu i złożoności projektu. Oferujemy elastyczne modele współpracy: jednorazowe projekty, team augmentation lub stały retainer. Skontaktuj się z nami, aby otrzymać darmową wycenę." }
+    ]
+  },
+  "footer": {
+    "description": "Tworzymy oprogramowanie na zamówienie i automatyzujemy procesy biznesowe z wykorzystaniem AI. Zmniejszamy koszty, zwiększamy efektywność.",
+    "industries": "Branże",
+    "industriesList": ["E-commerce", "Finanse", "Produkcja", "Usługi", "Healthcare", "Retail"],
+    "email": "m.kamieniak@inoxiesoft.com",
+    "phone": "+48 798943352",
+    "location": "Kolejowa 14, 46-073 Chróscina, Polska",
+    "servicesTitle": "Usługi",
+    "companyTitle": "Firma",
+    "copyright": "Wszelkie prawa zastrzeżone.",
+    "nip": "NIP: PL9910535234",
+    "owner": "Maciej Kamieniak Inoxie"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Porozmawiajmy o Twoim projekcie",
+    "description": "Chętnie pomożemy Ci wykorzystać AI w Twoim biznesie. Skontaktuj się z nami, a odpowiemy w ciągu 24 godzin.",
+    "form": {
+      "title": "Napisz do nas",
+      "name": "Imię i nazwisko",
+      "email": "Adres email",
+      "phone": "Numer telefonu",
+      "company": "Nazwa firmy",
+      "message": "Twoja wiadomość",
+      "submit": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "success": "Dziękujemy! Twoja wiadomość została wysłana.",
+      "error": "Ups, coś poszło nie tak. Spróbuj ponownie."
+    },
+    "info": {
+      "title": "Informacje kontaktowe",
+      "email": "Email",
+      "phone": "Telefon",
+      "location": "Lokalizacja",
+      "availability": "Dostępność"
+    }
+  },
+  "about": {
+    "title": "O nas",
+    "subtitle": "Pomagamy firmom wykorzystać moc AI",
+    "story": {
+      "title": "Nasza historia",
+      "content": "Inoxie powstało z pasji do technologii i chęci pomocy firmom w cyfrowej transformacji. Łączymy wieloletnie doświadczenie w programowaniu z najnowszymi osiągnięciami w dziedzinie sztucznej inteligencji, aby dostarczać rozwiązania, które realnie wpływają na wyniki biznesowe naszych klientów."
+    },
+    "mission": {
+      "title": "Nasza misja",
+      "content": "Demokratyzacja AI w biznesie. Chcemy, aby każda firma, niezależnie od wielkości, mogła korzystać z możliwości, jakie daje sztuczna inteligencja. Umożliwiamy firmom skupienie się na tym, co najważniejsze - rozwoju biznesu - podczas gdy my przejmujemy ciężar automatyzacji i optymalizacji procesów."
+    },
+    "values": {
+      "title": "Nasze wartości"
+    },
+    "team": {
+      "title": "Nasz zespół",
+      "subtitle": "Razem tworzymy przyszłość AI"
+    }
+  },
+  "offer": {
+    "title": "Oferta",
+    "subtitle": "Kompleksowe rozwiązania AI dla Twojego biznesu",
+    "cta": {
+      "title": "Potrzebujesz czegoś innego?",
+      "description": "Skontaktuj się z nami - znajdziemy rozwiązanie dopasowane do Twoich potrzeb.",
+      "button": "Porozmawiajmy"
+    }
+  },
+  "pricing": {
+    "title": "Cennik",
+    "subtitle": "Elastyczne modele współpracy dopasowane do Twoich potrzeb",
+    "custom": {
+      "title": "Indywidualne rozwiązania",
+      "description": "Każdy projekt jest inny. Skontaktuj się z nami, aby otrzymać wycenę dopasowaną do Twoich potrzeb.",
+      "cta": "Poproś o wycenę"
+    }
+  },
+  "seo": {
+    "title": "InoxieSoft | Automatyzacja AI + Oprogramowanie na Zamówienie | Wrocław, Warszawa",
+    "description": "InoxieSoft — automatyzacja AI i oprogramowanie na zamówienie dla firm MŚP. Tworzymy strony www, aplikacje SaaS, chatboty i systemy backend. Wrocław, Warszawa, Kraków, Poznań, Katowice."
+  },
+  "featuredBlogs": {
+    "title": "Popularne artykuły",
+    "subtitle": "Poznaj najnowsze trendy w AI i automatyzacji biznesowej",
+    "ctaButton": "Zobacz wszystkie artykuły",
+    "readMore": "Czytaj więcej",
+    "minRead": "min czytania"
+  },
+  "waas": {
+    "title": "Website as a Service",
+    "subtitle": "Kompletna strona www dla Twojej firmy za miesięczną opłatą. Bez ukrytych kosztów, bez długoterminowych zobowiązań.",
+    "seo": {
+      "title": "Website as a Service — Profesjonalne strony www dla firm | InoxieSoft",
+      "description": "Website as a Service (WAAS) to kompletna usługa tworzenia i utrzymania strony www dla małych firm. Od 299 zł/mies. Bez ukrytych kosztów, bez zobowiązań. Umów bezpłatną prezentację!"
+    },
+    "hero": {
+      "badge": "Nowość w ofercie",
+      "cta": "Umów bezpłatną prezentację",
+      "ctaSecondary": "Zobacz jak to działa"
+    },
+    "problem": {
+      "title": "Wiesz, że Twoja firma powinna być w internecie, ale..."
+    },
+    "solution": {
+      "title": "Website as a Service — zrób to za Ciebie",
+      "description": "Zamiast jednorazowego wydatku, płacisz miesięczną opłatę. My zajmujemy się wszystkim: od znalezienia klientów Twojej firmy, przez stworzenie profesjonalnej strony, po wysłanie pierwszych wiadomości do potencjalnych klientów."
+    },
+    "forWhom": {
+      "title": "Dla kogo jest Website as a Service?",
+      "description": "Nasza usługa sprawdza się najlepiej w przypadku:"
+    },
+    "features": {
+      "title": "Co zawiera Website as a Service?",
+      "subtitle": "Wszystko, czego potrzebujesz, aby zdobywać klientów przez internet."
+    },
+    "pricing": {
+      "title": "Ile kosztuje Website as a Service?",
+      "subtitle": "Prosty, przewidywalny model. Bez ukrytych opłat, bez zobowiązań.",
+      "guarantee": "30-dniowa gwarancja satysfakcji. Jeśli nie będziesz zadowolony w pierwszym miesiącu — zwrócimy pieniądze.",
+      "noContract": "Bez umowy minimum. Rezygnujesz kiedy chcesz."
+    },
+    "comparison": {
+      "title": "Porównanie: WAAS vs. tradycyjna strona",
+      "subtitle": "Zobacz, dlaczego Website as a Service to lepszy wybór dla małych firm."
+    },
+    "testimonials": {
+      "title": "Co mówią nasi klienci?"
+    },
+    "faq": {
+      "title": "Częste pytania o Website as a Service"
+    },
+    "eeat": {
+      "title": "Dlaczego możesz nam zaufać?",
+      "subtitle": "Inoxie to zespół z doświadczeniem w tworzeniu stron i automatyzacji marketingu."
+    },
+    "cta": {
+      "title": "Gotowy, żeby zdobywać klientów przez internet?",
+      "description": "Umów się na bezpłatną 20-minutową prezentację. Opowiemy, jak Website as a Service może pomóc Twojej firmie.",
+      "button": "Umów prezentację",
+      "orCall": "Wolisz rozmawiać? Zadzwoń: +48 798 943 352"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Poznaj najnowsze trendy w AI i automatyzacji biznesowej",
+    "faq": "Często zadawane pytania",
+    "author": "Autor",
+    "minRead": "min czytania",
+    "tableOfContents": "Spis treści",
+    "relatedPosts": "Powiązane artykuły",
+    "backToBlog": "Powrót do bloga",
+    "seeAlso": "Zobacz również",
+    "contact": "Kontakt",
+    "contactDescription": "Chcesz dowiedzieć się więcej o automatyzacji AI w Twojej firmie?",
+    "bookConsultation": "Umów bezpłatną konsultację",
+    "readMore": "Czytaj więcej"
+  },
+  "servicePage": {
+    "seeMore": "Zobacz więcej",
+    "contact": "Kontakt",
+    "relatedServices": "Powiązane usługi",
+    "faq": "Częste pytania"
+  }
+}

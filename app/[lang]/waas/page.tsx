@@ -1,4 +1,4 @@
-import { translations, type Lang } from '../../i18n';
+import { type Lang } from '../../i18n';
 import WAASPageClient from './WAASPageClient';
 
 interface PageProps {
@@ -11,11 +11,21 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang].waas.seo;
   
+  const meta = {
+    pl: {
+      title: 'Website as a Service | InoxieSoft',
+      description: 'Kompletna strona www dla Twojej firmy za miesięczną opłatą. Bez ukrytych kosztów, bez długoterminowych zobowiązań.',
+    },
+    en: {
+      title: 'Website as a Service | InoxieSoft',
+      description: 'A complete website for your business for a monthly fee. No hidden costs, no long-term commitments.',
+    },
+  };
+
   return {
-    title: t.title,
-    description: t.description,
+    title: meta[lang].title,
+    description: meta[lang].description,
     alternates: {
       languages: {
         'pl': 'https://inoxiesoft.com/waas',
@@ -27,7 +37,6 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang];
   
-  return <WAASPageClient t={t} lang={lang} />;
+  return <WAASPageClient lang={lang} />;
 }

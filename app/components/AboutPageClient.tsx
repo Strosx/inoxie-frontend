@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { translations } from '../i18n';
+import { useTranslations } from 'next-intl';
 
 const statsEN = [
   { value: '5+', label: 'Years Experience' },
@@ -60,11 +60,11 @@ const testimonialsPL = [
 ];
 
 interface AboutPageClientProps {
-  t: typeof translations.pl;
   lang: string;
 }
 
-export default function AboutPageClient({ t, lang }: AboutPageClientProps) {
+export default function AboutPageClient({ lang }: AboutPageClientProps) {
+  const t = useTranslations('about');
   const stats = lang === 'pl' ? statsPL : statsEN;
   const timeline = lang === 'pl' ? timelinePL : timelineEN;
   const values = lang === 'pl' ? valuesPL : valuesEN;
@@ -114,9 +114,9 @@ export default function AboutPageClient({ t, lang }: AboutPageClientProps) {
             className="text-center bg-white rounded-2xl p-8 lg:p-12 border border-stone-200"
           >
             <span className="text-6xl font-light text-accent/30 mb-6 block">—</span>
-            <h2 className="text-2xl lg:text-3xl font-bold text-stone-900 mb-6">{t.about.mission.title}</h2>
+            <h2 className="text-2xl lg:text-3xl font-bold text-stone-900 mb-6">{t('mission.title')}</h2>
             <p className="text-xl text-stone-600 max-w-3xl mx-auto italic leading-relaxed">
-              "{t.about.mission.content}"
+              "{t('mission.content')}"
             </p>
           </motion.div>
         </section>
@@ -192,7 +192,7 @@ export default function AboutPageClient({ t, lang }: AboutPageClientProps) {
               className="text-center mb-16"
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
-                {t.about.values.title}
+                {t('values.title')}
               </h2>
             </motion.div>
             

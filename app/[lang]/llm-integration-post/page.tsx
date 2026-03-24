@@ -1,5 +1,5 @@
 import LlmIntegrationPostClient from './LlmIntegrationPostClient';
-import { translations, type Lang } from '../../i18n';
+import { type Lang } from '../../i18n';
 
 interface PageProps {
   params: Promise<{ lang: Lang }>;
@@ -35,6 +35,5 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { lang } = await params;
-  const t = translations[lang as Lang];
-  return <LlmIntegrationPostClient t={t} lang={lang as Lang} />;
+  return <LlmIntegrationPostClient lang={lang as Lang} />;
 }

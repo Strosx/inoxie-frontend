@@ -1,15 +1,13 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Lang } from '../i18n';
 import { getBlogPosts, type BlogPost } from '../i18n/blog-posts';
 
-type Translations = typeof import('../i18n/pl').pl;
-
 interface FeaturedBlogsProps {
-  t: Translations;
   lang: Lang;
 }
 
@@ -22,7 +20,7 @@ function getFeaturedPosts(lang: 'pl' | 'en'): BlogPost[] {
 }
 
 // Blog Card Component
-function BlogCard({ post, lang, t }: { post: BlogPost; lang: Lang; t: Translations }) {
+function BlogCard({ post, lang, t }: { post: BlogPost; lang: Lang; t: ReturnType<typeof useTranslations> }) {
   const blogUrl = `/${lang}/blog/${post.slug}`;
   
   // Image placeholder based on category
@@ -73,11 +71,11 @@ function BlogCard({ post, lang, t }: { post: BlogPost; lang: Lang; t: Translatio
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>{post.readingTime} {t.featuredBlogs.minRead}</span>
+              <span>{post.readingTime} {t('minRead')}</span>
             </div>
             
             <span className="text-accent font-medium text-sm group-hover:underline">
-              {t.featuredBlogs.readMore} →
+              {t('readMore')} →
             </span>
           </div>
         </div>
@@ -87,7 +85,8 @@ function BlogCard({ post, lang, t }: { post: BlogPost; lang: Lang; t: Translatio
 }
 
 // Main Featured Blogs Section
-export default function FeaturedBlogs({ t, lang }: FeaturedBlogsProps) {
+export default function FeaturedBlogs({ lang }: FeaturedBlogsProps) {
+  const t = useTranslations('featuredBlogs');
   const featuredPosts = getFeaturedPosts(lang as 'pl' | 'en');
   const blogListUrl = `/${lang}/blog`;
 
@@ -101,10 +100,10 @@ export default function FeaturedBlogs({ t, lang }: FeaturedBlogsProps) {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
-            {t.featuredBlogs.title}
+            {t('title')}
           </h2>
           <p className="text-lg text-stone-600 max-w-xl mx-auto">
-            {t.featuredBlogs.subtitle}
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -132,7 +131,7 @@ export default function FeaturedBlogs({ t, lang }: FeaturedBlogsProps) {
             href={blogListUrl}
             className="inline-block bg-accent text-white px-8 py-4 rounded-xl font-semibold hover:bg-accent-hover transition-colors hover:shadow-lg hover:shadow-accent/25"
           >
-            {t.featuredBlogs.ctaButton}
+            {t('ctaButton')}
           </Link>
         </motion.div>
       </div>

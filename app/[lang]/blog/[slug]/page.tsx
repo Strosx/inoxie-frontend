@@ -1,4 +1,4 @@
-import { blogTranslations, type Lang } from '../../../i18n';
+import { type Lang } from '../../../i18n';
 import { getBlogPostBySlug, getRelatedPosts, type BlogPost } from '../../../i18n/blog-posts';
 import BlogPostClient from './BlogPostClient';
 import { notFound, redirect } from 'next/navigation';
@@ -27,16 +27,19 @@ export async function generateMetadata({ params }: PageProps) {
   const { lang, slug } = await params;
   const post = getBlogPostBySlug(slug, lang);
   
+  const meta = {
+    pl: { blogTitle: 'Blog | InoxieSoft' },
+    en: { blogTitle: 'Blog | InoxieSoft' },
+  };
+  
   if (!post) {
     return {
-      title: 'Blog | InoxieSoft',
+      title: meta[lang].blogTitle,
     };
   }
   
-  const t = blogTranslations[lang].seo;
-  
   return {
-    title: `${post.title} | ${t.title}`,
+    title: `${post.title} | InoxieSoft Blog`,
     description: post.excerpt,
     authors: [{ name: post.author }],
     publishedTime: post.date,
@@ -85,13 +88,11 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
   
   const relatedPosts = getRelatedPosts(slug, lang, 2);
-  const t = blogTranslations[lang].blog;
   
   return (
     <BlogPostClient 
       post={post} 
       relatedPosts={relatedPosts} 
-      t={t} 
       lang={lang} 
     />
   );
