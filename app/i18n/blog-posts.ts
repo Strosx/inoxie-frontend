@@ -17,6 +17,19 @@ export interface BlogPost {
 
 export const blogPostsEn: BlogPost[] = [
   {
+    slug: 'ai-readiness-checklist-2026',
+    title: 'AI Readiness Checklist 2026: Is Your Business Ready for AI Transformation?',
+    excerpt: 'Practical 10-point AI readiness checklist for Polish SMBs in 2026. Check if your company should invest in AI and where to start.',
+    date: '2026-03-24',
+    author: 'Maciej Kamieniak',
+    authorBio: 'Founder & AI Strategy Lead at InoxieSoft. 10+ years in software development, specialized in AI automation for SMEs since 2022.',
+    category: 'AI Agents',
+    readingTime: 10,
+    tags: ['AI readiness', 'checklist', 'assessment', 'Polish SMB', '2026 trends'],
+    featured: true,
+    content: `AI Readiness Checklist content - see dedicated page at /ai-readiness-checklist-post`
+  },
+  {
     slug: 'ai-agents-2026-business-automation',
     title: 'AI Agents in 2026: How They\'re Revolutionizing Business Automation',
     excerpt: 'Discover how AI agents are transforming business processes and what it means for your company in 2026. Real data from 30+ Polish implementations.',
@@ -1168,6 +1181,19 @@ We offer free 60-minute consultations where we'll:
 ];
 
 export const blogPostsPl: BlogPost[] = [
+  {
+    slug: 'ai-readiness-checklist-2026',
+    title: 'AI Readiness Checklist 2026: Czy Twoja firma jest gotowa na transformację AI?',
+    excerpt: 'Praktyczny 10-punktowy checklist gotowości AI dla polskich firm MŚP na 2026. Sprawdź, czy Twoja firma powinna inwestować w AI.',
+    date: '2026-03-24',
+    author: 'Maciej Kamieniak',
+    authorBio: 'Założyciel i lider strategii AI w InoxieSoft. Ponad 10 lat doświadczenia w tworzeniu oprogramowania, specjalizacja w automatyzacji AI dla MŚP od 2022 roku.',
+    category: 'Agenci AI',
+    readingTime: 10,
+    tags: ['gotowość AI', 'checklist', 'ocena', 'polskie MŚP', 'trendy 2026'],
+    featured: true,
+    content: `AI Readiness Checklist content - see dedicated page at /ai-readiness-checklist-post`
+  },
   {
     slug: 'agenci-ai-2026-automatyzacja-biznesowa',
     title: 'Agenci AI w 2026: Kompletny przewodnik dla polskich przedsiębiorców',

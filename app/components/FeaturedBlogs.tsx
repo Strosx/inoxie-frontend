@@ -11,6 +11,27 @@ interface FeaturedBlogsProps {
   lang: Lang;
 }
 
+// Mapping from old blog slugs to new dedicated page URLs
+const slugToDedicatedPage: Record<string, string> = {
+  // PL slugs
+  'roi-ai-polskie-przedsiebiorstwa-2026': 'roi-ai-post',
+  'agenci-ai-2026-automatyzacja-biznesowa': 'ai-agents-post',
+  'integracja-llm-przewodnik-polskie-firmy': 'llm-integration-post',
+  'ai-readiness-checklist-2026': 'ai-readiness-checklist-post',
+  // EN slugs
+  'ai-roi-polish-enterprises-2026': 'roi-ai-post',
+  'ai-agents-2026-business-automation': 'ai-agents-post',
+  'llm-integration-guide-polish-companies': 'llm-integration-post',
+};
+
+function getBlogUrl(slug: string, lang: Lang): string {
+  const dedicatedPage = slugToDedicatedPage[slug];
+  if (dedicatedPage) {
+    return `/${lang}/${dedicatedPage}`;
+  }
+  return `/${lang}/blog/${slug}`;
+}
+
 // Get featured posts based on language - shows different posts for each language
 function getFeaturedPosts(lang: 'pl' | 'en'): BlogPost[] {
   const posts = getBlogPosts(lang);
@@ -21,7 +42,7 @@ function getFeaturedPosts(lang: 'pl' | 'en'): BlogPost[] {
 
 // Blog Card Component
 function BlogCard({ post, lang, t }: { post: BlogPost; lang: Lang; t: ReturnType<typeof useTranslations> }) {
-  const blogUrl = `/${lang}/blog/${post.slug}`;
+  const blogUrl = getBlogUrl(post.slug, lang);
   
   // Image placeholder based on category
   const getCategoryImage = (category: string) => {

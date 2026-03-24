@@ -13,6 +13,7 @@ const slugToDedicatedPage: Record<string, string> = {
   'roi-ai-polskie-przedsiebiorstwa-2026': 'roi-ai-post',
   'agenci-ai-2026-automatyzacja-biznesowa': 'ai-agents-post',
   'integracja-llm-przewodnik-polskie-firmy': 'llm-integration-post',
+  'ai-readiness-checklist-2026': 'ai-readiness-checklist-post',
   // EN slugs
   'ai-roi-polish-enterprises-2026': 'roi-ai-post',
   'ai-agents-2026-business-automation': 'ai-agents-post',

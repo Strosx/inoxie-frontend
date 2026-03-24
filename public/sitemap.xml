@@ -204,6 +204,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/ai-readiness-checklist-post</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/ai-readiness-checklist-post"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/ai-readiness-checklist-post"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- Blog - Polish -->
   <url>
     <loc>https://inoxiesoft.com/pl/blog</loc>
@@ -230,6 +237,13 @@
     <loc>https://inoxiesoft.com/pl/llm-integration-post</loc>
     <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/llm-integration-post"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/llm-integration-post"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/ai-readiness-checklist-post</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/ai-readiness-checklist-post"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/ai-readiness-checklist-post"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
