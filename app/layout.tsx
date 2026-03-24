@@ -61,6 +61,11 @@ export const metadata: Metadata = {
     title: "InoxieSoft | Automatyzacja AI + Oprogramowanie",
     description: "Tworzymy oprogramowanie na zlecenie i automatyzujemy procesy biznesowe z AI.",
   },
+  icons: {
+    icon: "/icon-192.svg",
+    shortcut: "/icon-192.svg",
+  },
+  manifest: "/manifest.json",
   verification: {
     google: "google-site-verification-code",
   },
@@ -153,8 +158,8 @@ export default function RootLayout({
     // suppressHydrationWarning because lang is set dynamically by [lang]/layout.tsx
     <html lang="pl" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="icon" href="/icon-192.svg" type="image/svg+xml" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/icon-192.svg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
