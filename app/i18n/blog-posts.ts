@@ -17,6 +17,19 @@ export interface BlogPost {
 
 export const blogPostsEn: BlogPost[] = [
   {
+    slug: 'shadow-ai-hidden-threat-2026',
+    title: 'Shadow AI: The Hidden Threat to Polish Businesses in 2026',
+    excerpt: 'Shadow AI — employees using AI tools without company knowledge. Learn the risks and how to protect your business from data leakage.',
+    date: '2026-03-24',
+    author: 'Maciej Kamieniak',
+    authorBio: 'Founder & AI Strategy Lead at InoxieSoft. 10+ years in software development, specialized in AI automation for SMEs since 2022.',
+    category: 'AI Security',
+    readingTime: 11,
+    tags: ['Shadow AI', 'AI security', 'GDPR', 'data protection', 'Polish SMB'],
+    featured: true,
+    content: `Shadow AI content - see dedicated page at /shadow-ai-post`
+  },
+  {
     slug: 'ai-readiness-checklist-2026',
     title: 'AI Readiness Checklist 2026: Is Your Business Ready for AI Transformation?',
     excerpt: 'Practical 10-point AI readiness checklist for Polish SMBs in 2026. Check if your company should invest in AI and where to start.',
@@ -1181,6 +1194,19 @@ We offer free 60-minute consultations where we'll:
 ];
 
 export const blogPostsPl: BlogPost[] = [
+  {
+    slug: 'shadow-ai-2026',
+    title: 'Shadow AI: Ukryte Zagrożenie dla Polskich Firm w 2026 Roku',
+    excerpt: 'Shadow AI — pracownicy używają narzędzi AI bez wiedzy firmy. Poznaj ryzyka i dowiedz się, jak chronić swoją firmę przed wyciekiem danych.',
+    date: '2026-03-24',
+    author: 'Maciej Kamieniak',
+    authorBio: 'Założyciel i lider strategii AI w InoxieSoft. Ponad 10 lat doświadczenia w tworzeniu oprogramowania, specjalizacja w automatyzacji AI dla MŚP od 2022 roku.',
+    category: 'Bezpieczeństwo AI',
+    readingTime: 11,
+    tags: ['Shadow AI', 'bezpieczeństwo AI', 'RODO', 'ochrona danych', 'polskie MŚP'],
+    featured: true,
+    content: `Shadow AI content - see dedicated page at /shadow-ai-post`
+  },
   {
     slug: 'ai-readiness-checklist-2026',
     title: 'AI Readiness Checklist 2026: Czy Twoja firma jest gotowa na transformację AI?',
