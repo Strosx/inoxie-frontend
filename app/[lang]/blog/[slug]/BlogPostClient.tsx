@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { type BlogPost } from '../../../i18n/blog-posts';
 import type { Lang } from '../../../i18n';
+import { FaqJsonLd } from './FaqJsonLd';
 
 interface BlogPostClientProps {
   post: BlogPost;
@@ -220,6 +221,28 @@ export default function BlogPostClient({ post, relatedPosts, t, lang }: BlogPost
 
   const contentHtml = parseMarkdown(post.content);
 
+  // FAQ structured data for each blog post
+  const faqs = post.slug === 'roi-ai-polskie-przedsiebiorstwa-2026' ? [
+    { question: 'Czy AI się opłaca dla małych firm?', answer: 'Tak. Nawet firmy z 1-5 pracownikami mogą zautomatyzować 20-40% procesów i zobaczyć ROI w 3-6 miesięcy.' },
+    { question: 'Ile kosztuje wdrożenie AI?', answer: 'Typowe wdrożenie dla firmy MŚP to 15,000-50,000 PLN, w zależności od zakresu. Zwrot następuje średnio w 4-8 miesięcy.' },
+    { question: 'Czy potrzebuję własnego zespołu AI?', answer: 'Nie. Dedykowany zespół zewnętrzny (jak InoxieSoft) wdraża i utrzymuje rozwiązanie. Ty tylko korzystasz z efektów.' },
+    { question: 'Jakie dane potrzebuję do wdrożenia AI?', answer: 'Zależy od procesu. Minimum to opis procesu + dostęp do systemów (CRM, email, bazy danych). Resztę analizujemy na etapie audytu.' },
+    { question: 'Od czego zacząć?', answer: 'Zamów bezpłatny audyt procesów — w ciągu 1h analizy powiemy, gdzie AI przyniesie najwięcej korzyści w Twojej firmie.' },
+  ] : post.slug === 'agenci-ai-2026-automatyzacja-biznesowa' ? [
+    { question: 'Czym są agenci AI?', answer: 'Agenci AI to programy, które samodzielnie wykonują złożone zadania — od przeszukiwania danych po pisanie raportów i odpowiadanie na maile. Działają 24/7 bez przerw.' },
+    { question: 'Ile kosztuje wdrożenie agenta AI?', answer: 'Cena zależy od złożoności. Prosty chatbot AI kosztuje od 5,000 PLN. Zaawansowany agent z integracjami to 20,000-80,000 PLN.' },
+    { question: 'Czy agent AI zastąpi moich pracowników?', answer: 'Nie — agent AI odciąża zespół od powtarzalnych zadań. Pracownicy mogą się skupić na pracy wymagającej ludzkiego osądu.' },
+    { question: 'Jak szybko można wdrożyć pierwszego agenta?', answer: 'Pierwszy prototyp działamy w 1-2 tygodnie. Pełne wdrożenie to 4-8 tygodni.' },
+    { question: 'Czy agenci AI są bezpieczni?', answer: 'Tak, przy odpowiedniej konfiguracji. Dane są przetwarzane zgodnie z polityką prywatności, a agent działa tylko w zakresie zdefiniowanych uprawnień.' },
+  ] : post.slug === 'integracja-llm-przewodnik-polskie-firmy' ? [
+    { question: 'Czym jest integracja LLM?', answer: 'Integracja LLM to połączenie dużego modelu językowego (jak GPT-4 lub Claude) z Twoimi danymi i systemami. Dzięki temu AI rozumie kontekst Twojej firmy i może odpowiadać na pytania w oparciu o Twoje dokumenty.' },
+    { question: 'Jakie LLM wybrać — GPT-4, Claude czy Gemini?', answer: 'Wybór zależy od zastosowania. GPT-4 najlepszy do ogólnych zadań. Claude lepszy do długich dokumentów i analizy. Gemini najlepszy jeśli pracujesz w ekosystemie Google.' },
+    { question: 'Ile kosztuje integracja LLM?', answer: 'Typowa integracja dla firmy MŚP to 20,000-60,000 PLN. Koszt zależy od źródła danych, liczby użytkowników i poziomu customizacji.' },
+    { question: 'Czy moje dane są bezpieczne?', answer: 'Tak. Możemy wdrożyć LLM w trybie on-premise (na Twoich serwerach) lub użyć modeli z gwarancją RODO. Wybierasz rozwiązanie dopasowane do Twoich wymagań.' },
+    { question: 'Jak długo trwa wdrożenie?', answer: '4-12 tygodni, w zależności od złożoności integracji. Pierwszy prototyp działający możesz zobaczyć już po 2 tygodniach.' },
+    { question: 'Czy LLM zastąpi moich pracowników?', answer: 'Nie. LLM to narzędzie, które wzmacnia możliwości Twojego zespołu — nie go zastępuje.' },
+  ] : null;
+
   // Schema.org structured data for EEat
   const jsonLd = {
     "@context": "https://schema.org",
@@ -404,6 +427,9 @@ export default function BlogPostClient({ post, relatedPosts, t, lang }: BlogPost
               </div>
             </section>
           )}
+
+          {/* FAQ JSON-LD structured data */}
+          {faqs && <FaqJsonLd faqs={faqs} />}
 
           {/* Related Services — Internal Links */}
           <section className="py-12 lg:py-16 bg-stone-50 border-t border-stone-200">
