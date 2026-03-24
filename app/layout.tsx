@@ -150,7 +150,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pl">
+    // suppressHydrationWarning because lang is set dynamically by [lang]/layout.tsx
+    <html lang="pl" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
@@ -163,7 +164,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
       </head>
-      <body className="bg-stone-50 antialiased">
+      <body suppressHydrationWarning>
         {children}
       </body>
     </html>

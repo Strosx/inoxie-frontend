@@ -1,7 +1,7 @@
 import { blogTranslations, type Lang } from '../../../i18n';
 import { getBlogPostBySlug, getRelatedPosts, type BlogPost } from '../../../i18n/blog-posts';
 import BlogPostClient from './BlogPostClient';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
 interface PageProps {
   params: Promise<{ lang: Lang; slug: string }>;
@@ -58,10 +58,28 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
+// Slugs that have dedicated pages → redirect to dedicated URL
+// ONLY includes slugs where dedicated page actually EXISTS
+const slugToDedicatedPage: Record<string, string> = {
+  'roi-ai-polskie-przedsiebiorstwa-2026': 'roi-ai-post',
+  'ai-roi-polish-enterprises-2026': 'roi-ai-post',
+  'agenci-ai-2026-automatyzacja-biznesowa': 'ai-agents-post',
+  'integracja-llm-przewodnik-polskie-firmy': 'llm-integration-post',
+  'ai-agents-2026-business-automation': 'ai-agents-post',
+  'llm-integration-guide-polish-companies': 'llm-integration-post',
+};
+
 export default async function BlogPostPage({ params }: PageProps) {
   const { lang, slug } = await params;
+
+  // Redirect old blog slugs to new dedicated pages
+  const dedicatedPage = slugToDedicatedPage[slug];
+  if (dedicatedPage) {
+    redirect(`/${lang}/${dedicatedPage}`);
+  }
+
   const post = getBlogPostBySlug(slug, lang);
-  
+
   if (!post) {
     notFound();
   }

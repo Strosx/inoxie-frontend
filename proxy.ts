@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 const SUPPORTED_LANGS = ['pl', 'en'];
-const DEFAULT_LANG = 'pl';
 
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
@@ -17,34 +16,19 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check if path already has a language prefix
+  // If path already has a language prefix (/en, /pl), pass through
+  // NEVER redirect these — prevents SSR/hydration mismatch
   const pathLang = pathname.split('/')[1];
   if (SUPPORTED_LANGS.includes(pathLang)) {
     return NextResponse.next();
   }
 
-  // Check cookie for saved preference
+  // Root path without lang prefix — redirect based on cookie or default to /pl
   const savedLang = request.cookies.get('preferred_lang')?.value;
-  if (savedLang && SUPPORTED_LANGS.includes(savedLang)) {
-    const url = request.nextUrl.clone();
-    url.pathname = `/${savedLang}${pathname === '/' ? '' : pathname}`;
-    return NextResponse.redirect(url);
-  }
-
-  // Detect browser language
-  const acceptLanguage = request.headers.get('accept-language') || '';
-  let detectedLang = DEFAULT_LANG;
-
-  if (acceptLanguage.startsWith('en')) {
-    detectedLang = 'en';
-  } else if (acceptLanguage.startsWith('pl')) {
-    detectedLang = 'pl';
-  }
-
+  const lang = (savedLang && SUPPORTED_LANGS.includes(savedLang)) ? savedLang : 'pl';
   const url = request.nextUrl.clone();
-  url.pathname = `/${detectedLang}${pathname === '/' ? '' : pathname}`;
-  const response = NextResponse.redirect(url);
-  return response;
+  url.pathname = `/${lang}`;
+  return NextResponse.redirect(url);
 }
 
 export const config = {

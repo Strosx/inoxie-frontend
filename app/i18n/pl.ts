@@ -200,6 +200,7 @@ export const pl = {
     company: [
       { label: 'O nas', href: '/pl/about-us' },
       { label: 'Blog', href: '/pl/blog' },
+      { label: 'ROI AI 2026', href: '/pl/roi-ai-post' },
       { label: 'Kontakt', href: '/pl/contact' },
     ],
     copyright: 'Wszelkie prawa zastrzeżone.',

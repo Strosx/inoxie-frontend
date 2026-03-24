@@ -5,6 +5,27 @@ import Image from 'next/image';
 import { type BlogPost } from '../../i18n/blog-posts';
 import type { Lang } from '../../i18n';
 
+// Mapping from old blog slugs to new dedicated page URLs
+// ONLY includes slugs where dedicated page ACTUALLY EXISTS
+const slugToDedicatedPage: Record<string, string> = {
+  // PL slugs
+  'roi-ai-polskie-przedsiebiorstwa-2026': 'roi-ai-post',
+  'agenci-ai-2026-automatyzacja-biznesowa': 'ai-agents-post',
+  'integracja-llm-przewodnik-polskie-firmy': 'llm-integration-post',
+  // EN slugs
+  'ai-roi-polish-enterprises-2026': 'roi-ai-post',
+  'ai-agents-2026-business-automation': 'ai-agents-post',
+  'llm-integration-guide-polish-companies': 'llm-integration-post',
+};
+
+function getBlogUrl(slug: string, lang: Lang): string {
+  const dedicatedPage = slugToDedicatedPage[slug];
+  if (dedicatedPage) {
+    return `/${lang}/${dedicatedPage}`;
+  }
+  return `/${lang}/blog/${slug}`;
+}
+
 interface BlogListProps {
   posts: BlogPost[];
   t: {
@@ -82,7 +103,7 @@ export default function BlogList({ posts, t, lang }: BlogListProps) {
                     <div className="p-6 flex-1 flex flex-col">
                       <h2 className="text-xl font-bold text-stone-900 mb-3 line-clamp-2">
                         <Link 
-                          href={`/${lang}/blog/${post.slug}`}
+                          href={getBlogUrl(post.slug, lang)}
                           className="hover:text-accent transition-colors"
                         >
                           {post.title}
@@ -111,7 +132,7 @@ export default function BlogList({ posts, t, lang }: BlogListProps) {
 
                       {/* Read More Link */}
                       <Link 
-                        href={`/${lang}/blog/${post.slug}`}
+                        href={getBlogUrl(post.slug, lang)}
                         className="mt-4 inline-flex items-center text-accent font-semibold hover:text-accent-hover transition-colors"
                       >
                         {t.readMore}
