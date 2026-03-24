@@ -187,15 +187,19 @@ export const pl = {
     location: 'Kolejowa 14, 46-073 Chróscina, Polska',
     servicesTitle: 'Usługi',
     services: [
-      { label: 'Oprogramowanie na zamówienie', href: '/pl/offer#oprogramowanie' },
-      { label: 'Automatyzacja AI', href: '/pl/offer#automatyzacja' },
-      { label: 'Agenci AI', href: '/pl/offer#agenci' },
-      { label: 'Szkolenia z AI', href: '/pl/offer#szkolenia' },
+      { label: 'Oprogramowanie na zamówienie', href: '/pl/firma-programistyczna-wroclaw' },
+      { label: 'Automatyzacja AI', href: '/pl/automatyzacja-ai-wroclaw' },
+      { label: 'Strona internetowa Wrocław', href: '/pl/strona-internetowa-wroclaw' },
+      { label: 'Chatbot dla firmy', href: '/pl/chatbot-dla-firmy' },
+      { label: 'Automatyzacja procesów', href: '/pl/automatyzacja-procesow-biznesowych' },
+      { label: 'AI dla firm', href: '/pl/ai-dla-firm' },
+      { label: 'Software House Wrocław', href: '/pl/software-house-wroclaw' },
+      { label: 'Oferta', href: '/pl/offer' },
     ],
     companyTitle: 'Firma',
     company: [
       { label: 'O nas', href: '/pl/about-us' },
-      { label: 'Oferta', href: '/pl/offer' },
+      { label: 'Blog', href: '/pl/blog' },
       { label: 'Kontakt', href: '/pl/contact' },
     ],
     copyright: 'Wszelkie prawa zastrzeżone.',
@@ -345,8 +349,8 @@ export const pl = {
 
   // SEO
   seo: {
-    title: 'InoxieSoft | Automatyzacja AI + Oprogramowanie na Zamówienie',
-    description: 'Tworzymy oprogramowanie na zlecenie i automatyzujemy procesy biznesowe z wykorzystaniem AI. Agenci AI, integracje LLM, szkolenia. Zmniejszamy koszty, zwiększamy efektywność. Skontaktuj się!',
+    title: 'InoxieSoft | Automatyzacja AI + Oprogramowanie na Zamówienie | Wrocław, Warszawa',
+    description: 'InoxieSoft — automatyzacja AI i oprogramowanie na zamówienie dla firm MŚP. Tworzymy strony www, aplikacje SaaS, chatboty i systemy backend. Wrocław, Warszawa, Kraków, Poznań, Katowice.',
   },
 
   // Featured Blogs (Home Page)

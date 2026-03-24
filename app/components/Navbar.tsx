@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import type { Lang } from '../i18n';
 
 type Translations = typeof import('../i18n/pl').pl;
@@ -35,6 +36,7 @@ function UKFlag({ className = "w-5 h-4" }: { className?: string }) {
 
 function LanguageSwitcher({ currentLang }: { currentLang: Lang }) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const languages = [
     { code: 'pl' as Lang, name: 'Polski', flag: 'poland' },
@@ -42,6 +44,7 @@ function LanguageSwitcher({ currentLang }: { currentLang: Lang }) {
   ];
 
   const current = languages.find(l => l.code === currentLang) || languages[0];
+  const currentPath = pathname.replace(/^\/(pl|en)/, '') || '/';
 
   return (
     <div className="relative">
@@ -61,8 +64,11 @@ function LanguageSwitcher({ currentLang }: { currentLang: Lang }) {
           {languages.map((lang) => (
             <Link
               key={lang.code}
-              href={lang.code === 'pl' ? `/${lang.code === 'pl' ? '' : lang.code}` : `/${lang.code}`}
-              onClick={() => setIsOpen(false)}
+              href={lang.code === 'pl' ? `/pl${currentPath}` : `/en${currentPath}`}
+              onClick={() => {
+                document.cookie = `preferred_lang=${lang.code}; path=/; max-age=31536000; SameSite=Lax`;
+                setIsOpen(false);
+              }}
               className={`flex items-center gap-3 px-4 py-2 text-sm hover:bg-stone-50 ${currentLang === lang.code ? 'text-accent font-medium bg-accent/5' : 'text-stone-600'}`}
             >
               {lang.flag === 'poland' ? <PolandFlag className="w-5 h-4 rounded-sm" /> : <UKFlag className="w-5 h-4 rounded-sm" />}

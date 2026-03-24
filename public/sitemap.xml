@@ -60,14 +60,121 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- New Service Pages -->
   <url>
-    <loc>https://inoxiesoft.com/pl/cennik</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/cennik"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/cennik"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://inoxiesoft.com/pl/automatyzacja-ai-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/automatyzacja-ai-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/automatyzacja-ai-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-  
+  <url>
+    <loc>https://inoxiesoft.com/en/automatyzacja-ai-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/automatyzacja-ai-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/automatyzacja-ai-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/strona-internetowa-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/strona-internetowa-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/strona-internetowa-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/strona-internetowa-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/strona-internetowa-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/strona-internetowa-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/firma-programistyczna-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/firma-programistyczna-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/firma-programistyczna-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/firma-programistyczna-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/firma-programistyczna-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/firma-programistyczna-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/automatyzacja-procesow-biznesowych</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/automatyzacja-procesow-biznesowych"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/automatyzacja-procesow-biznesowych"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/automatyzacja-procesow-biznesowych</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/automatyzacja-procesow-biznesowych"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/automatyzacja-procesow-biznesowych"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/software-house-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/software-house-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/software-house-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/software-house-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/software-house-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/software-house-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/ai-dla-firm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/ai-dla-firm"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/ai-dla-firm"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/ai-dla-firm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/ai-dla-firm"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/ai-dla-firm"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/chatbot-dla-firmy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/chatbot-dla-firmy"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/chatbot-dla-firmy"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/chatbot-dla-firmy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/chatbot-dla-firmy"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/chatbot-dla-firmy"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/pl/custom-software-development-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/custom-software-development-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/custom-software-development-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://inoxiesoft.com/en/custom-software-development-wroclaw</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/custom-software-development-wroclaw"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/custom-software-development-wroclaw"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog - English -->
   <url>
     <loc>https://inoxiesoft.com/en/blog</loc>
@@ -78,16 +185,22 @@
   </url>
   <url>
     <loc>https://inoxiesoft.com/en/blog/ai-agents-2026-business-automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/ai-agents-2026-business-automation"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/agenci-ai-2026-automatyzacja-biznesowa"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://inoxiesoft.com/en/blog/llm-integration-guide-polish-companies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/llm-integration-guide-polish-companies"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/integracja-llm-przewodnik-polskie-firmy"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://inoxiesoft.com/en/blog/ai-roi-polish-enterprises-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/ai-roi-polish-enterprises-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/roi-ai-polskie-przedsiebiorstwa-2026"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -102,16 +215,22 @@
   </url>
   <url>
     <loc>https://inoxiesoft.com/pl/blog/agenci-ai-2026-automatyzacja-biznesowa</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/agenci-ai-2026-automatyzacja-biznesowa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/ai-agents-2026-business-automation"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://inoxiesoft.com/pl/blog/integracja-llm-przewodnik-polskie-firmy</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/integracja-llm-przewodnik-polskie-firmy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/llm-integration-guide-polish-companies"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://inoxiesoft.com/pl/blog/roi-ai-polskie-przedsiebiorstwa-2026</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inoxiesoft.com/pl/blog/roi-ai-polskie-przedsiebiorstwa-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inoxiesoft.com/en/blog/ai-roi-polish-enterprises-2026"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

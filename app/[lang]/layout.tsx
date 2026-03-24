@@ -1,6 +1,7 @@
 import { translations, type Lang } from '../i18n';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { OrganizationJsonLd } from './OrganizationJsonLd';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,12 +17,15 @@ export default async function LangLayout({ children, params }: LayoutProps) {
   const t = translations[lang as Lang];
 
   return (
-    <>
-      <Navbar t={t} lang={lang as Lang} />
-      <main className="pt-16">
-        {children}
-      </main>
-      <Footer t={t} lang={lang as Lang} />
-    </>
+    <html lang={lang}>
+      <body>
+        <OrganizationJsonLd lang={lang as Lang} />
+        <Navbar t={t} lang={lang as Lang} />
+        <main className="pt-16">
+          {children}
+        </main>
+        <Footer t={t} lang={lang as Lang} />
+      </body>
+    </html>
   );
 }

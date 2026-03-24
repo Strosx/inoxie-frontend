@@ -43,8 +43,9 @@ export function generateMetadata(lang: Lang) {
     title: t.title,
     description: t.description,
     alternates: {
+      canonical: 'https://inoxiesoft.com/pl',
       languages: {
-        'pl': 'https://inoxiesoft.com/',
+        'pl': 'https://inoxiesoft.com/pl',
         'en': 'https://inoxiesoft.com/en',
       },
     },

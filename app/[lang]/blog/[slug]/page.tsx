@@ -17,7 +17,10 @@ export async function generateStaticParams() {
     'roi-ai-polskie-przedsiebiorstwa-2026',
   ];
   
-  return slugs.map(slug => ({ slug }));
+  return slugs.flatMap(slug => [
+    { lang: 'pl', slug },
+    { lang: 'en', slug },
+  ]);
 }
 
 export async function generateMetadata({ params }: PageProps) {

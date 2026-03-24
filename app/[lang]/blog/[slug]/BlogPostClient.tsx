@@ -405,6 +405,35 @@ export default function BlogPostClient({ post, relatedPosts, t, lang }: BlogPost
             </section>
           )}
 
+          {/* Related Services — Internal Links */}
+          <section className="py-12 lg:py-16 bg-stone-50 border-t border-stone-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold text-stone-900 mb-8 text-center">
+                {lang === 'pl' ? 'Powiązane usługi' : 'Related Services'}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {[
+                  { title: lang === 'pl' ? 'Automatyzacja AI' : 'AI Automation', href: `/${lang}/automatyzacja-ai-wroclaw`, desc: lang === 'pl' ? 'Agenci AI i automatyzacja procesów' : 'AI agents and process automation' },
+                  { title: lang === 'pl' ? 'AI dla Firm' : 'AI for Business', href: `/${lang}/ai-dla-firm`, desc: lang === 'pl' ? 'Sztuczna inteligencja dla MŚP' : 'Artificial intelligence for SMBs' },
+                  { title: lang === 'pl' ? 'Chatbot dla Firmy' : 'Chatbot for Business', href: `/${lang}/chatbot-dla-firmy`, desc: lang === 'pl' ? 'Automatyczna obsługa klienta 24/7' : '24/7 AI customer service' },
+                  { title: lang === 'pl' ? 'Automatyzacja Procesów' : 'Process Automation', href: `/${lang}/automatyzacja-procesow-biznesowych`, desc: lang === 'pl' ? 'Workflow automation dla firm' : 'Workflow automation for businesses' },
+                ].map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="group bg-white rounded-xl p-5 border border-stone-200 hover:border-accent/40 hover:shadow-md transition-all"
+                  >
+                    <h3 className="font-bold text-stone-900 group-hover:text-accent transition-colors mb-1">{service.title}</h3>
+                    <p className="text-sm text-stone-500">{service.desc}</p>
+                    <span className="inline-flex items-center gap-1 text-xs text-accent mt-2 font-semibold">
+                      {lang === 'pl' ? 'Zobacz →' : 'See →'}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* CTA Section */}
           <section className="py-12 lg:py-16 bg-stone-900 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

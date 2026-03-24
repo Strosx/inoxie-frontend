@@ -6,7 +6,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }];
+  return [{ lang: 'pl' }, { lang: 'en' }];
 }
 
 export async function generateMetadata({ params }: PageProps) {

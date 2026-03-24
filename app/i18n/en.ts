@@ -187,15 +187,19 @@ export const en = {
     location: 'Kolejowa 14, 46-073 Chroscina, Poland',
     servicesTitle: 'Services',
     services: [
-      { label: 'Custom Software', href: '/en/offer#software' },
-      { label: 'AI Automation', href: '/en/offer#automation' },
-      { label: 'AI Agents', href: '/en/offer#agents' },
-      { label: 'AI Training', href: '/en/offer#training' },
+      { label: 'Custom Software', href: '/en/firma-programistyczna-wroclaw' },
+      { label: 'AI Automation', href: '/en/automatyzacja-ai-wroclaw' },
+      { label: 'Website Wrocław', href: '/en/strona-internetowa-wroclaw' },
+      { label: 'Chatbot for Business', href: '/en/chatbot-dla-firmy' },
+      { label: 'Process Automation', href: '/en/automatyzacja-procesow-biznesowych' },
+      { label: 'AI for Business', href: '/en/ai-dla-firm' },
+      { label: 'Software House Wrocław', href: '/en/software-house-wroclaw' },
+      { label: 'Services', href: '/en/offer' },
     ],
     companyTitle: 'Company',
     company: [
       { label: 'About', href: '/en/about-us' },
-      { label: 'Services', href: '/en/offer' },
+      { label: 'Blog', href: '/en/blog' },
       { label: 'Contact', href: '/en/contact' },
     ],
     copyright: 'All rights reserved.',
@@ -345,8 +349,8 @@ export const en = {
 
   // SEO
   seo: {
-    title: 'InoxieSoft | AI Automation + Custom Software Development',
-    description: 'We create custom software and automate business processes using AI. AI agents, LLM integrations, training. We reduce costs, increase efficiency. Contact us!',
+    title: 'InoxieSoft | AI Automation + Custom Software Development | Wrocław, Poland',
+    description: 'InoxieSoft — AI automation and custom software development for SMBs. We build websites, SaaS applications, chatbots and backend systems. Serving clients in Wrocław, Warsaw, Kraków, Poznań, Katowice.',
   },
 
   // Featured Blogs (Home Page)

@@ -6,21 +6,34 @@ import Image from 'next/image';
 import { translations } from '../../i18n';
 
 const servicesEN = [
-  { title: 'Custom Website Development', description: 'Professional business websites, e-commerce stores, and tailored solutions for your industry.', features: ['Business websites', 'E-commerce', 'Landing pages', 'Portfolios'] },
-  { title: 'SEO Optimization', description: 'Your business ranks higher in Google - more customers find you.', features: ['Content optimization', 'Page speed', 'Mobile-first', 'Links and citations'] },
-  { title: 'AI Automation', description: 'We use AI to automate processes in your company. Save time and money.', features: ['Task automation', 'Tool integrations', 'AI assistants', 'Time savings'] },
-  { title: 'Lead Generation', description: 'We help acquire new customers through websites and marketing campaigns.', features: ['Conversion optimization', 'Email campaigns', 'SMS marketing', 'CRM integrations'] },
+  { title: 'Custom Website Development', description: 'Professional business websites, e-commerce stores, and tailored solutions for your industry.', features: ['Business websites', 'E-commerce', 'Landing pages', 'Portfolios'], href: '/en/strona-internetowa-wroclaw' },
+  { title: 'AI Automation', description: 'We use AI to automate processes in your company. Save time and money.', features: ['AI agents', 'Workflow automation', 'AI chatbots', 'LLM integrations'], href: '/en/automatyzacja-ai-wroclaw' },
+  { title: 'Custom Software Development', description: 'Tailored software built to your exact specification — web apps, SaaS platforms, API integrations.', features: ['Custom web applications', 'SaaS platforms', 'API development', 'AI integrations'], href: '/en/custom-software-development-wroclaw' },
+  { title: 'Business Process Automation', description: 'Automate repetitive tasks and workflows across your company. Reduce costs by 40%.', features: ['Workflow automation', 'Back-office automation', 'Email automation', 'Cross-system integrations'], href: '/en/automatyzacja-procesow-biznesowych' },
 ];
 
 const servicesPL = [
-  { title: 'Strony www dla firm', description: 'Profesjonalne strony wizytówki, sklepy internetowe, strony z ofertą dopasowane do Twojej branży.', features: ['Strony wizytówki', 'Sklepy internetowe', 'Landing pages', 'Portfolia'] },
-  { title: 'Pozycjonowanie SEO', description: 'Twoja firma znajduje się wyżej w Google - więcej klientów Cię znajduje.', features: ['Optymalizacja treści', 'Szybkość ładowania', 'Mobile-first', 'Linki i cytowania'] },
-  { title: 'Automatyzacja AI', description: 'Wykorzystujemy AI do automatyzacji procesów w Twojej firmie. Oszczędzaj czas i pieniądze.', features: ['Automatyzacja zadań', 'Integracje z narzędziami', 'Asystenci AI', 'Oszczędność czasu'] },
-  { title: 'Lead Generation', description: 'Pomagamy pozyskiwać nowych klientów przez stronę i kampanie marketingowe.', features: ['Optymalizacja konwersji', 'Kampanie email', 'SMS marketing', 'CRM integracje'] },
+  { title: 'Strony www dla firm', description: 'Profesjonalne strony wizytówki, sklepy internetowe, strony z ofertą dopasowane do Twojej branży.', features: ['Strony wizytówki', 'Sklepy internetowe', 'Landing pages', 'Portfolia'], href: '/pl/strona-internetowa-wroclaw' },
+  { title: 'Automatyzacja AI', description: 'Wykorzystujemy AI do automatyzacji procesów w Twojej firmie. Oszczędzaj czas i pieniądze.', features: ['Agenci AI', 'Automatyzacja workflow', 'Chatboty AI', 'Integracje LLM'], href: '/pl/automatyzacja-ai-wroclaw' },
+  { title: 'Oprogramowanie na zamówienie', description: 'Dedykowane oprogramowanie zbudowane pod kątem Twoich wymagań — aplikacje webowe, SaaS, integracje API.', features: ['Aplikacje webowe', 'Platformy SaaS', 'Integracje API', 'Rozwiązania AI'], href: '/pl/firma-programistyczna-wroclaw' },
+  { title: 'Automatyzacja procesów biznesowych', description: 'Automatyzuj powtarzalne zadania i procesy w firmie. Redukuj koszty średnio o 40%.', features: ['Workflow automation', 'Automatyzacja back-office', 'Automatyzacja email', 'Integracje międzysystemowe'], href: '/pl/automatyzacja-procesow-biznesowych' },
 ];
 
-const citiesEN = ['Warsaw', 'Krakow', 'Wroclaw', 'Poznan', 'Gdansk', 'Lodz', 'Katowice', 'Lublin'];
-const citiesPL = ['Warszawa', 'Kraków', 'Wrocław', 'Poznań', 'Gdańsk', 'Łódź', 'Katowice', 'Lublin'];
+const cityServicesPL = [
+  { city: 'Wrocław', services: ['Automatyzacja AI Wrocław', '/pl/automatyzacja-ai-wroclaw'], services2: ['Strona www Wrocław', '/pl/strona-internetowa-wroclaw'] },
+  { city: 'Warszawa', services: ['Automatyzacja AI', '/pl/automatyzacja-ai-wroclaw'], services2: ['Oprogramowanie na zamówienie', '/pl/firma-programistyczna-wroclaw'] },
+  { city: 'Kraków', services: ['Automatyzacja AI', '/pl/automatyzacja-ai-wroclaw'], services2: ['Strona www', '/pl/strona-internetowa-wroclaw'] },
+  { city: 'Poznań', services: ['Automatyzacja AI', '/pl/automatyzacja-ai-wroclaw'], services2: ['Software House', '/pl/software-house-wroclaw'] },
+  { city: 'Katowice', services: ['Automatyzacja AI', '/pl/automatyzacja-ai-wroclaw'], services2: ['Oprogramowanie', '/pl/firma-programistyczna-wroclaw'] },
+];
+
+const cityServicesEN = [
+  { city: 'Wrocław', services: ['AI Automation Wrocław', '/en/automatyzacja-ai-wroclaw'], services2: ['Website Wrocław', '/en/strona-internetowa-wroclaw'] },
+  { city: 'Warsaw', services: ['AI Automation', '/en/automatyzacja-ai-wroclaw'], services2: ['Custom Software', '/en/custom-software-development-wroclaw'] },
+  { city: 'Kraków', services: ['AI Automation', '/en/automatyzacja-ai-wroclaw'], services2: ['Website', '/en/strona-internetowa-wroclaw'] },
+  { city: 'Poznań', services: ['AI Automation', '/en/automatyzacja-ai-wroclaw'], services2: ['Software House', '/en/software-house-wroclaw'] },
+  { city: 'Katowice', services: ['AI Automation', '/en/automatyzacja-ai-wroclaw'], services2: ['Custom Software', '/en/firma-programistyczna-wroclaw'] },
+];
 
 interface OfferPageClientProps {
   t: typeof translations.pl;
@@ -28,7 +41,7 @@ interface OfferPageClientProps {
 }
 
 export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
-  const cities = lang === 'pl' ? citiesPL : citiesEN;
+  const cityServices = lang === 'pl' ? cityServicesPL : cityServicesEN;
   const services = lang === 'pl' ? servicesPL : servicesEN;
   
   return (
@@ -64,16 +77,60 @@ export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
               </p>
               
               <div className="flex flex-wrap justify-center gap-3 mb-8">
-                {cities.map((city) => (
+                {cityServices.map((cs) => (
                   <span
-                    key={city}
+                    key={cs.city}
                     className="bg-white border border-stone-200 px-4 py-2 rounded-full text-stone-600 font-medium"
                   >
-                    {city}
+                    {cs.city}
                   </span>
                 ))}
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Local Services — City Hub */}
+        <section className="py-16 bg-stone-50 border-y border-stone-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
+                {lang === 'pl' ? 'Usługi IT w Twoim mieście' : 'IT Services in Your City'}
+              </h2>
+              <p className="text-stone-600">
+                {lang === 'pl'
+                  ? 'Świadczymy usługi zdalnie w całej Polsce — Wrocław, Warszawa, Kraków, Poznań, Katowice i więcej.'
+                  : 'We provide services remotely across Poland — Wrocław, Warsaw, Kraków, Poznań, Katowice and more.'}
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {cityServices.map((cs) => (
+                <motion.div
+                  key={cs.city}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-4 border border-stone-200 hover:border-accent/40 hover:shadow-md transition-all"
+                >
+                  <h3 className="font-bold text-stone-900 mb-3 text-center">{cs.city}</h3>
+                  <div className="space-y-2">
+                    <Link href={cs.services[1]} className="flex items-center gap-2 text-sm text-accent hover:text-accent-hover transition-colors">
+                      <span className="w-1 h-1 bg-accent rounded-full shrink-0" />
+                      {cs.services[0]}
+                    </Link>
+                    <Link href={cs.services2[1]} className="flex items-center gap-2 text-sm text-accent hover:text-accent-hover transition-colors">
+                      <span className="w-1 h-1 bg-accent rounded-full shrink-0" />
+                      {cs.services2[0]}
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -130,14 +187,14 @@ export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-stone-50 rounded-2xl p-8 border border-stone-100 hover:border-accent/30 transition-colors"
+                  className="bg-stone-50 rounded-2xl p-8 border border-stone-100 hover:border-accent/30 transition-colors flex flex-col"
                 >
                   <span className="text-6xl font-light text-accent/30">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <h3 className="text-xl font-bold text-stone-900 mb-3 mt-4">{service.title}</h3>
                   <p className="text-stone-600 mb-6">{service.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3 text-sm text-stone-500">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full" />
@@ -145,6 +202,14 @@ export default function OfferPageClient({ t, lang }: OfferPageClientProps) {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-auto pt-4 border-t border-stone-200">
+                    <Link
+                      href={service.href}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover transition-colors"
+                    >
+                      {lang === 'pl' ? 'Zobacz szczegóły →' : 'See details →'}
+                    </Link>
+                  </div>
                 </motion.div>
               ))}
             </div>
