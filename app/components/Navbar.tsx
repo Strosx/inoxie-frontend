@@ -81,6 +81,7 @@ export default function Navbar({ t, lang }: NavbarProps) {
   const navLinks = [
     { href: lang === 'pl' ? '/' : `/${lang}`, label: t.nav.start },
     { href: `/${lang}/offer`, label: t.nav.oferta },
+    { href: `/${lang}/waas`, label: t.nav.waas },
     { href: `/${lang}/blog`, label: t.nav.blog },
     { href: `/${lang}/about-us`, label: t.nav.oNas },
     { href: `/${lang}/contact`, label: t.nav.kontakt },
