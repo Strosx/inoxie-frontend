@@ -15,12 +15,12 @@ const slugToDedicatedPage: Record<string, string> = {
   'integracja-llm-przewodnik-polskie-firmy': 'llm-integration-post',
   'ai-readiness-checklist-2026': 'ai-readiness-checklist-post',
   'shadow-ai-2026': 'shadow-ai-post',
-  'ksef-ai-automation-2026': 'ksef-ai-automation-post',
   // EN slugs
   'ai-roi-polish-enterprises-2026': 'roi-ai-post',
   'ai-agents-2026-business-automation': 'ai-agents-post',
   'llm-integration-guide-polish-companies': 'llm-integration-post',
   'shadow-ai-hidden-threat-2026': 'shadow-ai-post',
+  // Shared slugs (same for PL and EN)
   'ksef-ai-automation-2026': 'ksef-ai-automation-post',
 };
 

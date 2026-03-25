@@ -300,7 +300,7 @@ function PainPointItem({ point, index, isPL }: { point: typeof postData.painPoin
         {point.icon}
       </div>
       <div>
-        <h4 className="font-bold text-stone-900 mb-0.5">{isPL ? point.label : point.labelEn}</h4>
+        <h4 className="font-bold text-stone-900 mb-0.5">{point.label}</h4>
         <p className="text-sm text-stone-600">{isPL ? point.desc : point.descEn}</p>
       </div>
     </motion.div>
