@@ -17,6 +17,19 @@ export interface BlogPost {
 
 export const blogPostsEn: BlogPost[] = [
   {
+    slug: 'ksef-ai-automation-2026',
+    title: 'KSeF + AI: How Polish Companies Are Automating Mandatory E-Invoicing in 2026',
+    excerpt: 'KSeF mandatory from February 2026. See how AI automates e-invoicing and saves 60% on processing costs. Practical guide for SMBs.',
+    date: '2026-03-25',
+    author: 'Maciej Kamieniak',
+    authorBio: 'Founder & AI Strategy Lead at InoxieSoft. 10+ years in software development, specialized in AI automation for SMEs since 2022.',
+    category: 'AI Automation',
+    readingTime: 12,
+    tags: ['KSeF', 'e-invoicing', 'AI automation', 'Polish SMB', '2026 trends'],
+    featured: true,
+    content: `KSeF AI content - see dedicated page at /ksef-ai-automation-post`
+  },
+  {
     slug: 'shadow-ai-hidden-threat-2026',
     title: 'Shadow AI: The Hidden Threat to Polish Businesses in 2026',
     excerpt: 'Shadow AI — employees using AI tools without company knowledge. Learn the risks and how to protect your business from data leakage.',
@@ -1194,6 +1207,19 @@ We offer free 60-minute consultations where we'll:
 ];
 
 export const blogPostsPl: BlogPost[] = [
+  {
+    slug: 'ksef-ai-automation-2026',
+    title: 'KSeF + AI: Jak Polskie Firmy Automatyzują Obowiązkową Elektronizację Fakturowania w 2026',
+    excerpt: 'KSeF obowiązkowy od lutego 2026. Sprawdź, jak AI automatyzuje fakturowanie i oszczędza 60% kosztów. Praktyczny przewodnik dla MŚP.',
+    date: '2026-03-25',
+    author: 'Maciej Kamieniak',
+    authorBio: 'Założyciel i lider strategii AI w InoxieSoft. Ponad 10 lat doświadczenia w tworzeniu oprogramowania, specjalizacja w automatyzacji AI dla MŚP od 2022 roku.',
+    category: 'Automatyzacja AI',
+    readingTime: 12,
+    tags: ['KSeF', 'fakturowanie elektroniczne', 'automatyzacja AI', 'polskie MŚP', 'trendy 2026'],
+    featured: true,
+    content: `KSeF AI content - see dedicated page at /ksef-ai-automation-post`
+  },
   {
     slug: 'shadow-ai-2026',
     title: 'Shadow AI: Ukryte Zagrożenie dla Polskich Firm w 2026 Roku',
